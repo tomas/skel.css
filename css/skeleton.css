@@ -129,10 +129,12 @@ html {
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
-  font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
   color: #222; }
 
+pre, code {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -231,6 +233,7 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
+  width: 100%;
   height: 42px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
@@ -249,10 +252,12 @@ textarea {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none; }
+
 textarea {
   min-height: 65px;
   padding-top: 6px;
   padding-bottom: 6px; }
+
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -294,8 +299,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%; }
+  margin: 1.5rem 0 1.5rem 3rem; }
 li {
   margin-bottom: 1rem; }
 
@@ -318,6 +322,12 @@ pre > code {
 
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+table {
+  width: 100%;
+  background-color: transparent;
+}
+
 th,
 td {
   padding: 12px 15px;
@@ -355,17 +365,16 @@ form {
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.u-full-width {
-  width: 100%;
-  box-sizing: border-box; }
-.u-max-full-width {
-  max-width: 100%;
-  box-sizing: border-box; }
-.u-pull-right {
-  float: right; }
-.u-pull-left {
-  float: left; }
 
+.left      { float: left !important; clear: left; }
+.right     { float: right !important; clear: right; }
+.center    { float: none; margin-left: auto; margin-right: auto; }
+.clear     { clear: both; }
+.visible   { display: inherit !important; }
+.hidden    { display: none !important; }
+.invisible { visibility: hidden; }
+.block     { display: block !important; }
+.inline    { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -382,33 +391,7 @@ hr {
 /* Self Clearing Goodness */
 .container:after,
 .row:after,
-.u-cf {
+.clearfix {
   content: "";
   display: table;
   clear: both; }
-
-
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-
-
-/* Larger than mobile */
-@media (min-width: 400px) {}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
-
-/* Larger than tablet */
-@media (min-width: 750px) {}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
