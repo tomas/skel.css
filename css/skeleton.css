@@ -101,7 +101,7 @@ p {
 /* For devices larger than 550px */
 @media (min-width: 550px) {
   .container {
-    width: 80%; }
+    width: 90%; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -290,6 +290,7 @@ legend {
   display: block;
   margin-bottom: .5rem;
   font-weight: 600; }
+legend { color: #999; }
 fieldset {
   padding: 0;
   border-width: 0; }
@@ -301,7 +302,6 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
-
 select {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
   padding-right: 3.0rem;
@@ -311,6 +311,23 @@ select:focus {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#222" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
 }
 
+@media (min-width: 767px) {
+
+  .aligned input,
+  .aligned textarea,
+  .aligned select {
+    display: inline-block;
+    width: auto;
+  }
+
+  .aligned label {
+    text-align: right;
+    display: inline-block;
+    width: 18em;
+    margin: 0 1em 0 0;
+  }
+
+}
 
 /* Lists
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -407,7 +424,7 @@ hr {
   content: "";
   display: table;
   clear: both; }
-  
+
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

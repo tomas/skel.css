@@ -43,9 +43,17 @@
   }
 
   $(function() {
+
+    $('.toggle-visible').on('click', function(e){
+      e.preventDefault();
+      var target = $(this).attr('href');
+      $(target).toggleClass('visible');
+    })
+
+
     var $codeSnippets = $('.code-example-body');
     $codeSnippets.each(function() {
-      var newContent = escapeHtml($(this).html())
+      var newContent = escapeHtml($(this).html().replace(/^\n/g, ''))
       $(this).html(newContent)
     })
   })
@@ -79,7 +87,7 @@
     <div class="navbar-spacer"></div>
     <nav class="navbar">
       <div class="container">
-        <ul class="navbar-list">
+        <ul class="menu">
           <li class="navbar-item"><a class="navbar-link" href="#intro">Intro</a></li>
           <li class="navbar-item">
             <a class="navbar-link" href="#" data-popover="#codeNavPopover">Code</a>
@@ -402,6 +410,152 @@
 
     </div>
 
+
+    <!-- Forms -->
+    <div class="docs-section" id="forms">
+      <h6 class="docs-header">Stacked Forms</h6>
+      <p>Very nice.</p>
+      <div class="docs-example docs-example-forms">
+        <form class="stacked">
+          <fieldset>
+            <legend>A Stacked Form</legend>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Email">
+
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Password">
+
+            <label for="state">State</label>
+            <select id="state">
+                <option>AL</option>
+                <option>CA</option>
+                <option>IL</option>
+            </select>
+
+            <label for="remember" class="pure-checkbox">
+                <input id="remember" type="checkbox"> Remember me
+            </label>
+
+            <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+          </fieldset>
+        </form>
+      </div>
+
+<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint">
+<form class="stacked">
+  <fieldset>
+    <legend>A Stacked Form</legend>
+
+    <label for="email">Email</label>
+    <input id="email" type="email" placeholder="Email">
+
+    <label for="password">Password</label>
+    <input id="password" type="password" placeholder="Password">
+
+    <label for="state">State</label>
+    <select id="state">
+        <option>AL</option>
+        <option>CA</option>
+        <option>IL</option>
+    </select>
+
+    <label for="remember" class="pure-checkbox">
+        <input id="remember" type="checkbox"> Remember me
+    </label>
+
+    <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+  </fieldset>
+</form>
+</code>
+</pre>
+<!-- ————————————————————————————————————————————————————— -->
+
+
+    </div>
+
+
+    <!-- Forms -->
+    <div class="docs-section" id="forms">
+      <h6 class="docs-header">Aligned Forms</h6>
+      <p>Very nice.</p>
+      <div class="docs-example docs-example-forms">
+        <form class="aligned">
+          <fieldset>
+            <div class="pure-control-group">
+              <label for="name">Username</label>
+              <input id="name" type="text" placeholder="Username">
+            </div>
+
+            <div class="pure-control-group">
+              <label for="password">Password</label>
+              <input id="password" type="password" placeholder="Password">
+            </div>
+
+            <div class="pure-control-group">
+              <label for="email">Email Address</label>
+              <input id="email" type="email" placeholder="Email Address">
+            </div>
+
+            <div class="pure-control-group">
+              <label for="foo">Supercalifragilistic Label</label>
+              <input id="foo" type="text" placeholder="Enter something here...">
+            </div>
+
+            <div class="pure-controls">
+              <label for="cb" class="pure-checkbox">
+                  <input id="cb" type="checkbox"> I've read the terms and conditions
+              </label>
+
+              <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint">
+<form class="aligned">
+  <fieldset>
+    <div class="pure-control-group">
+      <label for="name">Username</label>
+      <input id="name" type="text" placeholder="Username">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="Password">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="email">Email Address</label>
+      <input id="email" type="email" placeholder="Email Address">
+    </div>
+
+    <div class="pure-control-group">
+      <label for="foo">Supercalifragilistic Label</label>
+      <input id="foo" type="text" placeholder="Enter something here...">
+    </div>
+
+    <div class="pure-controls">
+      <label for="cb" class="pure-checkbox">
+          <input id="cb" type="checkbox"> I've read the terms and conditions
+      </label>
+
+      <button type="submit" class="pure-button pure-button-primary">Submit</button>
+    </div>
+  </fieldset>
+</form>
+</code>
+</pre>
+<!-- ————————————————————————————————————————————————————— -->
+
+
+    </div>
+
     <!-- Lists -->
     <div class="docs-section" id="lists">
       <h6 class="docs-header">Lists</h6>
@@ -437,7 +591,8 @@
 
 <!-- CODE EXAMPLE ———————————————————————————————————————— -->
 <pre class="code-example">
-<code class="code-example-body prettyprint"><ul>
+<code class="code-example-body prettyprint">
+<ul>
   <li>Item 1</li>
   <li>
     Item 2
@@ -547,37 +702,38 @@
     </div>
 
     <div class="docs-section" id="extras">
-      <h6 class="docs-header">Extras</h6>
-      <p>Alerts, tabs, and menus.</p>
+      <h6 class="docs-header">Extras: Alerts</h6>
+      <p>Notice (default), warning, success and error. Can optionally have a close button (either a BUTTON or an A tag) at the left or right. </p>
       <div class="docs-example">
         <div class="alert">
-          <a href="#close" class="right close-button"></a>
+          <button class="right close-button"></button>
           This is very important.
         </div>
-        
+
         <div class="alert alert-warning">
           <a href="#close" class="left close-button"></a>
           This is very important.
         </div>
-        
-        
+
+
         <div class="alert alert-success">
           <a href="#close" class="left close-button"></a>
           This is very important.
         </div>
-        
-        
+
+
         <div class="alert alert-error">
           <a href="#close" class="right close-button"></a>
           This is very important.
         </div>
+
       </div>
 
 <!-- CODE EXAMPLE ———————————————————————————————————————— -->
 <pre class="code-example">
 <code class="code-example-body prettyprint">
 <div class="alert">
-  <a href="#close" class="right close-button"></a>
+  <button class="right close-button"></button>
   This is very important.
 </div>
 
@@ -588,7 +744,7 @@
 
 
 <div class="alert alert-success">
-  <a href="#close" class="left close-button"></a>
+  <button class="left close-button"></button>
   This is very important.
 </div>
 
@@ -603,7 +759,65 @@
 
     </div>
 
+   <div class="docs-section" id="extras">
+      <h6 class="docs-header">Extras: Navbar</h6>
+      <p>In light and dark modes.</p>
+      <div class="docs-example">
 
+  <div class="dark navbar">
+    <div class="clearfix container">
+      <a class="left brand" href="/">FooApp</a>
+      <a href="#menu2" class="toggle-visible right menu-icon"></a>
+
+      <ul class="right menu" id="menu2">
+        <li><a href="#">Home</a></li>
+        <li><a href="/settings">Settings</a></li>
+        <li class="hover dropdown">
+          <span>Dropdown on hover<span class="caret"></span></span>
+
+          <ul>
+            <li><a href="#">Foo</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Baz</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+
+
+      </div>
+
+<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint">
+  <div class="dark navbar">
+    <div class="clearfix container">
+      <a class="left brand" href="/">FooApp</a>
+      <a href="#menu2" class="toggle-visible right menu-icon"></a>
+
+      <ul class="right menu" id="menu2">
+        <li><a href="#">Home</a></li>
+        <li><a href="/settings">Settings</a></li>
+        <li class="hover dropdown">
+          <span>Dropdown on hover<span class="caret"></span></span>
+
+          <ul>
+            <li><a href="#">Foo</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Baz</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</code>
+</pre>
+<!-- ————————————————————————————————————————————————————— -->
+
+    </div>
 
 
     <!-- Utilities and Misc. -->
