@@ -69,15 +69,15 @@
       <h2 class="title">A dead simple, responsive boilerplate.</h2>
       <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
       <div class="value-props row">
-        <div class="four columns value-prop">
+        <div class="span-4 value-prop">
           <img class="value-img" src="images/feather.svg">
           Light as a feather at ~400 lines &amp; built with mobile in mind.
         </div>
-        <div class="four columns value-prop">
+        <div class="span-4 value-prop">
           <img class="value-img" src="images/pens.svg">
           Styles designed to be a starting point, not a UI framework.
         </div>
-        <div class="four columns value-prop">
+        <div class="span-4 value-prop">
           <img class="value-img" src="images/watch.svg">
           Quick to start with zero compiling or installing necessary.
         </div>
@@ -171,48 +171,48 @@
       <p>The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser. </p>
       <div class="example-grid docs-example">
         <div class="row">
-          <div class="one column">One</div>
-          <div class="eleven columns">Eleven</div>
+          <div class="span-1">One</div>
+          <div class="span-11">Eleven</div>
         </div>
         <div class="row">
-          <div class="two columns">Two</div>
-          <div class="ten columns">Ten</div>
+          <div class="span-2">Two</div>
+          <div class="span-10">Ten</div>
         </div>
         <div class="row">
-          <div class="three columns">Three</div>
-          <div class="nine columns">Nine</div>
+          <div class="span-3">Three</div>
+          <div class="span-9">Nine</div>
         </div>
         <div class="row">
-          <div class="four columns">Four</div>
-          <div class="eight columns">Eight</div>
+          <div class="span-4">Four</div>
+          <div class="span-8">Eight</div>
         </div>
         <div class="row">
-          <div class="five columns">Five</div>
-          <div class="seven columns">Seven</div>
+          <div class="span-5">Five</div>
+          <div class="span-7">Seven</div>
         </div>
         <div class="row">
-          <div class="six columns">Six</div>
-          <div class="six columns">Six</div>
+          <div class="span-6">Six</div>
+          <div class="span-6">Six</div>
         </div>
         <div class="row">
-          <div class="seven columns">Seven</div>
-          <div class="five columns">Five</div>
+          <div class="span-7">Seven</div>
+          <div class="span-5">Five</div>
         </div>
         <div class="row">
-          <div class="eight columns">Eight</div>
-          <div class="four  columns">Four</div>
+          <div class="span-8">Eight</div>
+          <div class="span-4 ">Four</div>
         </div>
         <div class="row">
-          <div class="nine columns">Nine</div>
-          <div class="three columns">Three</div>
+          <div class="span-9">Nine</div>
+          <div class="span-3">Three</div>
         </div>
         <div class="row">
-          <div class="ten columns">Ten</div>
-          <div class="two columns">Two</div>
+          <div class="span-10">Ten</div>
+          <div class="span-2">Two</div>
         </div>
         <div class="row">
-          <div class="eleven columns">Eleven</div>
-          <div class="one column">One</div>
+          <div class="span-11">Eleven</div>
+          <div class="span-1">One</div>
         </div>
       </div>
 
@@ -224,24 +224,24 @@
 
   <!-- columns should be the immediate child of a .row -->
   <div class="row">
-    <div class="one column">One</div>
-    <div class="eleven columns">Eleven</div>
+    <div class="span-1">One</div>
+    <div class="span-11">Eleven</div>
   </div>
 
   <!-- just use a number and class 'column' or 'columns' -->
   <div class="row">
-    <div class="two columns">Two</div>
-    <div class="ten columns">Ten</div>
+    <div class="span-2">Two</div>
+    <div class="span-10">Ten</div>
   </div>
 
   <!-- there are a few shorthand columns widths as well -->
   <div class="row">
-    <div class="one-third column">1/3</div>
-    <div class="two-thirds column">2/3</div>
+    <div class="span-one-third">1/3</div>
+    <div class="span-two-thirds">2/3</div>
   </div>
   <div class="row">
-    <div class="one-half column">1/2</div>
-    <div class="one-half column">1/2</div>
+    <div class="span-one-half">1/2</div>
+    <div class="span-one-half">1/2</div>
   </div>
 
 </div>
@@ -260,11 +260,11 @@
       <p>Type is all set with the <code>rems</code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html&gt;</code> font-size property. Out of the box, Skeleton never changes the <code>&lt;html&gt;</code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1&gt;</code> with <code>5.0rem</code>font-size just means <code>50px</code>.</p>
       <div class="docs-example">
         <div class="row">
-          <div class="six columns">
+          <div class="span-6">
             <p><strong>The typography base</strong> is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all obviously included.</p>
             <p><strong>Headings</strong> create a family of distinct sizes each with specific <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
           </div>
-          <div class="six columns">
+          <div class="span-6">
             <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 50rem</span></h1>
             <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 42rem</span></h2>
             <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 36rem</span></h3>
@@ -349,11 +349,11 @@
       <div class="docs-example docs-example-forms">
         <form>
           <div class="row">
-            <div class="six columns">
+            <div class="span-6">
               <label for="exampleEmailInput">Your email</label>
               <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
             </div>
-            <div class="six columns">
+            <div class="span-6">
               <label for="exampleRecipientInput">Reason for contacting</label>
               <select class="u-full-width" id="exampleRecipientInput">
                 <option value="Option 1">Questions</option>
@@ -378,11 +378,11 @@
 <code class="code-example-body prettyprint"><!-- The above form looks like this -->
 <form>
   <div class="row">
-    <div class="six columns">
+    <div class="span-6">
       <label for="exampleEmailInput">Your email</label>
       <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
     </div>
-    <div class="six columns">
+    <div class="span-6">
       <label for="exampleRecipientInput">Reason for contacting</label>
       <select class="u-full-width" id="exampleRecipientInput">
         <option value="Option 1">Questions</option>
@@ -433,11 +433,11 @@
                 <option>IL</option>
             </select>
 
-            <label for="remember" class="pure-checkbox">
+            <label for="remember">
                 <input id="remember" type="checkbox"> Remember me
             </label>
 
-            <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+            <button type="submit" class="button primary">Sign in</button>
           </fieldset>
         </form>
       </div>
@@ -462,11 +462,11 @@
         <option>IL</option>
     </select>
 
-    <label for="remember" class="pure-checkbox">
+    <label for="remember">
         <input id="remember" type="checkbox"> Remember me
     </label>
 
-    <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+    <button type="submit" class="button primary">Sign in</button>
   </fieldset>
 </form>
 </code>
@@ -484,32 +484,32 @@
       <div class="docs-example docs-example-forms">
         <form class="aligned">
           <fieldset>
-            <div class="pure-control-group">
+            <div>
               <label for="name">Username</label>
               <input id="name" type="text" placeholder="Username">
             </div>
 
-            <div class="pure-control-group">
+            <div>
               <label for="password">Password</label>
               <input id="password" type="password" placeholder="Password">
             </div>
 
-            <div class="pure-control-group">
+            <div>
               <label for="email">Email Address</label>
               <input id="email" type="email" placeholder="Email Address">
             </div>
 
-            <div class="pure-control-group">
+            <div>
               <label for="foo">Supercalifragilistic Label</label>
               <input id="foo" type="text" placeholder="Enter something here...">
             </div>
 
-            <div class="pure-controls">
-              <label for="cb" class="pure-checkbox">
+            <div>
+              <label for="cb">
                   <input id="cb" type="checkbox"> I've read the terms and conditions
               </label>
 
-              <button type="submit" class="pure-button pure-button-primary">Submit</button>
+              <button type="submit" class="button primary">Submit</button>
             </div>
           </fieldset>
         </form>
@@ -520,32 +520,32 @@
 <code class="code-example-body prettyprint">
 <form class="aligned">
   <fieldset>
-    <div class="pure-control-group">
+    <div>
       <label for="name">Username</label>
       <input id="name" type="text" placeholder="Username">
     </div>
 
-    <div class="pure-control-group">
+    <div>
       <label for="password">Password</label>
       <input id="password" type="password" placeholder="Password">
     </div>
 
-    <div class="pure-control-group">
+    <div>
       <label for="email">Email Address</label>
       <input id="email" type="email" placeholder="Email Address">
     </div>
 
-    <div class="pure-control-group">
+    <div>
       <label for="foo">Supercalifragilistic Label</label>
       <input id="foo" type="text" placeholder="Enter something here...">
     </div>
 
-    <div class="pure-controls">
-      <label for="cb" class="pure-checkbox">
-          <input id="cb" type="checkbox"> I've read the terms and conditions
+    <div>
+      <label for="cb">
+        <input id="cb" type="checkbox"> I've read the terms and conditions
       </label>
 
-      <button type="submit" class="pure-button pure-button-primary">Submit</button>
+      <button type="submit" class="button primary">Submit</button>
     </div>
   </fieldset>
 </form>
@@ -560,7 +560,7 @@
     <div class="docs-section" id="lists">
       <h6 class="docs-header">Lists</h6>
       <div class="row docs-example">
-        <div class="six columns">
+        <div class="span-6">
           <ul>
             <li>Unordered lists have basic styles</li>
             <li>
@@ -573,7 +573,7 @@
             <li>Just more list items mama san</li>
           </ul>
         </div>
-        <div class="six columns">
+        <div class="span-6">
           <ol>
             <li>Ordered lists also have basic styles</li>
             <li>
@@ -815,10 +815,62 @@
   </div>
 </code>
 </pre>
+
+      <div class="docs-example">
+
+      <div class="navbar">
+        <div class="clearfix container">
+          <a class="left brand" href="/">FooApp</a>
+          <a href="#mobile-menu2" class="toggle-visible right menu-icon"></a>
+
+          <ul class="right menu" id="mobile-menu2">
+            <li><a href="#">Home</a></li>
+            <li><a href="/settings">Settings</a></li>
+            <li class="hover dropdown">
+              <span>Dropdown on hover<span class="caret"></span></span>
+
+              <ul>
+                <li><a href="#">Foo</a></li>
+                <li><a href="#">Bar</a></li>
+                <li><a href="#">Baz</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+
+      </div>
+
+<!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint">
+  <div class="navbar">
+    <div class="clearfix container">
+      <a class="left brand" href="/">FooApp</a>
+      <a href="#mobile-menu3" class="toggle-visible right menu-icon"></a>
+
+      <ul class="right menu" id="mobile-menu3">
+        <li><a href="#">Home</a></li>
+        <li><a href="/settings">Settings</a></li>
+        <li class="hover dropdown">
+          <span>Dropdown on hover<span class="caret"></span></span>
+
+          <ul>
+            <li><a href="#">Foo</a></li>
+            <li><a href="#">Bar</a></li>
+            <li><a href="#">Baz</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</code>
+</pre>
 <!-- ————————————————————————————————————————————————————— -->
 
     </div>
-
 
     <!-- Utilities and Misc. -->
     <div class="docs-section" id="utilities">
@@ -870,7 +922,7 @@
         <a class="example-screenshot-wrapper" target="_blank" href="examples/landing">
           <img class="example-screenshot" src="images/examples/landing.jpg">
         </a>
-        <div class="one-half offset-by-one-half column">
+        <div class="span-one-half offset-one-half column">
           <h6 class="example-header">Demo Landing Page</h6>
           <p class="example-description">This template is an example of how easy it can be to create a landing page with just the Skeleton grid and a few custom styles. The entire demo is ~150 lines of CSS including comments (most of which is positioning the phones at the top).</p>
           <a class="button" href="examples/landing" target="_blank">Demo</a>
@@ -881,7 +933,7 @@
         <div class="example-screenshot-wrapper">
           <div class="example-screenshot coming-soon"></div>
         </div>
-        <div class="one-half offset-by-one-half column">
+        <div class="span-one-half offset-one-half column">
           <h6 class="example-header">More Coming Soon!</h6>
           <p class="example-description">More examples will be added to help anyone get started or more familiar with how Skeleton works. The goal is education. If you're more interested in real, live examples of Skeleton sites, I'll be creating a "Built on Skeleton" list soon!</p>
         </div>

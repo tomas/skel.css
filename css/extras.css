@@ -223,6 +223,7 @@ a.close-button {
 
 .navbar > .container {
   width: 100%;
+  padding: 0;
 }
 
 .menu li {
@@ -319,8 +320,8 @@ a.close-button {
   right: 0;
 }
 
-.hover.dropdown:hover {
-  background: #f4f4f4;
+.hover.dropdown:hover > span {
+  color: #1EAEDB;
 }
 
 .hover.dropdown:hover ul {
@@ -335,9 +336,9 @@ a.close-button {
 .menu-icon {
   display: none;
   position: relative;
-  font-size: 21px;
-  padding: 13px 16px;
-  margin: 15px;
+  font-size: 19px;
+  padding: 11px 14px;
+  margin: 16px;
   text-indent: -9999px;
   background: transparent;
   border: none;
@@ -349,10 +350,10 @@ a.close-button {
   position: absolute;
   top: 0.3em;
   left: 0.3em;
-  width: 0.9em;
-  height: 0.125em;
-  border-top: 0.375em double #666;
-  border-bottom: 0.13em solid #666;
+  width: 18px;
+  height: 3px;
+  border-top: 7px double #666;
+  border-bottom: 2px solid #666;
 }
 
 .caret {
@@ -399,7 +400,6 @@ a.close-button {
 .dark .menu a:focus,
 .dark .dropdown:hover {
   color: #1EAEDB;
-  background: #222;
 }
 
 .dark .menu-icon:before {
@@ -426,6 +426,10 @@ a.close-button {
 
   .menu li {
     display: block; /* or inherit */
+  }
+
+  .menu li {
+    background: #fff;
   }
 
   .dark .menu li {

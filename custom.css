@@ -20,8 +20,7 @@
   display: block;
   text-align: center;
   margin: 2.5rem auto 0; }
-.example-grid .column,
-.example-grid .columns {
+.example-grid .row > * {
   background: #EEE;
   text-align: center;
   border-radius: 4px;
