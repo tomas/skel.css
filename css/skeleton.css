@@ -39,9 +39,12 @@ html {
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
+  color: #222; }
+
+body, label, input, textarea, select, button {
   font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-weight: 300;
-  color: #222; }
+}
 
 pre, code {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
