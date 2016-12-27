@@ -34,11 +34,20 @@
 /* alerts
 --------------------------------------*/
 
-.alert {
+.alert,
+.alert-notice,
+.alert-success,
+.alert-warning,
+.alert-danger,
+.alert-error {
   position: relative;
-  padding: 0 10px 0 15px;
-  line-height: 42px;
-  margin-bottom: 20px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+}
+
+.alert > :last-child {
+  margin-bottom: 0;
 }
 
 .alert label {
@@ -101,7 +110,8 @@
 
 .close-button {
   display: inline-block;
-  width: 20px;
+  width: 14px;
+  line-height: 24px;
   text-align: center;
   color: inherit;
   -webkit-appearance: none;
@@ -407,29 +417,20 @@ a.brand:hover,
   border-color: #ccc;
 }
 
-
 @media (max-width: 767px) {
 
-  .navbar .menu {
-    display: none;
-  }
-
-  .navbar .menu.visible,
-  .navbar .menu:target {
+  .menu.visible,
+  .menu:target {
     display: inherit;
     width: 100%;
-/*    float: none !important; */
+    float: none !important; /* without this it pushes below */
   }
 
   .menu-icon {
     display: inherit;
   }
 
-  .menu li {
-    display: block; /* or inherit */
-  }
-
-  .menu li {
+  .menu.visible li {
     background: #fff;
   }
 
@@ -438,7 +439,7 @@ a.brand:hover,
   }
 
   .visible.menu li {
-    display: block;
+    display: block; /* or inherit */
   }
 
   .dropdown:hover ul {
