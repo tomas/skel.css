@@ -269,6 +269,7 @@ a.close-button {
   color: #222;
 }
 
+a.brand:hover,
 .menu a:hover,
 .menu a:focus {
   color: #1EAEDB;
