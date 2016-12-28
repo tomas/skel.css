@@ -1,31 +1,43 @@
 /* alerts
 --------------------------------------*/
 
+input[type=submit].primary,
+button.primary,
 .button.primary {
   color: rgb(0, 120, 231);
   border-color: rgb(0, 120, 231);
 }
 
+input[type=submit].selected,
+button.selected,
 .button.selected {
   color: #345fcb;
   border-color: #345fcb;
 }
 
+input[type=submit].secondary,
+button.secondary,
 .button.secondary {
   border-color: rgb(126, 159, 177);
   color: rgb(88, 136, 162);
 }
 
+input[type=submit].danger,
+button.danger,
 .button.danger {
   color: rgb(214, 86, 75);
   border-color: rgb(214, 86, 75);
 }
 
+input[type=submit].success,
+button.success,
 .button.success {
   color: rgb(64, 189, 79);
   border-color: rgb(64, 189, 79);
 }
 
+input[type=submit].warning,
+button.warning,
 .button.warning {
   color: rgb(255, 163, 0);
   border-color: rgb(255, 163, 0);
@@ -155,6 +167,230 @@ a.close-button {
   opacity: 1;
 }
 
+/* menu
+-------------------------------------------------------------*/
+
+.navbar {
+  display: block;
+  width: 100%;
+  height: 5.5rem; /* same as a element line-height */
+  background: #fff;
+  z-index: 99;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.navbar > .container {
+  width: 100%;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+  position: relative;
+  margin-bottom: 0;
+}
+
+.navbar .menu {
+  margin-bottom: 0;
+}
+
+/* Initial menus should be inline-block so that they are horizontal */
+.navbar .menu li,
+.menu.horizontal li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/* Submenus should still be display: block; */
+.navbar .dropdown li,
+.menu.horizontal .dropdown li {
+  display: block;
+  margin-bottom: 0;
+}
+
+.menu .item {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  padding: 0 18px;
+  line-height: 5.5rem;  /* same as a .navbar line-height */
+  color: #222;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #1EAEDB;
+}
+
+.menu a:active {
+  color: #33C3F0;
+}
+
+.menu .button:hover {
+  color: inherit;
+}
+
+/* dropdown
+----------------------------------------------- */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 3.5em;
+  margin: 0em;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.dropdown li {
+  z-index: 100;
+  background-color: #fafafa;
+  min-width: 150px;
+  border: 1px solid #eee;
+  border-bottom: none;
+}
+
+.dropdown li:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.dark .dropdown li {
+  border-color: #111;
+}
+
+.right.dropdown ul {
+  left: auto;
+  right: 0;
+}
+
+.hover.dropdown:hover > .item {
+  /* color: #1EAEDB; */
+}
+
+.hover.dropdown:hover ul {
+  display: block;
+  visibility: visible;
+}
+
+/* menu icon & caret
+----------------------------------------------- */
+
+.menu-icon {
+  display: none;
+  position: relative;
+  font-size: 19px;
+  padding: 11px 14px;
+  margin: 16px;
+  text-indent: -9999px;
+  background: transparent;
+  border: none;
+  height: 1px;
+}
+
+.menu-icon:before {
+  content: "";
+  position: absolute;
+  top: 0.3em;
+  left: 0.3em;
+  width: 18px;
+  height: 3px;
+  border-top: 7px double #666;
+  border-bottom: 2px solid #666;
+}
+
+.caret {
+  display: inline-block;
+  padding: 0;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+}
+
+.dropdown .caret {
+  margin-top: 25px;
+}
+
+.dark .caret {
+  border-top-color: #666;
+}
+
+/* black navbar
+----------------------------------------------- */
+
+.dark.navbar {
+  border-color: #333;
+}
+
+.dark.navbar,
+.dark .dropdown li {
+  background: #1b1b1b;
+}
+
+.dark .item {
+  color: #999;
+}
+
+.dark.navbar a:hover,
+.dark.navbar a:focus,
+.dark .dropdown:hover {
+  color: #1EAEDB;
+}
+
+.dark .menu-icon:before {
+  border-color: #ccc;
+}
+
+@media (max-width: 767px) {
+
+  .menu.visible,
+  .menu:target {
+    display: inherit;
+    width: 100%;
+    float: none !important; /* without this it pushes below */
+    clear: both;
+    position: relative;
+    z-index: 1;
+  }
+
+  .menu-icon {
+    display: inherit;
+  }
+
+  .menu.visible li {
+    background: #fff;
+  }
+
+  .dark .menu li {
+    background: #1b1b1b;
+  }
+
+  .visible.menu li {
+    display: block; /* or inherit */
+  }
+
+  .dropdown:hover ul {
+    display: none; /* no support for responsive submenus yet */
+  }
+
+}
+
 
 /* tabs
 ----------------------------------------------- */
@@ -216,234 +452,4 @@ a.close-button {
 
 .pager .disabled {
   opacity: 0.5;
-}
-
-/* menu
--------------------------------------------------------------*/
-
-.navbar {
-  display: block;
-  width: 100%;
-  height: 5.5rem; /* same as a element line-height */
-  background: #fff;
-  z-index: 99;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.navbar > .container {
-  width: 100%;
-  padding: 0;
-}
-
-.menu li {
-  list-style: none;
-  position: relative;
-  margin-bottom: 0;
-}
-
-.navbar .menu {
-  margin-bottom: 0;
-}
-
-/* Initial menus should be inline-block so that they are horizontal */
-.navbar .menu li,
-.menu.horizontal li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  vertical-align: middle;
-}
-
-/* Submenus should still be display: block; */
-.navbar .dropdown li,
-.menu.horizontal .dropdown li {
-  display: block;
-  margin-bottom: 0;
-}
-
-.menu a,
-.menu span,
-.navbar .brand {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  white-space: nowrap;
-  text-transform: uppercase;
-
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: .2rem;
-  padding: 0 18px;
-  line-height: 5.5rem;  /* same as a .navbar line-height */
-  color: #222;
-}
-
-a.brand:hover,
-.menu a:hover,
-.menu a:focus {
-  color: #1EAEDB;
-}
-
-.menu a:active {
-  color: #33C3F0;
-}
-
-.menu .button:hover {
-  color: inherit;
-}
-
-/* dropdown
------------------------------------------------ */
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown ul {
-  z-index: 100;
-  position: absolute;
-  left: 0;
-  top: 3.5em;
-  margin: 0em;
-  display: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-.dropdown li {
-  z-index: 100;
-  background-color: #fafafa;
-  min-width: 150px;
-  border: 1px solid #eee;
-  border-bottom: none;
-}
-
-.dropdown li:last-child {
-  border-bottom: 1px solid #eee;
-}
-
-.dark .dropdown li {
-  border-color: #111;
-}
-
-.right.dropdown ul {
-  left: auto;
-  right: 0;
-}
-
-.hover.dropdown:hover > span {
-  color: #1EAEDB;
-}
-
-.hover.dropdown:hover ul {
-  display: block;
-  visibility: visible
-}
-
-
-/* menu icon & caret
------------------------------------------------ */
-
-.menu-icon {
-  display: none;
-  position: relative;
-  font-size: 19px;
-  padding: 11px 14px;
-  margin: 16px;
-  text-indent: -9999px;
-  background: transparent;
-  border: none;
-  height: 1px;
-}
-
-.menu-icon:before {
-  content: "";
-  position: absolute;
-  top: 0.3em;
-  left: 0.3em;
-  width: 18px;
-  height: 3px;
-  border-top: 7px double #666;
-  border-bottom: 2px solid #666;
-}
-
-.caret {
-  display: inline-block !important;
-  padding: 0 !important;
-  width: 0;
-  height: 0;
-  vertical-align: top;
-  border-top: 4px solid #000000;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  content: "";
-}
-
-.dropdown .caret {
-  margin-top: 25px;
-  margin-left: 10px;
-}
-
-.dark .caret {
-  border-top-color: #666;
-}
-
-/* black navbar
------------------------------------------------ */
-
-.dark.navbar {
-  border-color: #333;
-}
-
-.dark.navbar,
-.dark .dropdown li {
-  background: #1b1b1b;
-}
-
-.dark .menu a,
-.dark .menu span,
-.dark .brand {
-  color: #999;
-}
-
-.dark a.brand:hover,
-.dark .menu a:hover,
-.dark .menu a:focus,
-.dark .dropdown:hover {
-  color: #1EAEDB;
-}
-
-.dark .menu-icon:before {
-  border-color: #ccc;
-}
-
-@media (max-width: 767px) {
-
-  .menu.visible,
-  .menu:target {
-    display: inherit;
-    width: 100%;
-    float: none !important; /* without this it pushes below */
-  }
-
-  .menu-icon {
-    display: inherit;
-  }
-
-  .menu.visible li {
-    background: #fff;
-  }
-
-  .dark .menu li {
-    background: #1b1b1b;
-  }
-
-  .visible.menu li {
-    display: block; /* or inherit */
-  }
-
-  .dropdown:hover ul {
-    display: none; /* no support for responsive submenus yet */
-  }
-
 }

@@ -616,8 +616,25 @@
     <div class="docs-section" id="code">
       <h6 class="docs-header">Code</h6>
       <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+
       <div class="docs-example">
-<pre><code>.some-class {
+        <p>Un poco de código inline como este: <code>$ sh foo.sh 2> /dev/null</code> funciona bien.</p>
+      </div>
+
+      <div class="docs-example">
+        <p>Un comando con varias lineas se pone en un pre:</p>
+
+        <pre>curl \
+  -i \
+  -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdXR" \
+  http://localhost:5001/v1</pre>
+      </div>
+
+      <div class="docs-example">
+        <p>Y para que tenga fondo se mete un code dentro del pre:</p>
+
+
+<pre><code>.content {
   background-color: red;
 }</code></pre>
       </div>
@@ -625,11 +642,9 @@
 
 <!-- CODE EXAMPLE ———————————————————————————————————————— -->
 <pre class="code-example">
-<code class="code-example-body prettyprint"><pre><code>.some-class {
+<code class="code-example-body prettyprint"><pre><code>.content {
   background-color: red;
 }</code></pre>
-
-<!-- Remember every whitespace and break will be preserved in a <pre>, including indentation in your code -->
 </code>
 </pre>
 <!-- ————————————————————————————————————————————————————— -->
@@ -770,18 +785,18 @@
           <a href="#mobile-menu2" class="toggle-visible right menu-icon"></a>
 
           <ul class="right menu hidden-phone" id="mobile-menu2">
-            <li><a href="#">Home</a></li>
-            <li><a href="/settings">Settings</a></li>
+            <li><a class="item" href="#">Home</a></li>
+            <li><a class="item" href="/settings">Settings</a></li>
             <li class="hover dropdown">
-              <span>Dropdown on hover<span class="caret"></span></span>
+              <span class="item">Dropdown on hover<i class="caret"></i></span>
 
               <ul>
-                <li><a href="#">Foo</a></li>
-                <li><a href="#">Bar</a></li>
-                <li><a href="#">Baz</a></li>
+                <li><a class="item" href="#">Foo</a></li>
+                <li><a class="item" href="#">Bar</a></li>
+                <li><a class="item" href="#">Baz</a></li>
               </ul>
             </li>
-            <li><a href="#">Logout</a></li>
+            <li><a class="item" href="#">Logout</a></li>
           </ul>
         </div>
       </div>
@@ -800,7 +815,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="/settings">Settings</a></li>
         <li class="hover dropdown">
-          <span>Dropdown on hover<span class="caret"></span></span>
+          <span>Dropdown on hover<i class="caret"></i></span>
 
           <ul>
             <li><a href="#">Foo</a></li>
@@ -824,18 +839,18 @@
       <a href="#menu2" class="toggle-visible right menu-icon"></a>
 
       <ul class="right menu hidden-phone" id="menu2">
-        <li><a href="#">Home</a></li>
-        <li><a href="/settings">Settings</a></li>
+        <li><a class="item" href="#">Home</a></li>
+        <li><a class="item" href="/settings">Settings</a></li>
         <li class="hover dropdown">
-          <span>Dropdown on hover<span class="caret"></span></span>
+          <span class="item">Dropdown on hover<i class="caret"></i></span>
 
           <ul>
-            <li><a href="#">Foo</a></li>
-            <li><a href="#">Bar</a></li>
-            <li><a href="#">Baz</a></li>
+            <li><a class="item" href="#">Foo</a></li>
+            <li><a class="item" href="#">Bar</a></li>
+            <li><a class="item" href="#">Baz</a></li>
           </ul>
         </li>
-        <li><a href="#">Logout</a></li>
+        <li><a class="item" href="#">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -852,18 +867,18 @@
       <a href="#menu2" class="toggle-visible right menu-icon"></a>
 
       <ul class="right menu hidden-phone" id="menu2">
-        <li><a href="#">Home</a></li>
-        <li><a href="/settings">Settings</a></li>
+        <li><a class="item" href="#">Home</a></li>
+        <li><a class="item" href="/settings">Settings</a></li>
         <li class="hover dropdown">
           <span>Dropdown on hover<span class="caret"></span></span>
 
           <ul>
-            <li><a href="#">Foo</a></li>
-            <li><a href="#">Bar</a></li>
-            <li><a href="#">Baz</a></li>
+            <li><a class="item" href="#">Foo</a></li>
+            <li><a class="item" href="#">Bar</a></li>
+            <li><a class="item" href="#">Baz</a></li>
           </ul>
         </li>
-        <li><a href="#">Logout</a></li>
+        <li><a class="item" href="#">Logout</a></li>
       </ul>
     </div>
   </div>
