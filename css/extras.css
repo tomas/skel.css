@@ -53,7 +53,7 @@ button.warning,
 .alert-danger,
 .alert-error {
   position: relative;
-  padding: 8px 15px;
+  padding: 8px 10px;
   margin-bottom: 15px;
   border: 1px solid #eee;
 }
