@@ -291,7 +291,7 @@ a.close-button {
 .menu-icon:before {
   display: inherit;
   position: relative;
-  margin: 23px 20px;
+  margin: 23px 20px 22px;
   font-size: 18px;
   content: "";
   cursor: pointer;
