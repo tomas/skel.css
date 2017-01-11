@@ -99,7 +99,7 @@ img {
 
   .span-3,
   .span-one-fourth,
-  .padded.four.columns       { width: 22%;            }
+  .padded.four.columns > *   { width: 22%;            }
 
   .span-4,
   .span-one-third,
@@ -121,21 +121,21 @@ img {
   /* offsets
   ---------------------------------------------------*/
 
-  .offset-1                  { margin-left: 8.66666666667%; }
-  .offset-2                  { margin-left: 17.3333333333%; }
+  .offset-1                  { margin-left: 8.66666666667% !important }
+  .offset-2                  { margin-left: 17.3333333333% !important }
   .offset-3,
-  .offset-one-fourth         { margin-left: 26%;            }
+  .offset-one-fourth         { margin-left: 26% !important            }
   .offset-4,
-  .offset-one-third          { margin-left: 34.6666666667%; }
-  .offset-5                  { margin-left: 43.3333333333%; }
+  .offset-one-third          { margin-left: 34.6666666667% !important }
+  .offset-5                  { margin-left: 43.3333333333% !important }
   .offset-6,
-  .offset-one-half           { margin-left: 52%;            }
-  .offset-7                  { margin-left: 60.6666666667%; }
+  .offset-one-half           { margin-left: 52% !important            }
+  .offset-7                  { margin-left: 60.6666666667% !important }
   .offset-8,
-  .offset-two-thirds         { margin-left: 69.3333333333%; }
-  .offset-9                  { margin-left: 78.0%;          }
-  .offset-10                 { margin-left: 86.6666666667%; }
-  .offset-11                 { margin-left: 95.3333333333%; }
+  .offset-two-thirds         { margin-left: 69.3333333333% !important }
+  .offset-9                  { margin-left: 78.0% !important          }
+  .offset-10                 { margin-left: 86.6666666667% !important }
+  .offset-11                 { margin-left: 95.3333333333% !important }
 }
 
 
