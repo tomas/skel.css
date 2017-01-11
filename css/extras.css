@@ -288,7 +288,7 @@ a.close-button {
 /* menu icon & caret
 ----------------------------------------------- */
 
-.menu-icon {
+.menu-icon:before {
   display: none;
   position: relative;
   margin: 21px 20px;
@@ -297,8 +297,8 @@ a.close-button {
   cursor: pointer;
   width: 1em;
   height: 0.125em;
-  border-top: 0.375em double #ccc;
-  border-bottom: 0.125em solid #ccc;
+  border-top: 0.375em double #666;
+  border-bottom: 0.125em solid #666;
 }
 
 .caret {
@@ -359,7 +359,7 @@ a.close-button {
     z-index: 1;
   }
 
-  .menu-icon {
+  .menu-icon:before {
     display: inherit;
   }
 
