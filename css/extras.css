@@ -314,7 +314,7 @@ a.close-button {
 }
 
 .dropdown .caret {
-  margin-top: 25px;
+  margin: 25px 5px 0;
 }
 
 .dark .caret {
