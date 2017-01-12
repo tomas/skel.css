@@ -180,6 +180,10 @@ a.close-button {
   border-bottom: 1px solid #eee;
 }
 
+.navbar > .container {
+  padding: 0;
+}
+
 .menu li {
   list-style: none;
   position: relative;
@@ -215,7 +219,7 @@ a.close-button {
   font-size: 11px;
   font-weight: 500;
   letter-spacing: .2rem;
-  padding: 0 18px;
+  padding: 0 20px;
   line-height: 55px;  /* same as a .navbar line-height */
   color: #222;
 }
