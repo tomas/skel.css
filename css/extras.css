@@ -180,11 +180,6 @@ a.close-button {
   border-bottom: 1px solid #eee;
 }
 
-.navbar > .container {
-  width: 100%;
-  padding: 0;
-}
-
 .menu li {
   list-style: none;
   position: relative;

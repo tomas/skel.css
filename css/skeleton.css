@@ -70,12 +70,6 @@ img { max-width: 100%; }
   box-sizing: border-box;
 }
 
-/* For devices larger than 400px */
-@media (min-width: 400px) {
-  .container {
-    width: 90%;
-    padding: 0; }
-}
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
@@ -263,6 +257,7 @@ textarea:focus,
 select:focus {
   border: 1px solid #33C3F0;
   outline: 0; }
+
 label,
 legend {
   display: block;
@@ -279,6 +274,13 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  color: #999;
+  background-color: #f6f6f6;
+}
 
 select {
   border-radius: 0; /* chrome osx */
