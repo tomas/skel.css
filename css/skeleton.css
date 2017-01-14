@@ -70,9 +70,8 @@ img { max-width: 100%; }
   box-sizing: border-box;
 }
 
-
-/* For devices larger than 550px */
-@media (min-width: 550px) {
+/* For devices larger than 750px */
+@media (min-width: 750px) {
   .row > *,
   .padded.columns > * {
     margin-left: 4%;
