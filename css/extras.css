@@ -188,6 +188,7 @@ a.close-button {
   list-style: none;
   position: relative;
   margin-bottom: 0;
+  vertical-align: middle;
 }
 
 .navbar .menu {
@@ -206,7 +207,6 @@ a.close-button {
 .navbar .dropdown li,
 .menu.horizontal .dropdown li {
   display: block;
-  margin-bottom: 0;
 }
 
 .menu .item {
@@ -224,12 +224,19 @@ a.close-button {
   color: #222;
 }
 
+.menu .button,
+.menu button {
+  margin-right: 20px;
+}
+
 .menu a:hover,
 .menu a:focus {
   color: #1EAEDB;
 }
 
-.menu a:active {
+.menu a:active,
+.menu a.active,
+.menu .active a {
   color: #33C3F0;
 }
 
