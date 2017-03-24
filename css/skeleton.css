@@ -261,14 +261,18 @@ label,
 legend {
   display: block;
   margin-bottom: .5rem; }
+
 legend { color: #999; }
+
 fieldset {
   padding: 0;
   margin: 0;
   border-width: 0; }
+
 input[type="checkbox"],
 input[type="radio"] {
   display: inline; }
+
 label > .label-body {
   display: inline-block;
   margin-left: .5rem;
@@ -400,6 +404,7 @@ button,
 
 /* Misc
 -------------------------------------------------- */
+
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;

@@ -297,13 +297,13 @@ a.close-button {
 .menu-icon:before {
   display: inherit;
   position: relative;
-  margin: 23px 20px 22px;
+  margin: 21px 20px;
   font-size: 18px;
   content: "";
   cursor: pointer;
-  width: 1em;
-  height: 0.125em;
-  border-top: 0.375em double #666;
+  width: 20px;
+  height: 0.175em;
+  border-top: 0.4em double #666;
   border-bottom: 0.125em solid #666;
 }
 
