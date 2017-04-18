@@ -241,8 +241,7 @@ textarea, select {
 
 textarea {
   min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px; }
+  line-height: 1.6; }
 
 input[type="email"]:focus,
 input[type="number"]:focus,
