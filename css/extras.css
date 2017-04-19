@@ -286,6 +286,7 @@ a.close-button {
   /* color: #1EAEDB; */
 }
 
+.dropdown.active ul,
 .hover.dropdown:hover ul {
   display: block;
   visibility: visible;
