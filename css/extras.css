@@ -378,8 +378,4 @@ a.close-button {
     display: block; /* or inherit */
   }
 
-  .dropdown:hover ul {
-    display: none; /* no support for responsive submenus yet */
-  }
-
 }
