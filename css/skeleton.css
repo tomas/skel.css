@@ -277,6 +277,10 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
+input::placeholder {
+  color: #ccc;
+}
+
 input:disabled,
 select:disabled,
 textarea:disabled {
