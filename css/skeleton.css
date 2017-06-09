@@ -277,8 +277,9 @@ label > .label-body {
   margin-left: .5rem;
   font-weight: normal; }
 
-input::placeholder {
-  color: #ccc;
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
 }
 
 input:disabled,
@@ -337,6 +338,7 @@ dd { margin: 0 0 1.5rem 0; }
 
 /* Code
 -------------------------------------------------- */
+
 code {
   padding: .3rem .6rem;
   font-size: 90%;
