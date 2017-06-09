@@ -295,18 +295,49 @@ a.close-button {
 /* menu icon & caret
 ----------------------------------------------- */
 
-.menu-icon:before {
-  display: inherit;
+.menu-icon {
+  height: 2px;
   position: relative;
-  margin: 21px 20px;
-  font-size: 18px;
-  content: "";
-  cursor: pointer;
+  /* transition: background .2s ease-out; */
   width: 20px;
-  height: 0.175em;
-  border-top: 0.4em double #666;
-  border-bottom: 0.125em solid #666;
+  margin: 26px 20px;
+  font-size: 18px;
+  cursor: pointer;
 }
+
+.menu-icon:before, .menu-icon:after {
+  content: '';
+  height: 100%;
+  position: absolute;
+  /* transition: all .2s ease-out; */
+  width: 100%;
+  top: -5px;  
+}
+
+.menu-icon:after {
+  top: 5px;  
+}
+
+.menu-icon,
+.menu-icon:before, 
+.menu-icon:after {
+  display: block;
+  background-color: #666;
+}
+
+/*
+.menu-icon:active {
+  background: transparent;
+}
+
+.menu-icon:active:before {
+  transform: rotate(-45deg);
+}
+
+.menu-icon:active:after {
+  transform: rotate(45deg);
+}
+*/
 
 .caret {
   display: inline-block;
@@ -350,8 +381,10 @@ a.close-button {
   color: #1EAEDB;
 }
 
-.dark .menu-icon:before {
-  border-color: #ccc;
+.dark .menu-icon,
+.dark .menu-icon:before, 
+.dark .menu-icon:after {
+  background-color: #ccc;
 }
 
 @media (max-width: 767px) {
