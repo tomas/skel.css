@@ -295,49 +295,28 @@ a.close-button {
 /* menu icon & caret
 ----------------------------------------------- */
 
-.menu-icon {
-  height: 2px;
+.menu-icon:before,
+.menu-icon:after {
+  display: inherit;
   position: relative;
-  /* transition: background .2s ease-out; */
-  width: 20px;
-  margin: 26px 20px;
   font-size: 18px;
+  content: "";
   cursor: pointer;
+  width: 20px;
+  border-top: 2px solid #666;
 }
 
-.menu-icon:before, .menu-icon:after {
-  content: '';
-  height: 100%;
-  position: absolute;
-  /* transition: all .2s ease-out; */
-  width: 100%;
-  top: -5px;  
+.menu-icon:before {
+  height: 4px;
+  margin: 20px 20px 0;
+  border-bottom: 2px solid #666;
 }
 
 .menu-icon:after {
-  top: 5px;  
+  margin: 4px 20px 15px;
+  height: 6px;
+  border-top: 2px solid #666;
 }
-
-.menu-icon,
-.menu-icon:before, 
-.menu-icon:after {
-  display: block;
-  background-color: #666;
-}
-
-/*
-.menu-icon:active {
-  background: transparent;
-}
-
-.menu-icon:active:before {
-  transform: rotate(-45deg);
-}
-
-.menu-icon:active:after {
-  transform: rotate(45deg);
-}
-*/
 
 .caret {
   display: inline-block;
@@ -381,10 +360,9 @@ a.close-button {
   color: #1EAEDB;
 }
 
-.dark .menu-icon,
-.dark .menu-icon:before, 
+.dark .menu-icon:before,
 .dark .menu-icon:after {
-  background-color: #ccc;
+  border-color: #ccc;
 }
 
 @media (max-width: 767px) {
