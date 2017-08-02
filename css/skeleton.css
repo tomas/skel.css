@@ -505,6 +505,7 @@ hr {
 .invisible   { visibility: hidden; }
 .block       { display: block !important; }
 .inline      { display: inline-block !important; *display: inline; /*IE 6/7*/ }
+.nowrap      { white-space: nowrap; }
 
 .text-left   { text-align: left; }
 .text-center { text-align: center; }
