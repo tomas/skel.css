@@ -85,9 +85,12 @@ img { max-width: 100%; }
   .two.columns > *           { width: 50%; }
   .three.columns > *         { width: 33.333333%; }
   .four.columns > *          { width: 25%; }
+  .five.columns > *          { width: 20%; }
 
   .span-1                    { width: 4.66666666667%; }
   .span-2                    { width: 13.3333333333%; }
+
+  .padded.five.columns > *   { width: 19.5%;          }
 
   .span-3,
   .span-one-fourth,
@@ -204,7 +207,6 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 */
-
 
 /* Forms
 -------------------------------------------------- */
@@ -373,12 +375,14 @@ table {
 
 th,
 td {
-  padding: .5rem 1rem;
+  padding: 1rem;
   text-align: left;
   border-bottom: 1px solid #E1E1E1; }
+
 th:first-child,
 td:first-child {
   padding-left: 0; }
+
 th:last-child,
 td:last-child {
   padding-right: 0; }
