@@ -90,7 +90,7 @@ img { max-width: 100%; }
   .span-1                    { width: 4.66666666667%; }
   .span-2                    { width: 13.3333333333%; }
 
-  .padded.five.columns > *   { width: 19.5%;          }
+  .padded.five.columns > *   { width: 16.8%;          }
 
   .span-3,
   .span-one-fourth,
