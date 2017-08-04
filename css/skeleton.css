@@ -371,6 +371,7 @@ pre > code {
 table {
   width: 100%;
   background-color: transparent;
+  border-spacing: 0;
 }
 
 th,
@@ -395,6 +396,10 @@ textarea,
 select,
 fieldset {
   margin-bottom: 1.5rem; }
+
+table input, table select, table textarea {
+  margin-bottom: 0;
+}
 
 pre,
 blockquote,
