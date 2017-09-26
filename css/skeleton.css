@@ -446,7 +446,8 @@ hr {
 .container:after,
 .columns:after,
 .row:after,
-.clearfix:after {
+.clearfix:after,
+.cf:after {
   content: "";
   display: table;
   clear: both; }
