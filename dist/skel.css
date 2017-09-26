@@ -530,10 +530,6 @@ img { max-width: 100%; }
   box-sizing: border-box;
 }
 
-.container.row {
-  padding: 0;
-}
-
 /* For devices larger than 600px */
 @media (min-width: 600px) {
   .row > *,
