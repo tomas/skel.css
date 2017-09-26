@@ -2,7 +2,7 @@
 
 [ -z $(which csso) ] && echo "Please install csso: npm install -g csso" && exit 1
 
-rm -f dist
+rm -Rf dist
 mkdir dist
 
 cat css/normalize.css css/skeleton.css css/extras.css > dist/skel.css
