@@ -14,6 +14,6 @@ git commit -a -m "Updated build."
 git checkout gh-pages
 [ $? -ne 0 ] && echo "Stopping here." && exit 1
 
-git merge --ff-only master
-git push -f origin gh-pages
-git checkout master
+# git merge --ff-only master
+# git push -f origin gh-pages
+# git checkout master
