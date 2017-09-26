@@ -70,41 +70,46 @@ img { max-width: 100%; }
   box-sizing: border-box;
 }
 
+.container.row {
+  padding: 0;
+}
+
 /* For devices larger than 600px */
 @media (min-width: 600px) {
   .row > *,
-  .padded.columns > * {
+  .columns > * {
     margin-left: 4%;
   }
 
+  .full.columns > *,
   .row > *:first-child,
   .columns > *:first-child {
     margin-left: 0;
   }
 
-  .two.columns > *           { width: 50%; }
-  .three.columns > *         { width: 33.333333%; }
-  .four.columns > *          { width: 25%; }
-  .five.columns > *          { width: 20%; }
+  .two.full.columns   > *    { width: 50%; }
+  .three.full.columns > *    { width: 33.333333%; }
+  .four.full.columns  > *    { width: 25%; }
+  .five.full.columns  > *    { width: 20%; }
 
   .span-1                    { width: 4.66666666667%; }
   .span-2                    { width: 13.3333333333%; }
 
-  .padded.five.columns > *   { width: 16.8%;          }
+  .five.columns > *          { width: 16.8%;          }
 
   .span-3,
   .span-one-fourth,
-  .padded.four.columns > *   { width: 22%;            }
+  .four.columns > *          { width: 22%;            }
 
   .span-4,
   .span-one-third,
-  .padded.three.columns > *  { width: 30.6666666667%; }
+  .three.columns > *         { width: 30.6666666667%; }
 
   .span-5                    { width: 39.3333333333%; }
 
   .span-6,
   .span-one-half,
-  .padded.two.columns > *    { width: 48%;            }
+  .two.columns > *           { width: 48%;            }
 
   .span-7                    { width: 56.6666666667%; }
   .span-8,
@@ -131,6 +136,18 @@ img { max-width: 100%; }
   .offset-9                  { margin-left: 78.0% !important          }
   .offset-10                 { margin-left: 86.6666666667% !important }
   .offset-11                 { margin-left: 95.3333333333% !important }
+
+  .offset-1[class*="span-"]  { margin-left: 12.6666666667% !important }
+  .offset-2[class*="span-"]  { margin-left: 21.3333333333% !important }
+  .offset-3[class*="span-"]  { margin-left: 30% !important            }
+  .offset-4[class*="span-"]  { margin-left: 38.6666666667% !important }
+  .offset-5[class*="span-"]  { margin-left: 47.3333333333% !important }
+  .offset-6[class*="span-"]  { margin-left: 56% !important            }
+  .offset-7[class*="span-"]  { margin-left: 64.6666666667% !important }
+  .offset-8[class*="span-"]  { margin-left: 73.3333333333% !important }
+  .offset-9[class*="span-"]  { margin-left: 82.0% !important          }
+  .offset-10[class*="span-"] { margin-left: 90.6666666667% !important }
+  .offset-11[class*="span-"] { margin-left: 99.3333333333% !important }
 }
 
 

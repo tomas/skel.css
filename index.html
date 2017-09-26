@@ -16,12 +16,15 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="dist/skel.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/extras.css">
+  <!--<link rel="stylesheet" href="dist/skel.css">-->
   <link rel="stylesheet" href="web/custom.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="dist/images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <script>
@@ -41,13 +44,11 @@
   }
 
   $(function() {
-
     $('.toggle-visible').on('click', function(e){
       e.preventDefault();
       var target = $(this).attr('href');
       $(target).toggleClass('visible');
     })
-
 
     var $codeSnippets = $('.code-example-body');
     $codeSnippets.each(function() {
@@ -68,15 +69,15 @@
       <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
       <div class="value-props row">
         <div class="span-4 value-prop">
-          <img class="value-img" src="images/feather.svg">
+          <img class="value-img" src="web/feather.svg">
           Light as a feather at ~400 lines &amp; built with mobile in mind.
         </div>
         <div class="span-4 value-prop">
-          <img class="value-img" src="images/pens.svg">
+          <img class="value-img" src="web/pens.svg">
           Styles designed to be a starting point, not a UI framework.
         </div>
         <div class="span-4 value-prop">
-          <img class="value-img" src="images/watch.svg">
+          <img class="value-img" src="web/watch.svg">
           Quick to start with zero compiling or installing necessary.
         </div>
       </div>
@@ -264,9 +265,9 @@
     <div>Second column</div>
   </div>
 
-  <!-- if you add the 'padded' column, you'll get spacing in between them.
+  <!-- if you add the 'full' class, you'll columns without spacing in between them. -->
   <!-- for same column widths, set the parent class to one, two, three or four columns -->
-  <div class="padded two columns">
+  <div class="two full columns">
     <div>First column</div>
     <div>Second column</div>
   </div>
@@ -290,6 +291,11 @@
     <div class="offset-one-third span-two-thirds">1/3 Offset, 2/3 Width</div>
   </div>
 
+  <div class="row">
+    <div class="span-4">span-4</div>
+    <div class="offset-4 span-4">offset-4 span-4</div>
+  </div>
+
 </div>
 
 <!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
@@ -307,25 +313,30 @@
             <div>Second column</div>
           </div>
 
-          <div class="padded two columns">
-            <div>Padded first column</div>
-            <div>Padded second column</div>
+          <div class="two full columns">
+            <div>Full first column</div>
+            <div>Full second column</div>
           </div>
 
-          <div class="padded four columns">
+          <div class="four columns">
             <p>Hello</p>
             <p>there</p>
             <p>little</p>
             <p>friend</p>
           </div>
 
-          <div class="row">
+          <div class="container row">
             <div class="span-one-third">1/3</div>
             <div class="span-two-thirds">2/3</div>
           </div>
 
           <div class="row">
             <div class="offset-one-third span-two-thirds">1/3 Offset, 2/3 Width</div>
+          </div>
+
+          <div class="row">
+            <div class="span-4">span-4</div>
+            <div class="offset-4 span-4">offset-4 span-4</div>
           </div>
 
         </div>
