@@ -13,5 +13,5 @@ git checkout gh-pages
 [ $? -ne 0 ] && echo "Stopping here." && exit 1
 
 git merge --ff-only master
-git push origin gh-pages
+git push origin
 git checkout master
