@@ -4,7 +4,7 @@
 
 rm dist/skel*
 cat css/normalize.css css/skeleton.css css/extras.css > dist/skel.css
-csso dist/skel.css dist/skel.css
+csso dist/skel.css dist/skel.min.css
 
 git add dist
 git commit -a -m "Updated build."
