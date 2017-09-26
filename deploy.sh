@@ -1,14 +1,19 @@
-cd css
-rm -f all.css
-cat normalize.css skeleton.css extras.css > all.css
-cd -
+#!/bin/sh
 
-mv css build
+[ -z $(which csso) ] && echo "Please install csso: npm install -g csso" && exit 1
+
+rm -f dist
+mkdir dist
+
+cat css/normalize.css css/skeleton.css css/extras.css > dist/skel.css
+csso dist/skel.css dist/skel.css
+
+git add dist
+git commit -a -m "Updated build."
+
 git checkout gh-pages
 [ $? -ne 0 ] && echo "Stopping here." && exit 1
 
-rm -Rf dist/css
-mv build dist/css
-git commit -a -m "Updated build."
+git merge --ff-only master
 git push -f origin gh-pages
 git checkout master
