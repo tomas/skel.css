@@ -513,6 +513,11 @@ h6  { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 p   { margin-top: 0; }
 img { max-width: 100%; }
 
+abbr {
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
 /* Grid
 -------------------------------------------------- */
 .container {

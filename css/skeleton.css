@@ -34,6 +34,11 @@ pre, code {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
+abbr {
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
 /* Typography
 -------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
