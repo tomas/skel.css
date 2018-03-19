@@ -34,7 +34,7 @@ pre, code {
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-abbr {
+abbr[title] {
   text-decoration: none;
   border-bottom: dotted 1px;
 }
