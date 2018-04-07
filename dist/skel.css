@@ -1256,6 +1256,7 @@ a.close-button {
   z-index: 100;
   position: absolute;
   left: 0;
+  min-width: 100%;
   top: 3.5em;
   margin: 0em;
   display: none;
