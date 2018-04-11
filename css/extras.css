@@ -255,11 +255,15 @@ a.close-button {
   z-index: 100;
   position: absolute;
   left: 0;
-  min-width: 100%;
   top: 3.5em;
   margin: 0em;
   display: none;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ensure nested dropdowns use the full parent's width */
+li.dropdown ul {
+  min-width: 100%;
 }
 
 .dropdown li {
