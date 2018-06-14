@@ -20,16 +20,16 @@
   display: block;
   text-align: center;
   margin: 2.5rem auto 0; }
-.example-grid .row > *,
-.example-grid .columns > * {
+.example-grid .grid p,
+.example-grid .columns p {
   background: #EEE;
   text-align: center;
   border-radius: 4px;
   font-size: 1rem;
   text-transform: uppercase;
-  height: 30px;
-  line-height: 30px;
-  margin-bottom: .75rem;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;
   font-weight: 600;
   letter-spacing: .1rem; }
 .docs-example .row,
@@ -91,9 +91,7 @@
     margin-bottom: 7rem; }
   .value-img {
     margin-bottom: 1rem; }
-  .example-grid .row,
-  .example-grid .columns {
-    margin-bottom: 1.5rem; }
+
   .docs-section {
     padding: 6rem 0; }
   .example-send-yourself-copy {

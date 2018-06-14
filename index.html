@@ -68,15 +68,15 @@
       <h2 class="title">A dead simple, responsive boilerplate.</h2>
       <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a>
       <div class="value-props row">
-        <div class="span-4 value-prop">
+        <div class="width-4 value-prop">
           <img class="value-img" src="web/feather.svg">
           Light as a feather at ~400 lines &amp; built with mobile in mind.
         </div>
-        <div class="span-4 value-prop">
+        <div class="width-4 value-prop">
           <img class="value-img" src="web/pens.svg">
           Styles designed to be a starting point, not a UI framework.
         </div>
-        <div class="span-4 value-prop">
+        <div class="width-4 value-prop">
           <img class="value-img" src="web/watch.svg">
           Quick to start with zero compiling or installing necessary.
         </div>
@@ -169,180 +169,161 @@
       <h6 class="docs-header">The grid</h6>
       <p>The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser. </p>
       <div class="example-grid docs-example">
-        <div class="row">
-          <div class="span-1">One</div>
-          <div class="span-11">Eleven</div>
+        <div class="grid">
+          <div class="width-10"><p>10%</p></div>
+          <div class="width-90"><p>90%</p></div>
         </div>
-        <div class="row">
-          <div class="span-2">Two</div>
-          <div class="span-10">Ten</div>
+        <div class="grid">
+          <div class="width-20"><p>20%</p></div>
+          <div class="width-80"><p>80%</p></div>
         </div>
-        <div class="row">
-          <div class="span-3">Three</div>
-          <div class="span-9">Nine</div>
+        <div class="grid">
+          <div class="width-30"><p>30%</p></div>
+          <div class="width-70"><p>70%</p></div>
         </div>
-        <div class="row">
-          <div class="span-4">Four</div>
-          <div class="span-8">Eight</div>
+        <div class="grid">
+          <div class="width-40"><p>40%</p></div>
+          <div class="width-60"><p>60%</p></div>
         </div>
-        <div class="row">
-          <div class="span-5">Five</div>
-          <div class="span-7">Seven</div>
+        <div class="grid">
+          <div class="width-50"><p>50%</p></div>
+          <div class="width-50"><p>50%</p></div>
         </div>
-        <div class="row">
-          <div class="span-6">Six</div>
-          <div class="span-6">Six</div>
+        <div class="grid">
+          <div class="width-60"><p>60%</p></div>
+          <div class="width-40"><p>40%</p></div>
         </div>
-        <div class="row">
-          <div class="span-7">Seven</div>
-          <div class="span-5">Five</div>
+        <div class="grid">
+          <div class="width-70"><p>70%</p></div>
+          <div class="width-30"><p>30%</p></div>
         </div>
-        <div class="row">
-          <div class="span-8">Eight</div>
-          <div class="span-4 ">Four</div>
+        <div class="grid">
+          <div class="width-80"><p>80%</p></div>
+          <div class="width-20 "><p>20%</p></div>
         </div>
-        <div class="row">
-          <div class="span-9">Nine</div>
-          <div class="span-3">Three</div>
-        </div>
-        <div class="row">
-          <div class="span-10">Ten</div>
-          <div class="span-2">Two</div>
-        </div>
-        <div class="row">
-          <div class="span-11">Eleven</div>
-          <div class="span-1">One</div>
+        <div class="grid">
+          <div class="width-90"><p>90%</p></div>
+          <div class="width-10"><p>10%</p></div>
         </div>
       </div>
 
-      <br />
-      <p>As you would expect, 'offset-[num]' classes are also supported.</p>
-
-      <div class="example-grid docs-example">
-        <div class="row">
-          <div class="offset-1 span-11">Eleven</div>
-        </div>
-        <div class="row">
-          <div class="offset-2 span-10">Ten</div>
-        </div>
-        <div class="row">
-          <div class="offset-3 span-9">Nine</div>
-        </div>
-        <div class="row">
-          <div class="offset-4 span-8">Eight</div>
-        </div>
-        <div class="row">
-          <div class="offset-5 span-7">Seven</div>
-        </div>
-        <div class="row">
-          <div class="offset-6 span-6">Six</div>
-        </div>
-        <div class="row">
-          <div class="offset-7 span-5">Five</div>
-        </div>
-        <div class="row">
-          <div class="offset-8 span-4">Four</div>
-        </div>
-        <div class="row">
-          <div class="offset-9 span-3">Three</div>
-        </div>
-        <div class="row">
-          <div class="offset-10 span-2">Two</div>
-        </div>
-        <div class="row">
-          <div class="offset-11 span-1">One</div>
-        </div>
-      </div>
-
-<!-- CODE EXAMPLE ———————————————————————————————————————— -->
-<pre class="code-example">
-<code class="code-example-body prettyprint"><!-- .container is main centered wrapper -->
-<div class="container">
-
-  <!-- for same column widths, set the parent class to one, two, three or four columns -->
-  <div class="two columns">
-    <div>First column</div>
-    <div>Second column</div>
-  </div>
-
-  <!-- if you add the 'full' class, you'll columns without spacing in between them. -->
-  <!-- for same column widths, set the parent class to one, two, three or four columns -->
-  <div class="two full columns">
-    <div>First column</div>
-    <div>Second column</div>
-  </div>
-
-  <!-- columns don't have to be 'div' elements, by the way. any block element will do. -->
-  <div class="padded four columns">
-    <p>Hello</p>
-    <p>there</p>
-    <p>little</p>
-    <p>friend</p>
-  </div>
-
-  <!-- beside span-[num] classes, you can also use relative divisions. just make sure the parent has a 'row' class. -->
-  <div class="row">
-    <div class="span-one-third">1/3</div>
-    <div class="span-two-thirds">2/3</div>
-  </div>
-
-  <!-- these also work for offsets.  -->
-  <div class="row">
-    <div class="offset-one-third span-two-thirds">1/3 Offset, 2/3 Width</div>
-  </div>
-
-  <div class="row">
-    <div class="span-4">span-4</div>
-    <div class="offset-4 span-4">offset-4 span-4</div>
-  </div>
-
-</div>
-
-<!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
-</code>
-</pre>
-<!-- ————————————————————————————————————————————————————— -->
-
-  <p>The code above renders the following result:</p>
-
-      <div class="example-grid docs-example">
+        <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+        <pre class="code-example">
+        <code class="code-example-body prettyprint"><!-- .container is main centered wrapper -->
         <div class="container">
 
+          <!-- for same column widths, set the parent class to one, two, three or four columns -->
           <div class="two columns">
-            <div>First column</div>
-            <div>Second column</div>
+            <div><p>First column</p></div>
+            <div><p>Second column</p></div>
           </div>
 
+          <!-- if you add the 'full' class, you'll columns without spacing in between them. -->
+          <!-- for same column widths, set the parent class to one, two, three or four columns -->
           <div class="two full columns">
-            <div>Full first column</div>
-            <div>Full second column</div>
+            <div><p>Full first column</p></div>
+            <div><p>Full second column</p></div>
           </div>
 
+          <!-- columns don't have to be 'div' elements, by the way. any block element will do. -->
           <div class="four columns">
-            <p>Hello</p>
-            <p>there</p>
-            <p>little</p>
-            <p>friend</p>
+            <section><p>Hello</p></section>
+            <section><p>there</p></section>
+            <section><p>my old</p></section>
+            <section><p>friend</p></section>
           </div>
 
-          <div class="container row">
-            <div class="span-one-third">1/3</div>
-            <div class="span-two-thirds">2/3</div>
-          </div>
+          <!-- beside width-[num] classes, you can also use relative divisions. just make sure the parent has a 'grid' class. -->
+            <div class="grid">
+              <div class="one-third"><p>1/3</p></div>
+              <div class="two-thirds"><p>2/3</p></div>
+            </div>
 
-          <div class="row">
-            <div class="offset-one-third span-two-thirds">1/3 Offset, 2/3 Width</div>
-          </div>
+            <div class="grid">
+              <div class="width-30">
+                <div class="grid">
+                  <div class="one-half"><p>nested A 1/2</p></div>
+                  <div class="one-half"><p>nested A 1/2</p></div>
+                </div>
+              </div>
+              <div class="width-70">
+                <div class="grid">
+                  <div class="one-third"><p>nested B 1/3</p></div>
+                  <div class="two-thirds"><p>nested B 2/3</p></div>
+                </div>
+              </div>
+            </div>
 
-          <div class="row">
-            <div class="span-4">span-4</div>
-            <div class="offset-4 span-4">offset-4 span-4</div>
-          </div>
+            <div class="grid">
+              <div class="width-60 grid">
+                <div class="one-third"><p>nested C 1/3</p></div>
+                <div class="two-thirds"><p>nested C 2/3</p></div>
+              </div>
+              <div class="width-40 grid">
+                <div class="one-half"><p>nested D 1/2</p></div>
+                <div class="one-half"><p>nested D 1/2</p></div>
+              </div>
+            </div>
 
         </div>
-      </div>
+        </code>
+        </pre>
+        <!-- ————————————————————————————————————————————————————— -->
 
-    </div>
+      <p>The code above renders the following result:</p>
+
+      <div class="example-grid docs-example">
+        <div class="two columns">
+          <div><p>First column</p></div>
+          <div><p>Second column</p></div>
+        </div>
+
+        <div class="two full columns">
+          <div><p>Full first column</p></div>
+          <div><p>Full second column</p></div>
+        </div>
+
+        <div class="four columns">
+          <div><p>Hello</p></div>
+          <div><p>there</p></div>
+          <div><p>my old</p></div>
+          <div><p>friend</p></div>
+        </div>
+
+        <div class="grid">
+          <div class="one-third"><p>1/3</p></div>
+          <div class="two-thirds"><p>2/3</p></div>
+        </div>
+
+        <div class="grid">
+          <div class="width-30">
+            <div class="grid">
+              <div class="one-half"><p>nested A 1/2</p></div>
+              <div class="one-half"><p>nested A 1/2</p></div>
+            </div>
+          </div><!-- /width-30 -->
+          <div class="width-70">
+            <div class="grid">
+              <div class="one-third"><p>nested B 1/3</p></div>
+              <div class="two-thirds"><p>nested B 2/3</p></div>
+            </div>
+          </div><!-- /width-70 -->
+        </div>
+
+        <div class="grid">
+          <div class="width-60 grid">
+            <div class="one-third"><p>nested C 1/3</p></div>
+            <div class="two-thirds"><p>nested C 2/3</p></div>
+          </div><!-- /width-70 -->
+          <div class="width-40 grid">
+            <div class="one-half"><p>nested D 1/2</p></div>
+            <div class="one-half"><p>nested D 1/2</p></div>
+          </div><!-- /width-30 -->
+        </div>
+
+      </div><!-- /docs-example -->
+
+    </div><!-- / Grid section -->
 
     <!-- Typography -->
     <div class="docs-section" id="typography">
@@ -350,11 +331,11 @@
       <p>Type is all set with the <code>rems</code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html&gt;</code> font-size property. Out of the box, Skeleton never changes the <code>&lt;html&gt;</code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1&gt;</code> with <code>5.0rem</code>font-size just means <code>50px</code>.</p>
       <div class="docs-example">
         <div class="row">
-          <div class="span-6">
+          <div class="width-6">
             <p><strong>The typography base</strong> is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all obviously included.</p>
             <p><strong>Headings</strong> create a family of distinct sizes each with specific <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
           </div>
-          <div class="span-6">
+          <div class="width-6">
             <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 50rem</span></h1>
             <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 42rem</span></h2>
             <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 36rem</span></h3>
@@ -439,11 +420,11 @@
       <div class="docs-example docs-example-forms">
         <form>
           <div class="row">
-            <div class="span-6">
+            <div class="width-6">
               <label for="exampleEmailInput">Your email</label>
               <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
             </div>
-            <div class="span-6">
+            <div class="width-6">
               <label for="exampleRecipientInput">Reason for contacting</label>
               <select class="u-full-width" id="exampleRecipientInput">
                 <option value="Option 1">Questions</option>
@@ -468,11 +449,11 @@
 <code class="code-example-body prettyprint"><!-- The above form looks like this -->
 <form>
   <div class="row">
-    <div class="span-6">
+    <div class="width-6">
       <label for="exampleEmailInput">Your email</label>
       <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
     </div>
-    <div class="span-6">
+    <div class="width-6">
       <label for="exampleRecipientInput">Reason for contacting</label>
       <select class="u-full-width" id="exampleRecipientInput">
         <option value="Option 1">Questions</option>
@@ -650,7 +631,7 @@
     <div class="docs-section" id="lists">
       <h6 class="docs-header">Lists</h6>
       <div class="row docs-example">
-        <div class="span-6">
+        <div class="width-6">
           <ul>
             <li>Unordered lists have basic styles</li>
             <li>
@@ -663,7 +644,7 @@
             <li>Just more list items mama san</li>
           </ul>
         </div>
-        <div class="span-6">
+        <div class="width-6">
           <ol>
             <li>Ordered lists also have basic styles</li>
             <li>
@@ -1013,9 +994,6 @@
 .text-right  { text-align: right; }
 .text-upper  { text-transform: uppercase; }
 .text-lower  { text-transform: lowercase; }
-.text-bold   { font-weight: bold; }
-.text-italic { font-style: italic; }
-.text-normal { font-style: normal; }
 
 .hidden-phone { }
 .visible-phone { }

@@ -1,5 +1,5 @@
 /*
-* Skel v0.2
+* Skel v0.3
 * Copyright 2016, Tomas Pollak
 * Based on Skeleton CSS by Dave Gamache
 */
@@ -60,97 +60,72 @@ img { max-width: 100%; }
 
 /* Grid
 -------------------------------------------------- */
+
 .container {
   position: relative;
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
-
-.row > *,
-.columns > * {
-  width: 100%;
-  float: left;
   box-sizing: border-box;
 }
 
-/* For devices larger than 600px */
 @media (min-width: 600px) {
-  .row > *,
-  .columns > * {
-    margin-left: 4%;
+
+  .grid,
+  .columns {
+    margin: 0;
+    padding: 0;
+    margin-left: -20px;
   }
 
-  .full.columns > *,
-  .row > *:first-child,
-  .columns > *:first-child {
+  .grid > *,
+  .columns > * {
+    float: left;
+    padding-left: 20px;
+    vertical-align: top;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* allow using the .grid class directly on .width-* elements */
+  .grid[class*='width-'] {
+    padding-left: 0;
     margin-left: 0;
   }
 
-  .two.full.columns   > *    { width: 50%; }
-  .three.full.columns > *    { width: 33.333333%; }
-  .four.full.columns  > *    { width: 25%; }
-  .five.full.columns  > *    { width: 20%; }
+  .full.columns,
+  .full.grid {
+    margin-left: 0;
+  }
 
-  .span-1                    { width: 4.66666666667%; }
-  .span-2                    { width: 13.3333333333%; }
+  .full.columns > *,
+  .full.grid > * {
+    padding-left: 0;
+  }
 
-  .five.columns > *          { width: 16.8%;          }
+  /* widths */
 
-  .span-3,
-  .span-one-fourth,
-  .four.columns > *          { width: 22%;            }
-
-  .span-4,
-  .span-one-third,
-  .three.columns > *         { width: 30.6666666667%; }
-
-  .span-5                    { width: 39.3333333333%; }
-
-  .span-6,
-  .span-one-half,
-  .two.columns > *           { width: 48%;            }
-
-  .span-7                    { width: 56.6666666667%; }
-  .span-8,
-  .span-two-thirds           { width: 65.3333333333%; }
-  .span-9                    { width: 74.0%;          }
-  .span-10                   { width: 82.6666666667%; }
-  .span-11                   { width: 91.3333333333%; }
-
-  /* offsets
-  ---------------------------------------------------*/
-
-  .offset-1                  { margin-left: 8.66666666667% !important }
-  .offset-2                  { margin-left: 17.3333333333% !important }
-  .offset-3,
-  .offset-one-fourth         { margin-left: 26% !important            }
-  .offset-4,
-  .offset-one-third          { margin-left: 34.6666666667% !important }
-  .offset-5                  { margin-left: 43.3333333333% !important }
-  .offset-6,
-  .offset-one-half           { margin-left: 52% !important            }
-  .offset-7                  { margin-left: 60.6666666667% !important }
-  .offset-8,
-  .offset-two-thirds         { margin-left: 69.3333333333% !important }
-  .offset-9                  { margin-left: 78.0% !important          }
-  .offset-10                 { margin-left: 86.6666666667% !important }
-  .offset-11                 { margin-left: 95.3333333333% !important }
-
-  .offset-1[class*="span-"]  { margin-left: 12.6666666667% !important }
-  .offset-2[class*="span-"]  { margin-left: 21.3333333333% !important }
-  .offset-3[class*="span-"]  { margin-left: 30% !important            }
-  .offset-4[class*="span-"]  { margin-left: 38.6666666667% !important }
-  .offset-5[class*="span-"]  { margin-left: 47.3333333333% !important }
-  .offset-6[class*="span-"]  { margin-left: 56% !important            }
-  .offset-7[class*="span-"]  { margin-left: 64.6666666667% !important }
-  .offset-8[class*="span-"]  { margin-left: 73.3333333333% !important }
-  .offset-9[class*="span-"]  { margin-left: 82.0% !important          }
-  .offset-10[class*="span-"] { margin-left: 90.6666666667% !important }
-  .offset-11[class*="span-"] { margin-left: 99.3333333333% !important }
+  .width-10           { width: 10%; }
+  .five.columns > *,
+  .one-fifth,
+  .width-20           { width: 20%; }
+  .four.columns > *,
+  .one-fourth,
+  .width-25           { width: 25%; }
+  .width-30           { width: 30%; }
+  .three.columns > *,
+  .one-third          { width: 33.333%; }
+  .width-40           { width: 40%; }
+  .two.columns > *,
+  .one-half,
+  .width-50           { width: 50%; }
+  .width-60           { width: 60%; }
+  .two-thirds         { width: 66.666%; }
+  .width-70           { width: 70%; }
+  .width-80           { width: 80%; }
+  .width-90           { width: 90%; }
 }
-
 
 /* Buttons
 -------------------------------------------------- */
@@ -319,7 +294,7 @@ select:focus {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#222" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
 }
 
-@media (min-width: 767px) {
+@media (min-width: 900px) {
   .aligned input,
   .aligned textarea,
   .aligned select {
@@ -450,13 +425,12 @@ hr {
 /* Self Clearing Goodness */
 .container:after,
 .columns:after,
-.row:after,
+.grid:after,
 .clearfix:after,
 .cf:after {
   content: "";
   display: table;
   clear: both; }
-
 
 /* Utilities
 -------------------------------------------------- */
@@ -477,12 +451,12 @@ hr {
   display: inherit !important;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 600px) and (max-width: 960px) {
   .hidden-desktop {
     display: inherit !important;
   }
   .visible-desktop {
-    display: none !important ;
+    display: none !important;
   }
   .visible-tablet {
     display: inherit !important;
@@ -492,7 +466,7 @@ hr {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -536,6 +510,3 @@ hr {
 .text-right  { text-align: right; }
 .text-upper  { text-transform: uppercase; }
 .text-lower  { text-transform: lowercase; }
-.text-bold   { font-weight: bold; }
-.text-italic { font-style: italic; }
-.text-normal { font-style: normal; }
