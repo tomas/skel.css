@@ -74,8 +74,6 @@ img { max-width: 100%; }
 
   .grid,
   .columns {
-    margin: 0;
-    padding: 0;
     margin-left: -20px;
   }
 
@@ -108,20 +106,20 @@ img { max-width: 100%; }
 
   .width-10           { width: 10%; }
   .five.columns > *,
-  .one-fifth,
+  .width-one-fifth,
   .width-20           { width: 20%; }
   .four.columns > *,
-  .one-fourth,
+  .width-one-fourth,
   .width-25           { width: 25%; }
   .width-30           { width: 30%; }
   .three.columns > *,
-  .one-third          { width: 33.333%; }
+  .width-one-third    { width: 33.333%; }
   .width-40           { width: 40%; }
   .two.columns > *,
-  .one-half,
+  .width-one-half,
   .width-50           { width: 50%; }
   .width-60           { width: 60%; }
-  .two-thirds         { width: 66.666%; }
+  .width-two-thirds   { width: 66.666%; }
   .width-70           { width: 70%; }
   .width-80           { width: 80%; }
   .width-90           { width: 90%; }
