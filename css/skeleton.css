@@ -1,6 +1,6 @@
 /*
 * Skel v0.3
-* Copyright 2016, Tomas Pollak
+* Copyright (c) Tomas Pollak
 * Based on Skeleton CSS by Dave Gamache
 */
 
@@ -92,6 +92,12 @@ img { max-width: 100%; }
     margin-left: 0;
   }
 
+  /* allow containers to acts a grid parents */
+  .container.grid {
+    margin-left: auto;
+    padding-left: 0;
+  }
+
   .full.columns,
   .full.grid {
     margin-left: 0;
@@ -103,7 +109,6 @@ img { max-width: 100%; }
   }
 
   /* widths */
-
   .width-10           { width: 10%; }
   .five.columns > *,
   .width-one-fifth,
