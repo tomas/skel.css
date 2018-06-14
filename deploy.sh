@@ -2,9 +2,14 @@
 
 [ -z $(which csso) ] && echo "Please install csso: npm install -g csso-cli" && exit 1
 
-rm dist/skel*
-cat css/normalize.css css/skeleton.css css/extras.css > dist/skel.css
-csso dist/skel.css dist/skel.min.css
+version=$(head -5 css/skeleton.css  | grep "v[0-9]" | sed "s/.* v//")
+path="dist/${version}"
+
+rm -Rf $path
+mkdir -p $path
+
+cat css/normalize.css css/skeleton.css css/extras.css > ${path}/skel.css
+csso ${path}/skel.css ${path}/skel.min.css
 
 git add dist
 git commit -a -m "Updated build."
