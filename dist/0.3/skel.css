@@ -957,8 +957,8 @@ hr {
   }
 }
 
-.left        { float: left !important; clear: left; }
-.right       { float: right !important; clear: right; }
+.left        { float: left !important; }
+.right       { float: right !important; }
 .center      { float: none; margin-left: auto; margin-right: auto; }
 .clear       { clear: both; }
 .visible     { display: inherit !important; }
@@ -1016,6 +1016,13 @@ button.warning,
 .button.warning {
   color: rgb(255, 163, 0);
   border-color: rgb(255, 163, 0);
+}
+
+input[type=submit]:disabled,
+button:disabled,
+.button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
 }
 
 /* alerts
