@@ -43,6 +43,13 @@ button.warning,
   border-color: rgb(255, 163, 0);
 }
 
+input[type=submit]:disabled,
+button:disabled,
+.button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
 /* alerts
 --------------------------------------*/
 
