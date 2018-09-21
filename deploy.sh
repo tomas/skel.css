@@ -6,6 +6,7 @@ version=$(head -5 css/skeleton.css  | grep "v[0-9]" | sed "s/.* v//")
 path="dist/${version}"
 
 rm -Rf $path
+rm -f dist/latest
 mkdir -p $path
 
 cat css/normalize.css css/skeleton.css css/extras.css > ${path}/skel.css
