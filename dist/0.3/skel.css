@@ -531,7 +531,6 @@ img { max-width: 100%; }
 }
 
 @media (min-width: 600px) {
-
   .grid,
   .columns {
     margin-left: -20px;
