@@ -12,7 +12,8 @@ mkdir -p $path
 cat css/normalize.css css/skeleton.css css/extras.css > ${path}/skel.css
 csso ${path}/skel.css ${path}/skel.min.css
 
-ln -sf $path "dist/latest"
+cd dist
+ln -sf "$version" latest
 git add dist
 git commit -a -m "Updated build."
 
