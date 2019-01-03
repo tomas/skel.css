@@ -108,7 +108,9 @@ img { max-width: 100%; }
   }
 
   /* widths */
+  .width-5            { width: 5%; }
   .width-10           { width: 10%; }
+  .width-15           { width: 15%; }
   .five.columns > *,
   .width-one-fifth,
   .width-20           { width: 20%; }
@@ -118,7 +120,9 @@ img { max-width: 100%; }
   .width-30           { width: 30%; }
   .three.columns > *,
   .width-one-third    { width: 33.333%; }
+  .width-35           { width: 35%; }
   .width-40           { width: 40%; }
+  .width-45           { width: 45%; }
   .two.columns > *,
   .width-one-half,
   .width-50           { width: 50%; }
