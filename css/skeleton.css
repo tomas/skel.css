@@ -296,14 +296,14 @@ textarea:disabled {
 select {
   line-height: 1.6;
   border-radius: 0; /* chrome osx */
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='6' fill='%23aaaaaa'><polygon points='0,0 12,0 6,6'/></svg>");
-  background-position: 95% center;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12' fill='%23aaaaaa'><polygon points='12,4 24,4 18,10'/></svg>");
   background-repeat: no-repeat;
-  padding-right: 3.0rem;
+  background-position: right center;
 }
 
 select:focus {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='6' fill='%23222222'><polygon points='0,0 12,0 6,6'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12' fill='%23222222'><polygon points='12,4 24,4 18,10'/></svg>");
 }
 
 @media (min-width: 900px) {
