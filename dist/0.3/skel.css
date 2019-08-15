@@ -491,7 +491,7 @@ b, strong, th, label, legend {
 
 pre, code {
   color: #a93fa9;
-  font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
 abbr[title] {
@@ -504,7 +504,7 @@ abbr[title] {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 300;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased; }
 
@@ -692,6 +692,30 @@ input[type="button"].small {
   padding: 0 20px;
 }
 
+/*
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #33C3F0;
+  border-color: #33C3F0; }
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #1EAEDB;
+  border-color: #1EAEDB; }
+*/
 
 /* Forms
 -------------------------------------------------- */
@@ -1365,112 +1389,4 @@ li.dropdown ul {
     display: block; /* or inherit */
   }
 
-}
-
-/* card-list
--------------------------------------------------*/
-
-.card-list li {
-  /*min-height: 300px;*/
-  float: left;
-  margin-bottom: 30px;
-  position: relative;
-  border-radius: 3px;
-  box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
-}
-
-.card-list .item-1 {
-  margin-left: 0 !important
-}
-
-.card-list-4 li {
-  width: 23.5%;
-  margin-left: 2%;
-}
-
-.card-list-4 li:nth-child(4n-3) {
-  clear: left;
-  margin-left: 0
-}
-
-.card-list-3 li {
-  width: 31.333%;
-  margin-left: 3%;
-}
-
-.card-list-3 li:nth-child(3n+1) {
-  margin-left: 0;
-  clear: left;
-}
-
-@media (max-width: 800px) {
-
-  .card-list-4 li {
-    width: 31.333%;
-    margin-left: 3%
-  }
-
-  .card-list-4 li:nth-child(4n-3) {
-    clear: none;
-    margin-left: 3%
-  }
-
-  .card-list-4 li:nth-child(3n+1) {
-    margin-left: 0;
-    clear: left;
-  }
-
-  .card-list-3 li {
-    width: 48%;
-    margin-left: 4%;
-  }
-
-  .card-list-3 li:nth-child(3n+1) {
-    clear: none;
-    margin-left: 4%
-  }
-
-  .card-list-3 li:nth-child(2n+1) {
-    margin-left: 0;
-    clear: left;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-list-4 li {
-    width: 48%;
-    margin-left: 4%
-  }
-
-  .card-list-4 li:nth-child(3n+1) {
-    clear: none;
-    margin-left: 4%
-  }
-
-  .card-list-4 li:nth-child(2n+1) {
-    margin-left: 0;
-    clear: left
-  }
-
-  .card-list-3 li {
-    width: 100%;
-    margin-left: 0%;
-    clear: none
-  }
-
-  .card-list-3 li:nth-child(3n+1) {
-    margin-left: 0
-  }
-}
-
-@media (max-width: 460px) {
-  .card-list-4 li {
-    width: 100%;
-    margin-left: 0%;
-    clear: none
-  }
-
-  .card-list-4 li:nth-child(3n+1) {
-    margin-left: 0
-  }
 }
