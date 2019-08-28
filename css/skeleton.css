@@ -66,20 +66,20 @@ img { max-width: 100%; }
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 25px;
   box-sizing: border-box;
 }
 
 @media (min-width: 600px) {
   .grid,
   .columns {
-    margin-left: -20px;
+    margin-left: -25px;
   }
 
   .grid > *,
   .columns > * {
     float: left;
-    padding-left: 20px;
+    padding-left: 25px;
     vertical-align: top;
     width: 100%;
     box-sizing: border-box;
@@ -461,7 +461,6 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
-
 
 /* Clearing
 -------------------------------------------------- */
