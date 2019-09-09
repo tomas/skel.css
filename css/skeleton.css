@@ -8,7 +8,7 @@
 -------------------------------------------------- */
 
 html, body {
-  height: 100%;
+  /*height: 100%;*/
 }
 
 /*  html is set to 62.5% so that all the REM measurements throughout Skeleton
@@ -62,7 +62,7 @@ pre, code {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
-  font-weight: 400;
+  font-weight: 500;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased; }
 
@@ -519,6 +519,82 @@ hr {
 /* Utilities
 -------------------------------------------------- */
 
+/* default to screens smaller than 600px */
+
+.sm\:hidden,
+.md\:visible,
+.lg\:visible,
+.xl\:visible {
+  display: none !important;
+}
+
+.sm\:visible {
+  display: inherit !important;
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .sm\:visible,
+  .md\:hidden,
+  .lg\:visible,
+  .xl\:visible {
+    display: none !important;
+  }
+
+  .sm\:hidden,
+  .md\:visible,
+  .lg\:hidden,
+  .xl\:hidden {
+    display: inherit !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  .sm\:visible,
+  .md\:visible,
+  .lg\:hidden,
+  .xl\:visible {
+    display: none !important;
+  }
+
+  .sm\:hidden,
+  .md\:hidden,
+  .lg\:visible,
+  .xl\:hidden {
+    display: inherit !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sm\:visible,
+  .md\:visible,
+  .lg\:visible,
+  .xl\:hidden {
+    display: none !important;
+  }
+
+  .sm\:hidden,
+  .md\:hidden,
+  .lg\:hidden,
+  .xl\:visible {
+    display: inherit !important;
+  }
+}
+
+.print\:visible {
+  display: none !important;
+}
+
+@media print {
+  .print\:visible {
+    display: inherit !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+}
+
+
+
 .visible      { display: inherit !important; }
 .hidden       { display: none !important; }
 .invisible    { visibility: hidden !important }
@@ -600,78 +676,4 @@ hr {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap
-}
-
-/* default to screens smaller than 600px */
-
-.sm\:hidden,
-.md\:visible,
-.lg\:visible,
-.xl\:visible {
-  display: none !important;
-}
-
-.sm\:visible {
-  display: inherit !important;
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-  .sm\:visible,
-  .md\:hidden,
-  .lg\:visible,
-  .xl\:visible {
-    display: none !important;
-  }
-
-  .sm\:hidden,
-  .md\:visible,
-  .lg\:hidden,
-  .xl\:hidden {
-    display: inherit !important;
-  }
-}
-
-@media (min-width: 900px) and (max-width: 1200px) {
-  .sm\:visible,
-  .md\:visible,
-  .lg\:hidden,
-  .xl\:visible {
-    display: none !important;
-  }
-
-  .sm\:hidden,
-  .md\:hidden,
-  .lg\:visible,
-  .xl\:hidden {
-    display: inherit !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  .sm\:visible,
-  .md\:visible,
-  .lg\:visible,
-  .xl\:hidden {
-    display: none !important;
-  }
-
-  .sm\:hidden,
-  .md\:hidden,
-  .lg\:hidden,
-  .xl\:visible {
-    display: inherit !important;
-  }
-}
-
-.print\:visible {
-  display: none !important;
-}
-
-@media print {
-  .print\:visible {
-    display: inherit !important;
-  }
-  .print\:hidden {
-    display: none !important;
-  }
 }
