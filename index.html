@@ -21,6 +21,8 @@
   <!--<link rel="stylesheet" href="dist/latest/skel.css">-->
   <link rel="stylesheet" href="web/custom.css">
 
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -484,11 +486,12 @@
     <!-- Forms -->
     <div class="docs-section" id="forms">
       <h6 class="docs-header">Stacked Forms</h6>
-      <p>Very nice.</p>
+      <p>The default.</p>
+
       <div class="docs-example docs-example-forms">
         <form class="stacked">
           <fieldset>
-            <legend>A Stacked Form</legend>
+            <legend>Form Legend</legend>
 
             <label for="email">Email</label>
             <input id="email" type="email" placeholder="Email">
@@ -502,6 +505,9 @@
                 <option>CA</option>
                 <option>IL</option>
             </select>
+
+            <label for="comment">Comment</label>
+            <textarea id="comment"></textarea>
 
             <label for="remember">
                 <input id="remember" type="checkbox"> Remember me
@@ -517,7 +523,7 @@
 <code class="code-example-body prettyprint">
 <form class="stacked">
   <fieldset>
-    <legend>A Stacked Form</legend>
+    <legend>Form Legend</legend>
 
     <label for="email">Email</label>
     <input id="email" type="email" placeholder="Email">
@@ -550,7 +556,7 @@
     <!-- Forms -->
     <div class="docs-section" id="forms">
       <h6 class="docs-header">Aligned Forms</h6>
-      <p>Very nice.</p>
+      <p>Add a `aligned` class to the form element, and voilá.</p>
       <div class="docs-example docs-example-forms">
         <form class="aligned">
           <fieldset>
@@ -569,8 +575,16 @@
               <input id="email" type="email" placeholder="Email Address">
             </div>
 
+
+            <label for="state">State</label>
+            <select id="state">
+                <option>AL</option>
+                <option>CA</option>
+                <option>IL</option>
+            </select>
+
             <div>
-              <label for="foo">Supercalifragilistic Label</label>
+              <label for="foo">Supercalifragilistic Long Label</label>
               <input id="foo" type="text" placeholder="Enter something here...">
             </div>
 
@@ -851,13 +865,13 @@
 
       <div class="navbar">
         <div class="container">
-          <a href="#mobile-menu2" class="toggle-visible right visible-phone menu-icon"></a>
+          <a href="#mobile-menu2" class="toggle-visible right sm:visible menu-icon"></a>
 
           <ul class="left menu">
             <li><a class="item" href="/">FooApp</a></li>
           </ul>
 
-          <ul class="right menu hidden-phone" id="mobile-menu2">
+          <ul class="right menu sm:hidden" id="mobile-menu2">
             <li><a class="item" href="#">Home</a></li>
             <li><a class="item" href="/settings">Settings</a></li>
             <li class="hover dropdown">
@@ -881,13 +895,13 @@
 <code class="code-example-body prettyprint">
 <div class="navbar">
   <div class="container">
-    <a href="#mobile-menu2" class="toggle-visible right visible-phone menu-icon"></a>
+    <a href="#mobile-menu2" class="toggle-visible right sm:visible menu-icon"></a>
 
     <ul class="left menu">
       <li><a class="item" href="/">FooApp</a></li>
     </ul>
 
-    <ul class="right menu hidden-phone" id="mobile-menu2">
+    <ul class="right menu sm:hidden" id="mobile-menu2">
       <li><a class="item" href="#">Home</a></li>
       <li><a class="item" href="/settings">Settings</a></li>
       <li class="hover dropdown">
@@ -911,13 +925,13 @@
 
       <div class="dark navbar">
         <div class="container">
-          <a href="#mobile-menu3" class="toggle-visible right visible-phone menu-icon"></a>
+          <a href="#mobile-menu3" class="toggle-visible right sm:visible menu-icon"></a>
 
           <ul class="left menu">
             <li><a class="item" href="/">FooApp</a></li>
           </ul>
 
-          <ul class="right menu hidden-phone" id="mobile-menu3">
+          <ul class="right menu sm:hidden" id="mobile-menu3">
             <li><a class="item" href="#">Home</a></li>
             <li><a class="active item" href="/settings">Settings</a></li>
             <li class="hover dropdown">
@@ -941,13 +955,13 @@
 <code class="code-example-body prettyprint">
 <div class="dark navbar">
   <div class="container">
-    <a href="#mobile-menu3" class="toggle-visible right visible-phone menu-icon"></a>
+    <a href="#mobile-menu3" class="toggle-visible right sm:visible menu-icon"></a>
 
     <ul class="left menu">
       <li><a class="item" href="/">FooApp</a></li>
     </ul>
 
-    <ul class="right menu hidden-phone" id="mobile-menu3">
+    <ul class="right menu sm:hidden" id="mobile-menu3">
       <li><a class="item" href="#">Home</a></li>
       <li><a class="active item" href="/settings">Settings</a></li>
       <li class="hover dropdown">

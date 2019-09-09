@@ -8,8 +8,8 @@
 .alert-danger,
 .alert-error {
   position: relative;
-  padding: 8px 10px;
-  margin-bottom: 15px;
+  padding: 10px 15px;
+  margin-bottom: 2rem;
   border: 1px solid #eee;
 }
 
@@ -188,7 +188,7 @@ a.close-button {
 /*
 .menu .button,
 .menu button {
-  margin-right: 20px;
+  margin-right: 25px;
 }
 */
 
@@ -276,14 +276,24 @@ li.dropdown ul {
 
 .menu-icon:before {
   height: 4px;
-  margin: 20px 20px 0;
+  margin: 20px 25px 0;
   border-bottom: 2px solid #666;
 }
 
 .menu-icon:after {
-  margin: 4px 20px 15px;
+  margin: 4px 25px 15px;
   height: 6px;
   border-top: 2px solid #666;
+}
+
+.right.menu-icon:before,
+.right.menu-icon:after {
+  margin-right: 0;
+}
+
+.left.menu-icon:before,
+.left.menu-icon:after {
+  margin-left: 0;
 }
 
 .caret {
@@ -299,7 +309,7 @@ li.dropdown ul {
 }
 
 .dropdown .caret {
-  margin: 25px 5px 0;
+  margin: 25px 10px 0;
 }
 
 .dark .caret {
@@ -328,12 +338,16 @@ li.dropdown ul {
   color: #1EAEDB;
 }
 
+.dark .button:hover {
+  border-color: #1EAEDB;
+}
+
 .dark .menu-icon:before,
 .dark .menu-icon:after {
   border-color: #ccc;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
 
   .menu.visible,
   .menu:target {
@@ -347,6 +361,10 @@ li.dropdown ul {
 
   .menu.visible li {
     background: #fff;
+  }
+
+  .menu.visible .item {
+    padding: 0 15px !important;
   }
 
   .dark .menu li {

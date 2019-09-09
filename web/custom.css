@@ -32,10 +32,7 @@
   margin-bottom: 25px;
   font-weight: 600;
   letter-spacing: .1rem; }
-.docs-example .row,
-.docs-example.row,
-.docs-example form {
-  margin-bottom: 0; }
+
 .docs-example h1,
 .docs-example h2,
 .docs-example h3,
