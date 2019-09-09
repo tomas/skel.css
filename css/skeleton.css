@@ -36,6 +36,16 @@ b, strong {
   font-weight: 600;
 }
 
+abbr[title] {
+  text-decoration: none;
+  border-bottom: dotted 1px;
+}
+
+pre, code {
+  color: #a93fa9;
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
 /* utility classes */
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
@@ -45,18 +55,10 @@ b, strong {
   font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-pre, code {
-  color: #a93fa9;
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-}
-
-abbr[title] {
-  text-decoration: none;
-  border-bottom: dotted 1px;
-}
 
 /* Typography
 -------------------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 2rem;
@@ -74,13 +76,14 @@ h6  { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 p   { margin-top: 0; }
 img { max-width: 100%; }
 
+
 /* Grid
 -------------------------------------------------- */
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 25px;
   box-sizing: border-box;
@@ -257,8 +260,10 @@ input[type="button"].small {
   border-color: #fff;
 }
 
+
 /* Forms
 -------------------------------------------------- */
+
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -383,6 +388,7 @@ select.loading {
   }
 }
 
+
 /* Lists
 -------------------------------------------------- */
 ul {
@@ -406,6 +412,7 @@ li {
 
 dt { font-weight: 500; margin-bottom: 0.5rem; }
 dd { margin: 0 0 1.5rem 0; }
+
 
 /* Code
 -------------------------------------------------- */
@@ -460,6 +467,7 @@ td:last-child {
 
 /* Spacing
 -------------------------------------------------- */
+
 input,
 textarea,
 select,
@@ -467,8 +475,7 @@ fieldset {
   margin-bottom: 1.5rem; }
 
 table input, table select, table textarea {
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 pre,
 blockquote,
@@ -485,6 +492,7 @@ button,
 .button {
   margin-bottom: 0; }
 
+
 /* Misc
 -------------------------------------------------- */
 
@@ -494,10 +502,10 @@ hr {
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
+
 /* Clearing
 -------------------------------------------------- */
 
-/* Self Clearing Goodness */
 .container:after,
 .columns:after,
 .grid:after,
@@ -507,8 +515,92 @@ hr {
   display: table;
   clear: both; }
 
+
 /* Utilities
 -------------------------------------------------- */
+
+.visible      { display: inherit !important; }
+.hidden       { display: none !important; }
+.invisible    { visibility: hidden !important }
+
+.block        { display: block !important; }
+.inline       { display: inline-block !important; *display: inline; /*IE 6/7*/ }
+
+.nowrap       { white-space: nowrap; }
+.nomargin     { margin: 0 }
+
+/* .list-none    { list-style-type: none } */
+
+.fixed        { position: fixed !important }
+.absolute     { position: absolute !important }
+.relative     { position: relative !important }
+.sticky       { position: -webkit-sticky; position: sticky }
+
+.left         { float: left !important; }
+.right        { float: right !important; }
+.clear        { clear: both; }
+/* .center       { float: none; margin-left: auto; margin-right: auto; } */
+
+.centered {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  /* transform: translateY(-50%); */
+  /* right: 25px; */
+  /* left: 25px; */
+}
+
+.v-centered {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.full         { width: 100%; height: 100%; }
+.h-full       { height: 100% }
+.h-screen     { height: 100vh }
+.max-h-full   { max-height: 100% }
+.max-h-screen { max-height: 100vh }
+/* .min-h-full   { min-height: 100% } */
+/* .min-h-screen { min-height: 100vh } */
+
+.w-full       { width: 100% }
+.w-screen     { width: 100vw }
+.max-w-full   { max-width: 100% }
+.max-w-screen { max-width: 100vw }
+/* .min-w-full   { min-width: 100% } */
+/* .min-w-screen { min-width: 100%vw } */
+
+.text-black   { color: #000 }
+.text-333     { color: #333 }
+.text-666     { color: #666 }
+.text-999     { color: #999 }
+.text-ccc     { color: #ccc }
+.text-white   { color: #fff }
+
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-lower   { text-transform: lowercase; }
+.text-upper   { text-transform: uppercase; }
+.text-under   { text-decoration: underline }
+
+.hover\:text-under:hover { text-decoration: underline }
+.focus\:text-under:focus { text-decoration: underline }
+
+.text-tighter { letter-spacing: -.05em }
+.text-tight   { letter-spacing: -.025em }
+.text-wide    { letter-spacing: .025em }
+.text-wider   { letter-spacing: .05em }
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
 
 /* default to screens smaller than 600px */
 
@@ -582,136 +674,4 @@ hr {
   .print\:hidden {
     display: none !important;
   }
-}
-
-.visible      { display: inherit !important; }
-.hidden       { display: none !important; }
-.invisible    { visibility: hidden; }
-
-.block        { display: block !important; }
-.inline       { display: inline-block !important; *display: inline; /*IE 6/7*/ }
-
-.nowrap       { white-space: nowrap; }
-.nomargin     { margin: 0 }
-
-/* .list-none    { list-style-type: none } */
-
-.fixed        { position: fixed!important }
-.absolute     { position: absolute!important }
-.relative     { position: relative!important }
-.sticky       { position: -webkit-sticky!important; position: sticky!important }
-
-.left         { float: left !important; }
-.right        { float: right !important; }
-.clear        { clear: both; }
-/* .center       { float: none; margin-left: auto; margin-right: auto; } */
-
-.centered {
-  position: absolute;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  /* transform: translateY(-50%); */
-  /* right: 25px; */
-  /* left: 25px; */
-}
-
-.v-centered {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.full         { width: 100%; height: 100%; }
-.h-full       { height: 100%!important }
-.h-screen     { height: 100vh!important }
-.max-h-full   { max-height: 100%!important }
-.max-h-screen { max-height: 100vh!important }
-/* .min-h-full   { min-height: 100%!important } */
-/* .min-h-screen { min-height: 100vh!important } */
-
-.w-full       { width: 100%!important }
-.w-screen     { width: 100vw!important }
-.max-w-full   { max-width: 100%!important }
-.max-w-screen { max-width: 100vw!important }
-/* .min-w-full   { min-width: 100%!important } */
-/* .min-w-screen { min-width: 100%vw!important } */
-
-.text-black   { color: #000 }
-.text-333     { color: #333 }
-.text-666     { color: #666 }
-.text-999     { color: #999 }
-.text-ccc     { color: #ccc }
-.text-white   { color: #fff }
-
-.text-left    { text-align: left; }
-.text-center  { text-align: center; }
-.text-right   { text-align: right; }
-.text-lower   { text-transform: lowercase; }
-.text-upper   { text-transform: uppercase; }
-.text-under   { text-decoration: underline }
-
-.hover\:text-under:hover { text-decoration: underline!important }
-.focus\:text-under:focus { text-decoration: underline!important }
-
-.text-tighter { letter-spacing: -.05em !important }
-.text-tight   { letter-spacing: -.025em !important }
-.text-wide    { letter-spacing: .025em !important }
-.text-wider   { letter-spacing: .05em !important }
-
-.truncate {
-  overflow: hidden!important;
-  text-overflow: ellipsis!important;
-  white-space: nowrap!important
-}
-
-.shadow {
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)!important
-}
-
-/*
-
--- option 1: setting background via css:
-
-  .wity-bg::after {
-    background-image: url(some-image.png);
-  }
-
-  <div class="cover with-bg">
-    <div class="centered">
-      <h1>Hello!</h2>
-      <p>This is some text.</p>
-    </div>
-  </div>
-
--- option 2: setting background via html:
-
-  <div class="cover">
-    <div class="centered">
-      <h1>Hello!</h2>
-      <p>This is some text.</p>
-    </div>
-    <div class="bg" style="background-image: url(some-image.png)"></div>
-  </div>
-
-*/
-
-.cover {
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  background-color: rgba(0,0,0,0.75);
-}
-
-.bg, .with-bg::after {
-  content: "";
-  background-size: cover;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1
 }
