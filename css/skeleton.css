@@ -173,7 +173,7 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border: 1px solid #bbb;
+  border: 1px solid #aaa;
   cursor: pointer;
   box-sizing: border-box; }
 
@@ -487,10 +487,6 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem; }
-
-button,
-.button {
-  margin-bottom: 0; }
 
 
 /* Misc
