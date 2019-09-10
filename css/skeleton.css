@@ -591,26 +591,29 @@ hr {
 
 
 
-.visible      { display: inherit !important; }
-.hidden       { display: none !important; }
-.invisible    { visibility: hidden !important }
+.visible       { display: inherit !important; }
+.hidden        { display: none !important; }
+.invisible     { visibility: hidden !important }
 
-.block        { display: block !important; }
-.inline       { display: inline-block !important; *display: inline; /*IE 6/7*/ }
+.block         { display: block !important; }
+.inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
-.nowrap       { white-space: nowrap; }
-.nomargin     { margin: 0 }
+.nowrap        { white-space: nowrap; }
+.nomargin      { margin: 0 }
+
+.margin-top    { margin-top: 25px; }
+.margin-bottom { margin-bottom: 25px; }
 
 /* .list-none    { list-style-type: none } */
 
-.fixed        { position: fixed !important }
-.absolute     { position: absolute !important }
-.relative     { position: relative !important }
-.sticky       { position: -webkit-sticky; position: sticky }
+.fixed         { position: fixed !important }
+.absolute      { position: absolute !important }
+.relative      { position: relative !important }
+.sticky        { position: -webkit-sticky; position: sticky }
 
-.left         { float: left !important; }
-.right        { float: right !important; }
-.clear        { clear: both; }
+.left          { float: left !important; }
+.right         { float: right !important; }
+.clear         { clear: both; }
 /* .center       { float: none; margin-left: auto; margin-right: auto; } */
 
 .centered {
