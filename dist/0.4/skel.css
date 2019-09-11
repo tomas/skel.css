@@ -865,8 +865,9 @@ hr {
 /* Utilities
 -------------------------------------------------- */
 
-.visible       { display: inherit !important; }
-.hidden        { display: none !important; }
+/* these two (visible and hidden) we declare after the media query scopes */
+/*.visible       { display: inherit !important; }*/
+/*.hidden        { display: none !important; }*/
 .block         { display: block !important; }
 .inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
@@ -1308,6 +1309,9 @@ hr {
   }
 }
 
+.visible  { display: inherit !important; }
+.hidden   { display: none !important; }
+
 .print\:visible {
   display: none !important;
 }
@@ -1509,8 +1513,8 @@ a.close-button {
 
 .dropdown .menu .item,
 .menu.visible .item {
-  padding-left: 15px !important;
-  padding-right: 15px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
 }
 
 /*
@@ -1689,7 +1693,9 @@ li.dropdown ul {
   .menu.visible,
   .menu:target {
     display: inherit;
-    width: 100%;
+    /*width: 100%;*/
+    margin-left: -25px;
+    margin-right: -25px;
     float: none !important; /* without this it pushes below */
     clear: both;
     position: relative;
