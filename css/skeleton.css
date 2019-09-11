@@ -517,8 +517,9 @@ hr {
 /* Utilities
 -------------------------------------------------- */
 
-.visible       { display: inherit !important; }
-.hidden        { display: none !important; }
+/* these two (visible and hidden) we declare after the media query scopes */
+/*.visible       { display: inherit !important; }*/
+/*.hidden        { display: none !important; }*/
 .block         { display: block !important; }
 .inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
@@ -959,6 +960,9 @@ hr {
     white-space: nowrap
   }
 }
+
+.visible  { display: inherit !important; }
+.hidden   { display: none !important; }
 
 .print\:visible {
   display: none !important;
