@@ -355,9 +355,11 @@ template {
 /* Base Styles
 -------------------------------------------------- */
 
+/*
 html, body {
-  /*height: 100%;*/
+  height: 100%;
 }
+*/
 
 /*  html is set to 62.5% so that all the REM measurements throughout Skeleton
     are based on 10px sizing. So basically 1.5rem = 15px :) */
@@ -1210,6 +1212,12 @@ a.close-button {
   padding-right: 0;
 }
 
+.dropdown .menu .item,
+.menu.visible .item {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
 /*
 .menu .button,
 .menu button {
@@ -1334,12 +1342,21 @@ li.dropdown ul {
 }
 
 .dropdown .caret {
-  margin: 25px 10px 0;
+  margin: 25px 8px 0;
 }
 
 .dark .caret {
   border-top-color: #666;
 }
+
+.dropdown:hover .caret {
+  border-top-color: #000;
+}
+
+.dark .dropdown:hover .caret {
+  border-top-color: #fff
+}
+
 
 /* black navbar
 ----------------------------------------------- */
@@ -1386,10 +1403,6 @@ li.dropdown ul {
 
   .menu.visible li {
     background: #fff;
-  }
-
-  .menu.visible .item {
-    padding: 0 15px !important;
   }
 
   .dark .menu li {
