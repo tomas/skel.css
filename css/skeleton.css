@@ -523,12 +523,6 @@ hr {
 .block         { display: block !important; }
 .inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
-.nowrap        { white-space: nowrap; }
-.nomargin      { margin: 0 }
-
-.margin-top    { margin-top: 25px; }
-.margin-bottom { margin-bottom: 25px; }
-
 .fixed         { position: fixed !important }
 .absolute      { position: absolute !important }
 .relative      { position: relative !important }
@@ -568,6 +562,12 @@ hr {
 .max-w-full   { max-width: 100% }
 .max-w-screen { max-width: 100vw }
 
+.m-0          { margin: 0 }
+.mt-25        { margin-top: 25px; }
+.mt-50        { margin-top: 50px; }
+.mb-25        { margin-bottom: 25px; }
+.mb-50        { margin-bottom: 50px; }
+
 .text-black   { color: #000 }
 .text-333     { color: #333 }
 .text-666     { color: #666 }
@@ -590,6 +590,7 @@ hr {
 .text-wide    { letter-spacing: .025em }
 .text-wider   { letter-spacing: .05em }
 
+.nowrap       { white-space: nowrap; }
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -610,12 +611,6 @@ hr {
 
   .sm\:block         { display: block !important; }
   .sm\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
-
-  .sm\:nowrap        { white-space: nowrap; }
-  .sm\:nomargin      { margin: 0 }
-
-  .sm\:margin-top    { margin-top: 25px; }
-  .sm\:margin-bottom { margin-bottom: 25px; }
 
   .sm\:fixed         { position: fixed !important }
   .sm\:absolute      { position: absolute !important }
@@ -656,6 +651,12 @@ hr {
   .sm\:max-w-full   { max-width: 100% }
   .sm\:max-w-screen { max-width: 100vw }
 
+  .sm\:m-0          { margin: 0 }
+  .sm\:mt-25        { margin-top: 25px; }
+  .sm\:mt-50        { margin-top: 50px; }
+  .sm\:mb-25        { margin-bottom: 25px; }
+  .sm\:mb-50        { margin-bottom: 50px; }
+
   .sm\:text-black   { color: #000 }
   .sm\:text-333     { color: #333 }
   .sm\:text-666     { color: #666 }
@@ -678,6 +679,7 @@ hr {
   .sm\:text-wide    { letter-spacing: .025em }
   .sm\:text-wider   { letter-spacing: .05em }
 
+  .sm\:nowrap       { white-space: nowrap; }
   .sm\:truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -702,12 +704,6 @@ hr {
 
   .md\:block         { display: block !important; }
   .md\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
-
-  .md\:nowrap        { white-space: nowrap; }
-  .md\:nomargin      { margin: 0 }
-
-  .md\:margin-top    { margin-top: 25px; }
-  .md\:margin-bottom { margin-bottom: 25px; }
 
   .md\:fixed         { position: fixed !important }
   .md\:absolute      { position: absolute !important }
@@ -748,6 +744,12 @@ hr {
   .md\:max-w-full   { max-width: 100% }
   .md\:max-w-screen { max-width: 100vw }
 
+  .md\:m-0          { margin: 0 }
+  .md\:mt-25        { margin-top: 25px; }
+  .md\:mt-50        { margin-top: 50px; }
+  .md\:mb-25        { margin-bottom: 25px; }
+  .md\:mb-50        { margin-bottom: 50px; }
+
   .md\:text-black   { color: #000 }
   .md\:text-333     { color: #333 }
   .md\:text-666     { color: #666 }
@@ -770,6 +772,7 @@ hr {
   .md\:text-wide    { letter-spacing: .025em }
   .md\:text-wider   { letter-spacing: .05em }
 
+  .md\:nowrap       { white-space: nowrap; }
   .md\:truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -794,12 +797,6 @@ hr {
 
   .lg\:block         { display: block !important; }
   .lg\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
-
-  .lg\:nowrap        { white-space: nowrap; }
-  .lg\:nomargin      { margin: 0 }
-
-  .lg\:margin-top    { margin-top: 25px; }
-  .lg\:margin-bottom { margin-bottom: 25px; }
 
   .lg\:fixed         { position: fixed !important }
   .lg\:absolute      { position: absolute !important }
@@ -840,6 +837,12 @@ hr {
   .lg\:max-w-full   { max-width: 100% }
   .lg\:max-w-screen { max-width: 100vw }
 
+  .lg\:m-0          { margin: 0 }
+  .lg\:mt-25        { margin-top: 25px; }
+  .lg\:mt-50        { margin-top: 50px; }
+  .lg\:mb-25        { margin-bottom: 25px; }
+  .lg\:mb-50        { margin-bottom: 50px; }
+
   .lg\:text-black   { color: #000 }
   .lg\:text-333     { color: #333 }
   .lg\:text-666     { color: #666 }
@@ -862,6 +865,7 @@ hr {
   .lg\:text-wide    { letter-spacing: .025em }
   .lg\:text-wider   { letter-spacing: .05em }
 
+  .lg\:nowrap       { white-space: nowrap; }
   .lg\:truncate {
     overflow: hidden;
     text-overflow: ellipsis;
@@ -886,12 +890,6 @@ hr {
 
   .xl\:block         { display: block !important; }
   .xl\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
-
-  .xl\:nowrap        { white-space: nowrap; }
-  .xl\:nomargin      { margin: 0 }
-
-  .xl\:margin-top    { margin-top: 25px; }
-  .xl\:margin-bottom { margin-bottom: 25px; }
 
   .xl\:fixed         { position: fixed !important }
   .xl\:absolute      { position: absolute !important }
@@ -932,6 +930,12 @@ hr {
   .xl\:max-w-full   { max-width: 100% }
   .xl\:max-w-screen { max-width: 100vw }
 
+  .xl\:m-0           { margin: 0 }
+  .xl\:mt-25         { margin-top: 25px; }
+  .xl\:mt-50         { margin-top: 50px; }
+  .xl\:mb-25         { margin-bottom: 25px; }
+  .xl\:mb-50         { margin-bottom: 50px; }
+
   .xl\:text-black   { color: #000 }
   .xl\:text-333     { color: #333 }
   .xl\:text-666     { color: #666 }
@@ -954,6 +958,7 @@ hr {
   .xl\:text-wide    { letter-spacing: .025em }
   .xl\:text-wider   { letter-spacing: .05em }
 
+  .xl\:nowrap       { white-space: nowrap; }
   .xl\:truncate {
     overflow: hidden;
     text-overflow: ellipsis;
