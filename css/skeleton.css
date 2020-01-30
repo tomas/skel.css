@@ -603,7 +603,7 @@ hr {
 .text-wide    { letter-spacing: .025em }
 .text-wider   { letter-spacing: .05em }
 
-.nowrap       { white-space: nowrap; }
+.nowrap   { white-space: nowrap; }
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
