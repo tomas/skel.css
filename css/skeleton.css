@@ -567,11 +567,19 @@ hr {
 .max-w-full   { max-width: 100% }
 .max-w-screen { max-width: 100vw }
 
-.m-0          { margin: 0 }
+.m-0, .nomargin { margin: 0 }
+.mt-10        { margin-top: 10px; }
 .mt-25        { margin-top: 25px; }
 .mt-50        { margin-top: 50px; }
+.mb-10        { margin-bottom: 10px; }
 .mb-25        { margin-bottom: 25px; }
 .mb-50        { margin-bottom: 50px; }
+.ml-10        { margin-left: 10px; }
+.ml-25        { margin-left: 25px; }
+.ml-50        { margin-left: 50px; }
+.mr-10        { margin-right: 10px; }
+.mr-25        { margin-right: 25px; }
+.mr-50        { margin-right: 50px; }
 
 .text-black   { color: #000 }
 .text-333     { color: #333 }
@@ -656,11 +664,19 @@ hr {
   .sm\:max-w-full   { max-width: 100% }
   .sm\:max-w-screen { max-width: 100vw }
 
-  .sm\:m-0          { margin: 0 }
+  .sm\:m-0, .sm\:nomargin { margin: 0 }
+  .sm\:mt-10        { margin-top: 10px; }
   .sm\:mt-25        { margin-top: 25px; }
   .sm\:mt-50        { margin-top: 50px; }
+  .sm\:mb-10        { margin-bottom: 10px; }
   .sm\:mb-25        { margin-bottom: 25px; }
   .sm\:mb-50        { margin-bottom: 50px; }
+  .sm\:ml-10        { margin-left: 10px; }
+  .sm\:ml-25        { margin-left: 25px; }
+  .sm\:ml-50        { margin-left: 50px; }
+  .sm\:mr-10        { margin-right: 10px; }
+  .sm\:mr-25        { margin-right: 25px; }
+  .sm\:mr-50        { margin-right: 50px; }
 
   .sm\:text-black   { color: #000 }
   .sm\:text-333     { color: #333 }
@@ -749,11 +765,19 @@ hr {
   .md\:max-w-full   { max-width: 100% }
   .md\:max-w-screen { max-width: 100vw }
 
-  .md\:m-0          { margin: 0 }
+  .md\:m-0, .md\:nomargin { margin: 0 }
+  .md\:mt-10        { margin-top: 10px; }
   .md\:mt-25        { margin-top: 25px; }
   .md\:mt-50        { margin-top: 50px; }
+  .md\:mb-10        { margin-bottom: 10px; }
   .md\:mb-25        { margin-bottom: 25px; }
   .md\:mb-50        { margin-bottom: 50px; }
+  .md\:ml-10        { margin-left: 10px; }
+  .md\:ml-25        { margin-left: 25px; }
+  .md\:ml-50        { margin-left: 50px; }
+  .md\:mr-10        { margin-right: 10px; }
+  .md\:mr-25        { margin-right: 25px; }
+  .md\:mr-50        { margin-right: 50px; }
 
   .md\:text-black   { color: #000 }
   .md\:text-333     { color: #333 }
@@ -842,11 +866,19 @@ hr {
   .lg\:max-w-full   { max-width: 100% }
   .lg\:max-w-screen { max-width: 100vw }
 
-  .lg\:m-0          { margin: 0 }
+  .lg\:m-0, .lg\:nomargin { margin: 0 }
+  .lg\:mt-10        { margin-top: 10px; }
   .lg\:mt-25        { margin-top: 25px; }
   .lg\:mt-50        { margin-top: 50px; }
+  .lg\:mb-10        { margin-bottom: 10px; }
   .lg\:mb-25        { margin-bottom: 25px; }
   .lg\:mb-50        { margin-bottom: 50px; }
+  .lg\:ml-10        { margin-left: 10px; }
+  .lg\:ml-25        { margin-left: 25px; }
+  .lg\:ml-50        { margin-left: 50px; }
+  .lg\:mr-10        { margin-right: 10px; }
+  .lg\:mr-25        { margin-right: 25px; }
+  .lg\:mr-50        { margin-right: 50px; }
 
   .lg\:text-black   { color: #000 }
   .lg\:text-333     { color: #333 }
@@ -935,11 +967,19 @@ hr {
   .xl\:max-w-full   { max-width: 100% }
   .xl\:max-w-screen { max-width: 100vw }
 
-  .xl\:m-0           { margin: 0 }
+  .xl\:m-0, .xl\:nomargin { margin: 0 }
+  .xl\:mt-10         { margin-top: 10px; }
   .xl\:mt-25         { margin-top: 25px; }
   .xl\:mt-50         { margin-top: 50px; }
+  .xl\:mb-10         { margin-bottom: 10px; }
   .xl\:mb-25         { margin-bottom: 25px; }
   .xl\:mb-50         { margin-bottom: 50px; }
+  .xl\:ml-10         { margin-left: 10px; }
+  .xl\:ml-25         { margin-left: 25px; }
+  .xl\:ml-50         { margin-left: 50px; }
+  .xl\:mr-10         { margin-right: 10px; }
+  .xl\:mr-25         { margin-right: 25px; }
+  .xl\:mr-50         { margin-right: 50px; }
 
   .xl\:text-black   { color: #000 }
   .xl\:text-333     { color: #333 }
