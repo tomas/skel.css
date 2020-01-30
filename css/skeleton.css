@@ -147,11 +147,16 @@ img { max-width: 100%; }
   .two.columns > *,
   .width-one-half, .w-1-2,
   .width-50, .w-50    { width: 50%; }
+  .width-55, .w-55    { width: 55%; }
   .width-60, .w-60    { width: 60%; }
+  .width-65, .w-65    { width: 65%; }
   .width-two-thirds   { width: 66.666%; }
   .width-70, .w-70    { width: 70%; }
+  .width-75, .w-75    { width: 75%; }
   .width-80, .w-80    { width: 80%; }
+  .width-85, .w-85    { width: 85%; }
   .width-90, .w-90    { width: 90%; }
+  .width-95, .w-95    { width: 95%; }
 }
 
 /* Buttons
