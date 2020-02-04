@@ -1065,10 +1065,7 @@ hr {
     display: none !important;
   }
 
-  .sm\:hidden,
-  .md\:visible,
-  .lg\:hidden,
-  .xl\:hidden {
+  .md\:visible {
     display: inherit !important;
   }
 
@@ -1166,10 +1163,7 @@ hr {
     display: none !important;
   }
 
-  .sm\:hidden,
-  .md\:hidden,
-  .lg\:visible,
-  .xl\:hidden {
+  .lg\:visible {
     display: inherit !important;
   }
 
@@ -1267,9 +1261,6 @@ hr {
     display: none !important;
   }
 
-  .sm\:hidden,
-  .md\:hidden,
-  .lg\:hidden,
   .xl\:visible {
     display: inherit !important;
   }
