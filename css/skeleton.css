@@ -533,6 +533,7 @@ hr {
 .absolute      { position: absolute !important }
 .relative      { position: relative !important }
 .sticky        { position: -webkit-sticky; position: sticky }
+.bottom        { bottom: 0; }
 
 .left          { float: left !important; }
 .right         { float: right !important; }
@@ -630,6 +631,7 @@ hr {
   .sm\:absolute      { position: absolute !important }
   .sm\:relative      { position: relative !important }
   .sm\:sticky        { position: -webkit-sticky; position: sticky }
+  .sm\:bottom        { bottom: 0; }
 
   .sm\:left          { float: left !important; }
   .sm\:right         { float: right !important; }
@@ -728,6 +730,7 @@ hr {
   .md\:absolute      { position: absolute !important }
   .md\:relative      { position: relative !important }
   .md\:sticky        { position: -webkit-sticky; position: sticky }
+  .md\:bottom        { bottom: 0; }
 
   .md\:left          { float: left !important; }
   .md\:right         { float: right !important; }
@@ -826,6 +829,7 @@ hr {
   .lg\:absolute      { position: absolute !important }
   .lg\:relative      { position: relative !important }
   .lg\:sticky        { position: -webkit-sticky; position: sticky }
+  .lg\:bottom        { bottom: 0; }
 
   .lg\:left          { float: left !important; }
   .lg\:right         { float: right !important; }
@@ -924,6 +928,7 @@ hr {
   .xl\:absolute      { position: absolute !important }
   .xl\:relative      { position: relative !important }
   .xl\:sticky        { position: -webkit-sticky; position: sticky }
+  .xl\:bottom        { bottom: 0; }
 
   .xl\:left          { float: left !important; }
   .xl\:right         { float: right !important; }
