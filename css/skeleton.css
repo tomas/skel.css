@@ -569,7 +569,7 @@ hr {
 .max-w-full   { max-width: 100% }
 .max-w-screen { max-width: 100vw }
 
-.m-0, .nomargin { margin: 0 }
+.m-0, .m0, .nomargin { margin: 0 }
 .mt-10        { margin-top: 10px; }
 .mt-25        { margin-top: 25px; }
 .mt-50        { margin-top: 50px; }
@@ -604,6 +604,11 @@ hr {
 .text-tight   { letter-spacing: -.025em }
 .text-wide    { letter-spacing: .025em }
 .text-wider   { letter-spacing: .05em }
+
+.text-smaller { font-size: 0.5em }
+.text-small   { font-size: 0.75em }
+.text-big     { font-size: 1.5em }
+.text-bigger  { font-size: 2em }
 
 .nowrap   { white-space: nowrap; }
 .truncate {
@@ -667,7 +672,7 @@ hr {
   .sm\:max-w-full   { max-width: 100% }
   .sm\:max-w-screen { max-width: 100vw }
 
-  .sm\:m-0, .sm\:nomargin { margin: 0 }
+  .sm\:m-0, .sm\:m0, .sm\:nomargin { margin: 0 }
   .sm\:mt-10        { margin-top: 10px; }
   .sm\:mt-25        { margin-top: 25px; }
   .sm\:mt-50        { margin-top: 50px; }
@@ -702,6 +707,11 @@ hr {
   .sm\:text-tight   { letter-spacing: -.025em }
   .sm\:text-wide    { letter-spacing: .025em }
   .sm\:text-wider   { letter-spacing: .05em }
+
+  .sm\:text-smaller { font-size: 0.5em }
+  .sm\:text-small   { font-size: 0.75em }
+  .sm\:text-big     { font-size: 1.5em }
+  .sm\:text-bigger  { font-size: 2em }
 
   .sm\:nowrap       { white-space: nowrap; }
   .sm\:truncate {
@@ -766,7 +776,7 @@ hr {
   .md\:max-w-full   { max-width: 100% }
   .md\:max-w-screen { max-width: 100vw }
 
-  .md\:m-0, .md\:nomargin { margin: 0 }
+  .md\:m-0, .md\:m0, .md\:nomargin { margin: 0 }
   .md\:mt-10        { margin-top: 10px; }
   .md\:mt-25        { margin-top: 25px; }
   .md\:mt-50        { margin-top: 50px; }
@@ -801,6 +811,11 @@ hr {
   .md\:text-tight   { letter-spacing: -.025em }
   .md\:text-wide    { letter-spacing: .025em }
   .md\:text-wider   { letter-spacing: .05em }
+
+  .md\:text-smaller { font-size: 0.5em }
+  .md\:text-small   { font-size: 0.75em }
+  .md\:text-big     { font-size: 1.5em }
+  .md\:text-bigger  { font-size: 2em }
 
   .md\:nowrap       { white-space: nowrap; }
   .md\:truncate {
@@ -865,7 +880,7 @@ hr {
   .lg\:max-w-full   { max-width: 100% }
   .lg\:max-w-screen { max-width: 100vw }
 
-  .lg\:m-0, .lg\:nomargin { margin: 0 }
+  .lg\:m-0, .lg\:m0, .lg\:nomargin { margin: 0 }
   .lg\:mt-10        { margin-top: 10px; }
   .lg\:mt-25        { margin-top: 25px; }
   .lg\:mt-50        { margin-top: 50px; }
@@ -900,6 +915,11 @@ hr {
   .lg\:text-tight   { letter-spacing: -.025em }
   .lg\:text-wide    { letter-spacing: .025em }
   .lg\:text-wider   { letter-spacing: .05em }
+
+  .lg\:text-smaller { font-size: 0.5em }
+  .lg\:text-small   { font-size: 0.75em }
+  .lg\:text-big     { font-size: 1.5em }
+  .lg\:text-bigger  { font-size: 2em }
 
   .lg\:nowrap       { white-space: nowrap; }
   .lg\:truncate {
@@ -964,7 +984,7 @@ hr {
   .xl\:max-w-full   { max-width: 100% }
   .xl\:max-w-screen { max-width: 100vw }
 
-  .xl\:m-0, .xl\:nomargin { margin: 0 }
+  .xl\:m-0, .xl\:m0, .xl\:nomargin { margin: 0 }
   .xl\:mt-10         { margin-top: 10px; }
   .xl\:mt-25         { margin-top: 25px; }
   .xl\:mt-50         { margin-top: 50px; }
@@ -999,6 +1019,11 @@ hr {
   .xl\:text-tight   { letter-spacing: -.025em }
   .xl\:text-wide    { letter-spacing: .025em }
   .xl\:text-wider   { letter-spacing: .05em }
+
+  .xl\:text-smaller { font-size: 0.5em }
+  .xl\:text-small   { font-size: 0.75em }
+  .xl\:text-big     { font-size: 1.5em }
+  .xl\:text-bigger  { font-size: 2em }
 
   .xl\:nowrap       { white-space: nowrap; }
   .xl\:truncate {
