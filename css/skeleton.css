@@ -538,7 +538,7 @@ hr {
 .left          { float: left !important; }
 .right         { float: right !important; }
 .clear         { clear: both; }
-/* .center       { float: none; margin-left: auto; margin-right: auto; } */
+.center       { float: none; margin-left: auto; margin-right: auto; }
 
 .centered {
   position: absolute;
@@ -678,7 +678,7 @@ hr {
   .sm\:left          { float: left !important; }
   .sm\:right         { float: right !important; }
   .sm\:clear         { clear: both; }
-  /* .sm\:center       { float: none; margin-left: auto; margin-right: auto; } */
+  .sm\:center       { float: none; margin-left: auto; margin-right: auto; }
 
   .sm\:centered {
     position: absolute;
@@ -819,7 +819,7 @@ hr {
   .md\:left          { float: left !important; }
   .md\:right         { float: right !important; }
   .md\:clear         { clear: both; }
-  /* .md\:center       { float: none; margin-left: auto; margin-right: auto; } */
+  .md\:center       { float: none; margin-left: auto; margin-right: auto; }
 
   .md\:centered {
     position: absolute;
@@ -960,7 +960,7 @@ hr {
   .lg\:left          { float: left !important; }
   .lg\:right         { float: right !important; }
   .lg\:clear         { clear: both; }
-  /* .lg\:center       { float: none; margin-left: auto; margin-right: auto; } */
+  .lg\:center       { float: none; margin-left: auto; margin-right: auto; }
 
   .lg\:centered {
     position: absolute;
@@ -1101,7 +1101,7 @@ hr {
   .xl\:left          { float: left !important; }
   .xl\:right         { float: right !important; }
   .xl\:clear         { clear: both; }
-  /* .xl\:center       { float: none; margin-left: auto; margin-right: auto; } */
+  .xl\:center       { float: none; margin-left: auto; margin-right: auto; }
 
   .xl\:centered {
     position: absolute;
