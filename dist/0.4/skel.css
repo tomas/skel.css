@@ -886,7 +886,7 @@ hr {
 .left          { float: left !important; }
 .right         { float: right !important; }
 .clear         { clear: both; }
-.center       { float: none; margin-left: auto; margin-right: auto; }
+.center        { float: none; margin-left: auto; margin-right: auto; }
 
 .centered {
   position: absolute;
@@ -1826,6 +1826,10 @@ li.dropdown ul {
   border-bottom: none;
 }
 
+.dropdown .item {
+  line-height: 40px;
+}
+
 .dropdown li:last-child {
   border-bottom: 1px solid #eee;
 }
@@ -1853,7 +1857,9 @@ li.dropdown ul {
 ----------------------------------------------- */
 
 .menu-icon:before,
-.menu-icon:after {
+.menu-icon:after,
+.three-dots:before,
+.three-dots:after {
   display: inherit;
   position: relative;
   font-size: 18px;
@@ -1883,6 +1889,34 @@ li.dropdown ul {
 .left.menu-icon:before,
 .left.menu-icon:after {
   margin-left: 0;
+}
+
+.three-dots {
+  padding: 0 8px;
+  line-height: 28px;
+}
+
+.three-dots:before,
+.three-dots:after {
+  width: 3px;
+  border-top: 3px solid #666;
+}
+
+.three-dots:before {
+  height: 3px;
+  margin: 14px 0 0;
+  border-bottom: 3px solid #666;
+}
+
+.three-dots:after {
+  margin: 4px 0 8px -3px;
+  border-top: 3px solid #666;
+  height: 4px;
+}
+
+.three-dots:hover:before,
+.three-dots:hover:after {
+  border-color: #000;
 }
 
 .caret {
@@ -1963,7 +1997,7 @@ li.dropdown ul {
     background: #fff;
   }
 
-  .dark .menu li {
+  .dark.navbar .menu li {
     background: #1b1b1b;
   }
 
