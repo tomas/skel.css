@@ -538,7 +538,7 @@ hr {
 .left          { float: left !important; }
 .right         { float: right !important; }
 .clear         { clear: both; }
-.center       { float: none; margin-left: auto; margin-right: auto; }
+.center        { float: none; margin-left: auto; margin-right: auto; }
 
 .centered {
   position: absolute;

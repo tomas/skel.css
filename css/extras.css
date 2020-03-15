@@ -414,7 +414,7 @@ li.dropdown ul {
     background: #fff;
   }
 
-  .dark .menu li {
+  .dark.navbar .menu li {
     background: #1b1b1b;
   }
 
