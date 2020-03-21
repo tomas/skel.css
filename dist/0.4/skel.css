@@ -1826,7 +1826,7 @@ li.dropdown ul {
   border-bottom: none;
 }
 
-.dropdown .item {
+.dropdown ul .item {
   line-height: 40px;
 }
 
