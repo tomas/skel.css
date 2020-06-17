@@ -530,8 +530,8 @@ hr {
 .inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
 .fixed         { position: fixed !important }
-.absolute      { position: absolute !important }
-.relative      { position: relative !important }
+.absolute, .abs { position: absolute !important }
+.relative, .rel { position: relative !important }
 .sticky        { position: -webkit-sticky; position: sticky }
 .bottom        { bottom: 0; }
 
@@ -564,7 +564,7 @@ hr {
 .max-h-full   { max-height: 100% }
 .max-h-screen { max-height: 100vh }
 
-.w-full       { width: 100% }
+.w-full, .w-100 { width: 100% }
 .w-screen     { width: 100vw }
 .max-w-full   { max-width: 100% }
 .max-w-screen { max-width: 100vw }
@@ -670,8 +670,8 @@ hr {
   .sm\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .sm\:fixed         { position: fixed !important }
-  .sm\:absolute      { position: absolute !important }
-  .sm\:relative      { position: relative !important }
+  .sm\:absolute, .sm\:abs { position: absolute !important }
+  .sm\:relative, .sm\:rel { position: relative !important }
   .sm\:sticky        { position: -webkit-sticky; position: sticky }
   .sm\:bottom        { bottom: 0; }
 
@@ -704,7 +704,7 @@ hr {
   .sm\:max-h-full   { max-height: 100% }
   .sm\:max-h-screen { max-height: 100vh }
 
-  .sm\:w-full       { width: 100% }
+  .sm\:w-full, .sm\:w-100 { width: 100% }
   .sm\:w-screen     { width: 100vw }
   .sm\:max-w-full   { max-width: 100% }
   .sm\:max-w-screen { max-width: 100vw }
@@ -811,8 +811,8 @@ hr {
   .md\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .md\:fixed         { position: fixed !important }
-  .md\:absolute      { position: absolute !important }
-  .md\:relative      { position: relative !important }
+  .md\:absolute, .md\:abs { position: absolute !important }
+  .md\:relative, .md\:rel { position: relative !important }
   .md\:sticky        { position: -webkit-sticky; position: sticky }
   .md\:bottom        { bottom: 0; }
 
@@ -845,7 +845,7 @@ hr {
   .md\:max-h-full   { max-height: 100% }
   .md\:max-h-screen { max-height: 100vh }
 
-  .md\:w-full       { width: 100% }
+  .md\:w-full, .md\:w-100 { width: 100% }
   .md\:w-screen     { width: 100vw }
   .md\:max-w-full   { max-width: 100% }
   .md\:max-w-screen { max-width: 100vw }
@@ -952,8 +952,8 @@ hr {
   .lg\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .lg\:fixed         { position: fixed !important }
-  .lg\:absolute      { position: absolute !important }
-  .lg\:relative      { position: relative !important }
+  .lg\:absolute, .lg\:abs { position: absolute !important }
+  .lg\:relative, .lg\:rel { position: relative !important }
   .lg\:sticky        { position: -webkit-sticky; position: sticky }
   .lg\:bottom        { bottom: 0; }
 
@@ -986,7 +986,7 @@ hr {
   .lg\:max-h-full   { max-height: 100% }
   .lg\:max-h-screen { max-height: 100vh }
 
-  .lg\:w-full       { width: 100% }
+  .lg\:w-full, .lg\:w-100 { width: 100% }
   .lg\:w-screen     { width: 100vw }
   .lg\:max-w-full   { max-width: 100% }
   .lg\:max-w-screen { max-width: 100vw }
@@ -1093,8 +1093,8 @@ hr {
   .xl\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .xl\:fixed         { position: fixed !important }
-  .xl\:absolute      { position: absolute !important }
-  .xl\:relative      { position: relative !important }
+  .xl\:absolute, .xl\:abs { position: absolute !important }
+  .xl\:relative, .xl\:rel { position: relative !important }
   .xl\:sticky        { position: -webkit-sticky; position: sticky }
   .xl\:bottom        { bottom: 0; }
 
@@ -1127,7 +1127,7 @@ hr {
   .xl\:max-h-full   { max-height: 100% }
   .xl\:max-h-screen { max-height: 100vh }
 
-  .xl\:w-full       { width: 100% }
+  .xl\:w-full, .xl\:w-100 { width: 100% }
   .xl\:w-screen     { width: 100vw }
   .xl\:max-w-full   { max-width: 100% }
   .xl\:max-w-screen { max-width: 100vw }
