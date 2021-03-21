@@ -103,12 +103,10 @@ img { max-width: 100%; }
     flex-basis: 0;
   }
 
-  .columns,
   .grid {
     margin-left: -25px;
   }
 
-  .columns > *,
   .grid > * {
     float: left;
     padding-left: 25px;
