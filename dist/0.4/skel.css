@@ -440,13 +440,22 @@ img { max-width: 100%; }
 }
 
 @media (min-width: 600px) {
-  .grid,
   .columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .columns > * {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .grid {
     margin-left: -25px;
   }
 
-  .grid > *,
-  .columns > * {
+  .grid > * {
     float: left;
     padding-left: 25px;
     vertical-align: top;
@@ -466,6 +475,7 @@ img { max-width: 100%; }
     padding-left: 0;
   }
 
+/*
   .full.columns,
   .full.grid {
     margin-left: 0;
@@ -475,24 +485,21 @@ img { max-width: 100%; }
   .full.grid > * {
     padding-left: 0;
   }
+*/
 
   /* widths */
   .width-5, .w-5      { width: 5%; }
   .width-10, .w-10    { width: 10%; }
   .width-15, .w-15    { width: 15%; }
-  .five.columns > *,
   .width-one-fifth, .w-1-5, .w-1\/5,
   .width-20, .w-20    { width: 20%; }
-  .four.columns > *,
   .width-one-fourth, .w-1-4, .w-1\/4,
   .width-25, .w-25    { width: 25%; }
   .width-30, .w-30    { width: 30%; }
-  .three.columns > *,
   .width-one-third, .w-1-3, .w-1\/3 { width: 33.333%; }
   .width-35, .w-35    { width: 35%; }
   .width-40, .w-40    { width: 40%; }
   .width-45, .w-45    { width: 45%; }
-  .two.columns > *,
   .width-one-half, .w-1-2, .w-1\/2,
   .width-50, .w-50    { width: 50%; }
   .width-55, .w-55    { width: 55%; }
@@ -878,8 +885,8 @@ hr {
 .inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
 .fixed         { position: fixed !important }
-.absolute      { position: absolute !important }
-.relative      { position: relative !important }
+.absolute, .abs { position: absolute !important }
+.relative, .rel { position: relative !important }
 .sticky        { position: -webkit-sticky; position: sticky }
 .bottom        { bottom: 0; }
 
@@ -912,7 +919,7 @@ hr {
 .max-h-full   { max-height: 100% }
 .max-h-screen { max-height: 100vh }
 
-.w-full       { width: 100% }
+.w-full, .w-100 { width: 100% }
 .w-screen     { width: 100vw }
 .max-w-full   { max-width: 100% }
 .max-w-screen { max-width: 100vw }
@@ -922,18 +929,22 @@ hr {
 .m-25         { margin: 25px; }
 .m-50         { margin: 50px; }
 .m-100        { margin: 100px; }
+.mt-10        { margin-top: 0; }
 .mt-10        { margin-top: 10px; }
 .mt-25        { margin-top: 25px; }
 .mt-50        { margin-top: 50px; }
 .mt-100       { margin-top: 100px; }
+.mb-0         { margin-bottom: 0; }
 .mb-10        { margin-bottom: 10px; }
 .mb-25        { margin-bottom: 25px; }
 .mb-50        { margin-bottom: 50px; }
 .mb-100       { margin-bottom: 100px; }
+.ml-0         { margin-left: 0 }
 .ml-10        { margin-left: 10px; }
 .ml-25        { margin-left: 25px; }
 .ml-50        { margin-left: 50px; }
 .ml-100       { margin-left: 100px; }
+.mr-0         { margin-right: 0 }
 .mr-10        { margin-right: 10px; }
 .mr-25        { margin-right: 25px; }
 .mr-50        { margin-right: 50px; }
@@ -944,18 +955,22 @@ hr {
 .p-25         { padding: 25px; }
 .p-50         { padding: 50px; }
 .p-100        { padding: 100px; }
+.pt-0         { padding-top: 0 }
 .pt-10        { padding-top: 10px; }
 .pt-25        { padding-top: 25px; }
 .pt-50        { padding-top: 50px; }
 .pt-100       { padding-top: 100px; }
+.pb-0         { padding-bottom: 0 }
 .pb-10        { padding-bottom: 10px; }
 .pb-25        { padding-bottom: 25px; }
 .pb-50        { padding-bottom: 50px; }
 .pb-100       { padding-bottom: 100px; }
+.pl-0         { padding-left: 0 }
 .pl-10        { padding-left: 10px; }
 .pl-25        { padding-left: 25px; }
 .pl-50        { padding-left: 50px; }
 .pl-100       { padding-left: 100px; }
+.pr-0         { padding-right: 0 }
 .pr-10        { padding-right: 10px; }
 .pr-25        { padding-right: 25px; }
 .pr-50        { padding-right: 50px; }
@@ -1018,8 +1033,8 @@ hr {
   .sm\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .sm\:fixed         { position: fixed !important }
-  .sm\:absolute      { position: absolute !important }
-  .sm\:relative      { position: relative !important }
+  .sm\:absolute, .sm\:abs { position: absolute !important }
+  .sm\:relative, .sm\:rel { position: relative !important }
   .sm\:sticky        { position: -webkit-sticky; position: sticky }
   .sm\:bottom        { bottom: 0; }
 
@@ -1052,7 +1067,7 @@ hr {
   .sm\:max-h-full   { max-height: 100% }
   .sm\:max-h-screen { max-height: 100vh }
 
-  .sm\:w-full       { width: 100% }
+  .sm\:w-full, .sm\:w-100 { width: 100% }
   .sm\:w-screen     { width: 100vw }
   .sm\:max-w-full   { max-width: 100% }
   .sm\:max-w-screen { max-width: 100vw }
@@ -1062,18 +1077,22 @@ hr {
   .sm\:m-25         { margin: 25px; }
   .sm\:m-50         { margin: 50px; }
   .sm\:m-100        { margin: 100px; }
+  .sm\:mt-0         { margin-top: 0 }
   .sm\:mt-10        { margin-top: 10px; }
   .sm\:mt-25        { margin-top: 25px; }
   .sm\:mt-50        { margin-top: 50px; }
   .sm\:mt-100       { margin-top: 100px; }
+  .sm\:mb-0         { margin-bottom: 0 }
   .sm\:mb-10        { margin-bottom: 10px; }
   .sm\:mb-25        { margin-bottom: 25px; }
   .sm\:mb-50        { margin-bottom: 50px; }
   .sm\:mb-100       { margin-bottom: 100px; }
+  .sm\:ml-0         { margin-left: 0 }
   .sm\:ml-10        { margin-left: 10px; }
   .sm\:ml-25        { margin-left: 25px; }
   .sm\:ml-50        { margin-left: 50px; }
   .sm\:ml-100       { margin-left: 100px; }
+  .sm\:mr-0         { margin-right: 0 }
   .sm\:mr-10        { margin-right: 10px; }
   .sm\:mr-25        { margin-right: 25px; }
   .sm\:mr-50        { margin-right: 50px; }
@@ -1084,18 +1103,22 @@ hr {
   .sm\:p-25         { padding: 25px; }
   .sm\:p-50         { padding: 50px; }
   .sm\:p-100        { padding: 100px; }
+  .sm\:pt-0         { padding-top: 0 }
   .sm\:pt-10        { padding-top: 10px; }
   .sm\:pt-25        { padding-top: 25px; }
   .sm\:pt-50        { padding-top: 50px; }
   .sm\:pt-100       { padding-top: 100px; }
+  .sm\:pb-0         { padding-bottom: 0 }
   .sm\:pb-10        { padding-bottom: 10px; }
   .sm\:pb-25        { padding-bottom: 25px; }
   .sm\:pb-50        { padding-bottom: 50px; }
   .sm\:pb-100       { padding-bottom: 100px; }
+  .sm\:pl-0         { padding-left: 0 }
   .sm\:pl-10        { padding-left: 10px; }
   .sm\:pl-25        { padding-left: 25px; }
   .sm\:pl-50        { padding-left: 50px; }
   .sm\:pl-100       { padding-left: 100px; }
+  .sm\:pr-0         { padding-right: 0 }
   .sm\:pr-10        { padding-right: 10px; }
   .sm\:pr-25        { padding-right: 25px; }
   .sm\:pr-50        { padding-right: 50px; }
@@ -1159,8 +1182,8 @@ hr {
   .md\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .md\:fixed         { position: fixed !important }
-  .md\:absolute      { position: absolute !important }
-  .md\:relative      { position: relative !important }
+  .md\:absolute, .md\:abs { position: absolute !important }
+  .md\:relative, .md\:rel { position: relative !important }
   .md\:sticky        { position: -webkit-sticky; position: sticky }
   .md\:bottom        { bottom: 0; }
 
@@ -1193,7 +1216,7 @@ hr {
   .md\:max-h-full   { max-height: 100% }
   .md\:max-h-screen { max-height: 100vh }
 
-  .md\:w-full       { width: 100% }
+  .md\:w-full, .md\:w-100 { width: 100% }
   .md\:w-screen     { width: 100vw }
   .md\:max-w-full   { max-width: 100% }
   .md\:max-w-screen { max-width: 100vw }
@@ -1203,18 +1226,22 @@ hr {
   .md\:m-25         { margin: 25px; }
   .md\:m-50         { margin: 50px; }
   .md\:m-100        { margin: 100px; }
+  .md\:mt-0         { margin-top: 0 }
   .md\:mt-10        { margin-top: 10px; }
   .md\:mt-25        { margin-top: 25px; }
   .md\:mt-50        { margin-top: 50px; }
   .md\:mt-100       { margin-top: 100px; }
+  .md\:mb-0         { margin-bottom: 0 }
   .md\:mb-10        { margin-bottom: 10px; }
   .md\:mb-25        { margin-bottom: 25px; }
   .md\:mb-50        { margin-bottom: 50px; }
   .md\:mb-100       { margin-bottom: 100px; }
+  .md\:ml-0         { margin-left: 0 }
   .md\:ml-10        { margin-left: 10px; }
   .md\:ml-25        { margin-left: 25px; }
   .md\:ml-50        { margin-left: 50px; }
   .md\:ml-100       { margin-left: 100px; }
+  .md\:mr-0         { margin-right: 0 }
   .md\:mr-10        { margin-right: 10px; }
   .md\:mr-25        { margin-right: 25px; }
   .md\:mr-50        { margin-right: 50px; }
@@ -1225,18 +1252,22 @@ hr {
   .md\:p-25         { padding: 25px; }
   .md\:p-50         { padding: 50px; }
   .md\:p-100        { padding: 100px; }
+  .md\:pt-0         { padding-top: 0 }
   .md\:pt-10        { padding-top: 10px; }
   .md\:pt-25        { padding-top: 25px; }
   .md\:pt-50        { padding-top: 50px; }
   .md\:pt-100       { padding-top: 100px; }
+  .md\:pb-0         { padding-bottom: 0 }
   .md\:pb-10        { padding-bottom: 10px; }
   .md\:pb-25        { padding-bottom: 25px; }
   .md\:pb-50        { padding-bottom: 50px; }
   .md\:pb-100       { padding-bottom: 100px; }
+  .md\:pl-0         { padding-left: 0 }
   .md\:pl-10        { padding-left: 10px; }
   .md\:pl-25        { padding-left: 25px; }
   .md\:pl-50        { padding-left: 50px; }
   .md\:pl-100       { padding-left: 100px; }
+  .md\:pr-0         { padding-right: 0 }
   .md\:pr-10        { padding-right: 10px; }
   .md\:pr-25        { padding-right: 25px; }
   .md\:pr-50        { padding-right: 50px; }
@@ -1300,8 +1331,8 @@ hr {
   .lg\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .lg\:fixed         { position: fixed !important }
-  .lg\:absolute      { position: absolute !important }
-  .lg\:relative      { position: relative !important }
+  .lg\:absolute, .lg\:abs { position: absolute !important }
+  .lg\:relative, .lg\:rel { position: relative !important }
   .lg\:sticky        { position: -webkit-sticky; position: sticky }
   .lg\:bottom        { bottom: 0; }
 
@@ -1334,7 +1365,7 @@ hr {
   .lg\:max-h-full   { max-height: 100% }
   .lg\:max-h-screen { max-height: 100vh }
 
-  .lg\:w-full       { width: 100% }
+  .lg\:w-full, .lg\:w-100 { width: 100% }
   .lg\:w-screen     { width: 100vw }
   .lg\:max-w-full   { max-width: 100% }
   .lg\:max-w-screen { max-width: 100vw }
@@ -1344,18 +1375,22 @@ hr {
   .lg\:m-25         { margin: 25px; }
   .lg\:m-50         { margin: 50px; }
   .lg\:m-100        { margin: 100px; }
+  .lg\:mt-0         { margin-top: 0 }
   .lg\:mt-10        { margin-top: 10px; }
   .lg\:mt-25        { margin-top: 25px; }
   .lg\:mt-50        { margin-top: 50px; }
   .lg\:mt-100       { margin-top: 100px; }
+  .lg\:mb-0         { margin-bottom: 0 }
   .lg\:mb-10        { margin-bottom: 10px; }
   .lg\:mb-25        { margin-bottom: 25px; }
   .lg\:mb-50        { margin-bottom: 50px; }
   .lg\:mb-100       { margin-bottom: 100px; }
+  .lg\:ml-0         { margin-left: 0 }
   .lg\:ml-10        { margin-left: 10px; }
   .lg\:ml-25        { margin-left: 25px; }
   .lg\:ml-50        { margin-left: 50px; }
   .lg\:ml-100       { margin-left: 100px; }
+  .lg\:mr-0         { margin-right: 0 }
   .lg\:mr-10        { margin-right: 10px; }
   .lg\:mr-25        { margin-right: 25px; }
   .lg\:mr-50        { margin-right: 50px; }
@@ -1366,18 +1401,22 @@ hr {
   .lg\:p-25         { padding: 25px; }
   .lg\:p-50         { padding: 50px; }
   .lg\:p-100        { padding: 100px; }
+  .lg\:pt-0         { padding-top: 0 }
   .lg\:pt-10        { padding-top: 10px; }
   .lg\:pt-25        { padding-top: 25px; }
   .lg\:pt-50        { padding-top: 50px; }
   .lg\:pt-100       { padding-top: 100px; }
+  .lg\:pb-0         { padding-bottom: 0 }
   .lg\:pb-10        { padding-bottom: 10px; }
   .lg\:pb-25        { padding-bottom: 25px; }
   .lg\:pb-50        { padding-bottom: 50px; }
   .lg\:pb-100       { padding-bottom: 100px; }
+  .lg\:pl-0         { padding-left: 0 }
   .lg\:pl-10        { padding-left: 10px; }
   .lg\:pl-25        { padding-left: 25px; }
   .lg\:pl-50        { padding-left: 50px; }
   .lg\:pl-100       { padding-left: 100px; }
+  .lg\:pr-0         { padding-right: 0 }
   .lg\:pr-10        { padding-right: 10px; }
   .lg\:pr-25        { padding-right: 25px; }
   .lg\:pr-50        { padding-right: 50px; }
@@ -1441,8 +1480,8 @@ hr {
   .xl\:inline        { display: inline-block !important; *display: inline; /*IE 6/7*/ }
 
   .xl\:fixed         { position: fixed !important }
-  .xl\:absolute      { position: absolute !important }
-  .xl\:relative      { position: relative !important }
+  .xl\:absolute, .xl\:abs { position: absolute !important }
+  .xl\:relative, .xl\:rel { position: relative !important }
   .xl\:sticky        { position: -webkit-sticky; position: sticky }
   .xl\:bottom        { bottom: 0; }
 
@@ -1475,7 +1514,7 @@ hr {
   .xl\:max-h-full   { max-height: 100% }
   .xl\:max-h-screen { max-height: 100vh }
 
-  .xl\:w-full       { width: 100% }
+  .xl\:w-full, .xl\:w-100 { width: 100% }
   .xl\:w-screen     { width: 100vw }
   .xl\:max-w-full   { max-width: 100% }
   .xl\:max-w-screen { max-width: 100vw }
@@ -1485,18 +1524,22 @@ hr {
   .xl\:m-25          { margin: 25px; }
   .xl\:m-50          { margin: 50px; }
   .xl\:m-100         { margin: 100px; }
+  .xl\:mt-0          { margin-top: 0 }
   .xl\:mt-10         { margin-top: 10px; }
   .xl\:mt-25         { margin-top: 25px; }
   .xl\:mt-50         { margin-top: 50px; }
   .xl\:mt-100        { margin-top: 100px; }
+  .xl\:mb-0          { margin-bottom: 0 }
   .xl\:mb-10         { margin-bottom: 10px; }
   .xl\:mb-25         { margin-bottom: 25px; }
   .xl\:mb-50         { margin-bottom: 50px; }
   .xl\:mb-100        { margin-bottom: 100px; }
+  .xl\:ml-0          { margin-left: 0 }
   .xl\:ml-10         { margin-left: 10px; }
   .xl\:ml-25         { margin-left: 25px; }
   .xl\:ml-50         { margin-left: 50px; }
   .xl\:ml-100        { margin-left: 100px; }
+  .xl\:mr-0          { margin-right: 0 }
   .xl\:mr-10         { margin-right: 10px; }
   .xl\:mr-25         { margin-right: 25px; }
   .xl\:mr-50         { margin-right: 50px; }
@@ -1507,18 +1550,22 @@ hr {
   .xl\:p-25         { padding: 25px; }
   .xl\:p-50         { padding: 50px; }
   .xl\:p-100        { padding: 100px; }
+  .xl\:pt-0         { padding-top: 0 }
   .xl\:pt-10        { padding-top: 10px; }
   .xl\:pt-25        { padding-top: 25px; }
   .xl\:pt-50        { padding-top: 50px; }
   .xl\:pt-100       { padding-top: 100px; }
+  .xl\:pb-0         { padding-bottom: 0 }
   .xl\:pb-10        { padding-bottom: 10px; }
   .xl\:pb-25        { padding-bottom: 25px; }
   .xl\:pb-50        { padding-bottom: 50px; }
   .xl\:pb-100       { padding-bottom: 100px; }
+  .xl\:pl-0         { padding-left: 0 }
   .xl\:pl-10        { padding-left: 10px; }
   .xl\:pl-25        { padding-left: 25px; }
   .xl\:pl-50        { padding-left: 50px; }
   .xl\:pl-100       { padding-left: 100px; }
+  .xl\:pr-0         { padding-right: 0 }
   .xl\:pr-10        { padding-right: 10px; }
   .xl\:pr-25        { padding-right: 25px; }
   .xl\:pr-50        { padding-right: 50px; }
