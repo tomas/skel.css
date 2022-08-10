@@ -240,7 +240,7 @@ li.dropdown ul {
 }
 
 .dropdown ul .item {
-  line-height: 40px;
+  /*line-height: 40px;*/
 }
 
 .dropdown li:last-child {
@@ -392,30 +392,48 @@ li.dropdown ul {
   border-color: #ccc;
 }
 
+@media (max-width: 900px) {
+  .menu.visible,
+  .menu:target {
+    position: absolute;
+    top: 100%;
+    float: none !important; /* without this it pushes below */
+    /*right: 25px;*/
+    z-index:1;
+  }
+
+  .menu.right.visible {
+    right: 0;
+    text-align: right;
+  }
+
+  .visible.menu li {
+    min-width: 150px;
+    background: #fff;
+    display: block; /* or inherit */
+  }
+
+  .visible.menu .item {
+    padding: 0 25px !important;
+  }
+
+  .dark.navbar .menu li {
+    background: #1b1b1b;
+  }
+}
+
 @media (max-width: 600px) {
 
   .menu.visible,
   .menu:target {
     display: inherit;
     /*width: 100%;*/
+    top: 0;
     margin-left: -25px;
     margin-right: -25px;
-    float: none !important; /* without this it pushes below */
     clear: both;
     position: relative;
     z-index: 1;
-  }
-
-  .menu.visible li {
-    background: #fff;
-  }
-
-  .dark.navbar .menu li {
-    background: #1b1b1b;
-  }
-
-  .visible.menu li {
-    display: block; /* or inherit */
   }
 
 }
