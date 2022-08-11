@@ -190,7 +190,7 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border: 1px solid #aaa;
+  outline: 1px solid #aaa;
   cursor: pointer;
   box-sizing: border-box }
 
@@ -198,42 +198,42 @@ input[type=submit].primary,
 button.primary,
 .button.primary {
   color: rgb(0, 120, 231);
-  border-color: rgb(0, 120, 231);
+  outline-color: rgb(0, 120, 231);
 }
 
 input[type=submit].selected,
 button.selected,
 .button.selected {
   color: #345fcb;
-  border-color: #345fcb;
+  outline-color: #345fcb;
 }
 
 input[type=submit].secondary,
 button.secondary,
 .button.secondary {
-  border-color: rgb(126, 159, 177);
   color: rgb(88, 136, 162);
+  outline-color: rgb(126, 159, 177);
 }
 
 input[type=submit].danger,
 button.danger,
 .button.danger {
   color: rgb(214, 86, 75);
-  border-color: rgb(214, 86, 75);
+  outline-color: rgb(214, 86, 75);
 }
 
 input[type=submit].success,
 button.success,
 .button.success {
   color: rgb(64, 189, 79);
-  border-color: rgb(64, 189, 79);
+  outline-color: rgb(64, 189, 79);
 }
 
 input[type=submit].warning,
 button.warning,
 .button.warning {
   color: rgb(255, 163, 0);
-  border-color: rgb(255, 163, 0);
+  outline-color: rgb(255, 163, 0);
 }
 
 input[type=submit]:disabled,
@@ -254,7 +254,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
-  border-color: #666;
+  outline-color: #666;
   outline: 0 }
 
 .button.small,
@@ -269,12 +269,12 @@ input[type="button"].small {
 
 .dark .button {
   color: #ddd;
-  border-color: #ddd;
+  outline-color: #ddd;
 }
 
 .dark .button:hover {
   color: #fff;
-  border-color: #fff;
+  outline-color: #fff;
 }
 
 
@@ -333,7 +333,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border-color: #33C3F0;
+  outline-color: #33C3F0;
   outline: 0 }
 
 label,
