@@ -725,13 +725,13 @@ select {
   line-height: 1.6;
   border-radius: 0; /* chrome osx */
   padding-right: 36px;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12' fill='%23aaaaaa'><polygon points='12,4 24,4 18,10'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12'><path d='M14,4 L18,8 L22,4' stroke='%23aaaaaa' stroke-width='2' fill='none' /></svg>");
   background-repeat: no-repeat;
   background-position: right center;
 }
 
 select:focus {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12' fill='%23222222'><polygon points='12,4 24,4 18,10'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12'><path d='M14,4 L18,8 L22,4' stroke='%2333C3F0' stroke-width='2' fill='none' /></svg>");
 }
 
 select.loading {
