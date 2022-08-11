@@ -524,20 +524,21 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"] {
   display: inline-block;
-  padding: 0 30px;
+  padding: 0 25px;
   height: 42px;
   line-height: 42px;
   color: #777;
   text-align: center;
+/*
   font-weight: 500;
   font-size: 12px;
-/*
   letter-spacing: .1rem;
   text-transform: uppercase;
 */
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
+  border: 0;
   outline: 1px solid #aaa;
   cursor: pointer;
   box-sizing: border-box }
@@ -602,8 +603,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
-  outline-color: #666;
-  outline: 0 }
+  outline-color: #666 }
 
 .button.small,
 button.small,
@@ -647,7 +647,8 @@ textarea, select {
   height: 42px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
-  border: 1px solid #D1D1D1;
+  border: 0;
+  outline: 1px solid #D1D1D1;
   box-shadow: none;
   box-sizing: border-box }
 
@@ -681,8 +682,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  outline-color: #33C3F0;
-  outline: 0 }
+  outline-color: #33C3F0; }
 
 label,
 legend {
@@ -1647,7 +1647,7 @@ hr {
   position: relative;
   padding: 10px 15px;
   margin-bottom: 2rem;
-  border: 1px solid #eee;
+  outline: 1px solid #eee;
 }
 
 .alert > :last-child {
@@ -1666,7 +1666,7 @@ hr {
 .alert,
 .alert-notice {
   background: #ebf7fd;
-  border: 1px solid rgba(45,112,145,0.3);
+  outline: 1px solid rgba(45,112,145,0.3);
 }
 
 .alert,
@@ -1678,7 +1678,7 @@ hr {
 
 .alert-success {
   background: #f2fae3;
-  border-color: rgba(101,159,19,0.3);
+  outline-color: rgba(101,159,19,0.3);
 }
 
 .alert-success,
@@ -1688,7 +1688,7 @@ hr {
 
 .alert-warning {
   background: #fffceb;
-  border-color: rgba(226,131,39,0.3);
+  outline-color: rgba(226,131,39,0.3);
 }
 
 .alert-warning,
@@ -1699,7 +1699,7 @@ hr {
 .alert-error,
 .alert-danger {
   background: #fff1f0;
-  border-color: rgba(216,80,48,0.3);
+  outline-color: rgba(216,80,48,0.3);
 }
 
 .alert-danger,
@@ -1724,6 +1724,7 @@ hr {
   height: auto;
   padding: 0;
   border: 0;
+  outline: 0;
   font-weight: 300;
 }
 
