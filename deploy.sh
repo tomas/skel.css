@@ -10,7 +10,7 @@ rm -f dist/latest
 mkdir -p $path
 
 cat css/normalize.css css/skeleton.css css/components.css > ${path}/skel.css
-cat ${path}/skel.css css/plugins.css > ${path}/skel-with-extras.css
+cat ${path}/skel.css css/extras.css > ${path}/skel-with-extras.css
 csso -i ${path}/skel.css -o ${path}/skel.min.css
 csso -i ${path}/skel-with-extras.css -o ${path}/skel-with-extras.min.css
 
