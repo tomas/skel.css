@@ -141,18 +141,23 @@
   box-shadow: 0 5px 15px 5px rgb(0,0,0,0.05);
   width: 100%;
   margin-top: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
   transform: translateY(-19px);
   transition: all .3s cubic-bezier(.18,.89,.25,1.45), opacity .15s ease-out;
 }
 
 .nice-select.open .nice-select-dropdown {
-  opacity:1;
   transform: translateY(0)
 }
 
-.nice-select::after { right: 16px; }
-.nice-select .list { margin-bottom: 0; }
+.nice-select::after {
+  right: 16px;
+}
+
+.nice-select .list {
+  margin-bottom: 0;
+  border-radius: 3px;
+}
 
 .nice-select .option.selected {
   font-weight: 600;
