@@ -9,10 +9,10 @@ rm -Rf $path
 rm -f dist/latest
 mkdir -p $path
 
-cat css/normalize.css css/skeleton.css css/extras.css > ${path}/skel.css
-cat css/normalize.css css/skeleton.css css/extras.css css/plugins.css > ${path}/skel-with-plugins.css
+cat css/normalize.css css/skeleton.css css/components.css > ${path}/skel.css
+cat ${path}/skel.css css/plugins.css > ${path}/skel-with-extras.css
 csso -i ${path}/skel.css -o ${path}/skel.min.css
-csso -i ${path}/skel-with-plugins.css -o ${path}/skel-with-plugins.min.css
+csso -i ${path}/skel-with-extras.css -o ${path}/skel-with-extras.min.css
 
 cd dist
 ln -sf "$version" latest
