@@ -539,7 +539,7 @@ input[type="button"] {
   white-space: nowrap;
   background-color: transparent;
   border: 0;
-  outline: 1px solid #aaa;
+  box-shadow: 0 0 0 1px #aaa;
   cursor: pointer;
   box-sizing: border-box }
 
@@ -547,42 +547,42 @@ input[type=submit].primary,
 button.primary,
 .button.primary {
   color: rgb(0, 120, 231);
-  outline-color: rgb(0, 120, 231);
+  box-shadow: 0 0 0 1px rgb(0, 120, 231);
 }
 
 input[type=submit].selected,
 button.selected,
 .button.selected {
   color: #345fcb;
-  outline-color: #345fcb;
+  box-shadow: 0 0 0 1px #345fcb;
 }
 
 input[type=submit].secondary,
 button.secondary,
 .button.secondary {
   color: rgb(88, 136, 162);
-  outline-color: rgb(126, 159, 177);
+  box-shadow: 0 0 0 1px rgb(126, 159, 177);
 }
 
 input[type=submit].danger,
 button.danger,
 .button.danger {
   color: rgb(214, 86, 75);
-  outline-color: rgb(214, 86, 75);
+  box-shadow: 0 0 0 1px rgb(214, 86, 75);
 }
 
 input[type=submit].success,
 button.success,
 .button.success {
   color: rgb(64, 189, 79);
-  outline-color: rgb(64, 189, 79);
+  box-shadow: 0 0 0 1px rgb(64, 189, 79);
 }
 
 input[type=submit].warning,
 button.warning,
 .button.warning {
   color: rgb(255, 163, 0);
-  outline-color: rgb(255, 163, 0);
+  box-shadow: 0 0 0 1px rgb(255, 163, 0);
 }
 
 input[type=submit]:disabled,
@@ -603,7 +603,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
-  outline-color: #666 }
+  box-shadow: 0 0 0 1px #666 }
 
 .button.small,
 button.small,
@@ -617,12 +617,12 @@ input[type="button"].small {
 
 .dark .button {
   color: #ddd;
-  outline-color: #ddd;
+  box-shadow: 0 0 0 1px #ddd;
 }
 
 .dark .button:hover {
   color: #fff;
-  outline-color: #fff;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 
@@ -648,8 +648,8 @@ textarea, select {
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 0;
-  outline: 1px solid #D1D1D1;
-  box-shadow: none;
+  outline: none;
+  box-shadow: 0 0 0 1px #D1D1D1;
   box-sizing: border-box }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -682,7 +682,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  outline-color: #33C3F0; }
+  box-shadow: 0 0 0 1px #33C3F0; }
 
 label,
 legend {
@@ -700,6 +700,7 @@ input[type="checkbox"],
 input[type="radio"] {
   display: inline;
   margin-right: 5px;
+  cursor: pointer;
 }
 
 /*
@@ -1647,7 +1648,7 @@ hr {
   position: relative;
   padding: 10px 15px;
   margin-bottom: 2rem;
-  outline: 1px solid #eee;
+  box-shadow: 0 0 0 1px #eee;
 }
 
 .alert > :last-child {
@@ -1666,7 +1667,7 @@ hr {
 .alert,
 .alert-notice {
   background: #ebf7fd;
-  outline: 1px solid rgba(45,112,145,0.3);
+  box-shadow: 0 0 0 1px rgba(45,112,145,0.3);
 }
 
 .alert,
@@ -1678,7 +1679,7 @@ hr {
 
 .alert-success {
   background: #f2fae3;
-  outline-color: rgba(101,159,19,0.3);
+  box-shadow: 0 0 0 1px rgba(101,159,19,0.3);
 }
 
 .alert-success,
@@ -1688,7 +1689,7 @@ hr {
 
 .alert-warning {
   background: #fffceb;
-  outline-color: rgba(226,131,39,0.3);
+  box-shadow: 0 0 0 1px rgba(226,131,39,0.3);
 }
 
 .alert-warning,
@@ -1699,7 +1700,7 @@ hr {
 .alert-error,
 .alert-danger {
   background: #fff1f0;
-  outline-color: rgba(216,80,48,0.3);
+  box-shadow: 0 0 0 1px rgba(216,80,48,0.3);
 }
 
 .alert-danger,
@@ -1724,7 +1725,7 @@ hr {
   height: auto;
   padding: 0;
   border: 0;
-  outline: 0;
+  box-shadow: none;
   font-weight: 300;
 }
 
@@ -1742,6 +1743,10 @@ a.close-button {
 
 .close-button:focus {
   outline: none;
+}
+
+.close-button:hover {
+  box-shadow: none;
 }
 
 .close-button:after {
@@ -2074,114 +2079,6 @@ li.dropdown ul {
     z-index: 1;
   }
 
-}
-
-/* card-list
--------------------------------------------------*/
-
-.card-list li {
-  /*min-height: 300px;*/
-  float: left;
-  margin-bottom: 30px;
-  position: relative;
-  border-radius: 3px;
-  box-shadow: 0 1px 5px 0px rgba(0,0,0,0.2);
-}
-
-.card-list .item-1 {
-  margin-left: 0 !important
-}
-
-.card-list-4 li {
-  width: 23.5%;
-  margin-left: 2%;
-}
-
-.card-list-4 li:nth-child(4n-3) {
-  clear: left;
-  margin-left: 0
-}
-
-.card-list-3 li {
-  width: 31.333%;
-  margin-left: 3%;
-}
-
-.card-list-3 li:nth-child(3n+1) {
-  margin-left: 0;
-  clear: left;
-}
-
-@media (max-width: 800px) {
-
-  .card-list-4 li {
-    width: 31.333%;
-    margin-left: 3%
-  }
-
-  .card-list-4 li:nth-child(4n-3) {
-    clear: none;
-    margin-left: 3%
-  }
-
-  .card-list-4 li:nth-child(3n+1) {
-    margin-left: 0;
-    clear: left;
-  }
-
-  .card-list-3 li {
-    width: 48%;
-    margin-left: 4%;
-  }
-
-  .card-list-3 li:nth-child(3n+1) {
-    clear: none;
-    margin-left: 4%
-  }
-
-  .card-list-3 li:nth-child(2n+1) {
-    margin-left: 0;
-    clear: left;
-  }
-}
-
-@media (max-width: 600px) {
-  .card-list-4 li {
-    width: 48%;
-    margin-left: 4%
-  }
-
-  .card-list-4 li:nth-child(3n+1) {
-    clear: none;
-    margin-left: 4%
-  }
-
-  .card-list-4 li:nth-child(2n+1) {
-    margin-left: 0;
-    clear: left
-  }
-
-  .card-list-3 li {
-    width: 100%;
-    margin-left: 0%;
-    clear: none
-  }
-
-  .card-list-3 li:nth-child(3n+1) {
-    margin-left: 0
-  }
-}
-
-@media (max-width: 460px) {
-  .card-list-4 li {
-    width: 100%;
-    margin-left: 0%;
-    clear: none
-  }
-
-  .card-list-4 li:nth-child(3n+1) {
-    margin-left: 0
-  }
 }
 
 
