@@ -114,7 +114,7 @@
   height: 42px;
   line-height: 40px;
   border: none;
-  outline: 1px solid #ccc;
+  box-shadow: 0 0 0 1px #d1d1d1;
   border-radius: 0;
   padding-left: 13px;
   font-weight: 400;
@@ -124,7 +124,7 @@
 
 .nice-select.open {
   border-color: none;
-  outline-color: #33c3f0;
+  box-shadow: 0 0 0 1px #33c3f0;
 }
 
 .nice-select .option {
@@ -137,7 +137,7 @@
 }
 
 .nice-select .nice-select-dropdown {
-  outline: 1px solid #ccc;
+  border: 1px solid #d1d1d1;
   box-shadow: 0 5px 15px 5px rgb(0,0,0,0.05);
   width: 100%;
   margin-top: 10px;
