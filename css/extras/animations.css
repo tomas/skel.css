@@ -1,0 +1,76 @@
+.animate__animated {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animate__shakeX {
+  -webkit-animation-name:shakeX;
+  animation-name:shakeX
+}
+
+.animate__shakeY {
+  -webkit-animation-name:shakeY;
+  animation-name:shakeY
+}
+
+@-webkit-keyframes shakeX {
+  0%, to {
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0)
+  }
+  20%, 60% {
+    -webkit-transform:translate3d(-5px,0,0);
+    transform:translate3d(-5px,0,0)
+  }
+  40%, 80% {
+    -webkit-transform:translate3d(5px,0,0);
+    transform:translate3d(5px,0,0)
+  }
+}
+
+@keyframes shakeX {
+  0%, to {
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0)
+  }
+  20%, 60% {
+    -webkit-transform:translate3d(-5px,0,0);
+    transform:translate3d(-5px,0,0)
+  }
+  40%, 80% {
+    -webkit-transform:translate3d(5px,0,0);
+    transform:translate3d(5px,0,0)
+  }
+}
+
+@-webkit-keyframes shakeY {
+  0%, to {
+    -webkit-transform:translateZ(0);
+     transform:translateZ(0)
+  }
+  20%, 60% {
+    -webkit-transform:translate3d(0,-5px,0);
+    transform:translate3d(0,-5px,0)
+  }
+  40%, 80% {
+    -webkit-transform:translate3d(0,5px,0);
+    transform:translate3d(0,5px,0)
+  }
+}
+
+@keyframes shakeY {
+  0%, to {
+    -webkit-transform:translateZ(0);
+    transform:translateZ(0)
+  }
+  20%, 60% {
+    -webkit-transform:translate3d(0,-5px,0);
+    transform:translate3d(0,-5px,0)
+  }
+  40%, 80% {
+    -webkit-transform:translate3d(0,5px,0);
+    transform:translate3d(0,5px,0)
+  }
+}

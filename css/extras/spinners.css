@@ -1,0 +1,15 @@
+button.spinner {
+  text-indent: -999em;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%238080a9' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
+  background-position: 56% center;
+  background-repeat: no-repeat;
+}
+
+button.primary.spinner {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%23309bff' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
+}
+
+select.spinner {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%238080a9' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
+  padding-right: 44px;
+}

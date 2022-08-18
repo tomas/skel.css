@@ -1,0 +1,122 @@
+
+/* tooltips, from pico.css
+--------------------------------------------------------------*/
+
+[data-tooltip] {
+  position:relative
+}
+
+[data-tooltip]:not(a):not(button):not(input) {
+  cursor:help
+}
+
+[data-tooltip]::after,
+[data-tooltip]::before {
+  display:block;
+  z-index: 99;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  padding: .5rem 1rem;
+  overflow:hidden;
+  transform: translate(-73%,-.25rem);
+  border-radius: .25rem;
+  background: rgba(0,0,0,.8);
+  content: attr(data-tooltip);
+  color: #fff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  pointer-events: none;
+  width: 160px;
+}
+
+[data-tooltip]::after {
+  padding:0;
+  transform: translate(-50%,.3rem);
+  border-top: .6rem solid;
+  border-right: .6rem solid transparent;
+  border-left: .6em solid transparent;
+  border-radius: 0;
+  background-color:transparent;
+  content:"";
+  color: rgba(0,0,0,.8);
+  width: auto;
+}
+
+[data-tooltip]:focus::after,
+[data-tooltip]:focus::before,
+[data-tooltip]:hover::after,
+[data-tooltip]:hover::before {
+  opacity:1
+}
+
+@media (hover:hover) and (pointer:fine) {
+  [data-tooltip]:focus::after,
+  [data-tooltip]:focus::before,
+  [data-tooltip]:hover::after,
+  [data-tooltip]:hover::before {
+    -webkit-animation-duration:.2s;
+    animation-duration:.2s;
+    -webkit-animation-name:slide;
+    animation-name:slide
+  }
+
+  [data-tooltip]:focus::after,
+  [data-tooltip]:hover::after {
+    -webkit-animation-duration:.3s;
+    animation-duration:.3s;
+    -webkit-animation-name:slideCaret;
+    animation-name:slideCaret
+  }
+}
+
+@-webkit-keyframes slide {
+  from {
+    transform:translate(-73%,.75rem);
+    opacity:0
+  }
+  to {
+    transform:translate(-73%,-.25rem);
+    opacity:1
+  }
+}
+@keyframes slide {
+  from {
+    transform:translate(-73%,.75rem);
+    opacity:0
+  }
+  to {
+    transform:translate(-73%,-.25rem);
+    opacity:1
+  }
+}
+@-webkit-keyframes slideCaret {
+  from {
+    opacity:0
+  }
+  50% {
+    transform:translate(-50%,-.3rem);
+    opacity:0
+  }
+  to {
+    transform:translate(-50%,.3rem);
+    opacity:1
+  }
+}
+@keyframes slideCaret {
+  from {
+    opacity:0
+  }
+  50% {
+    transform:translate(-50%,-.3rem);
+    opacity:0
+  }
+  to {
+   transform:translate(-50%,.3rem);
+   opacity:1
+  }
+}
