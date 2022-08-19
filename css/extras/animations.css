@@ -1,3 +1,26 @@
+.transition__shrink,
+.transition__unshrink.pending {
+  font-size: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+
+  /* fade out, then shrink */
+  transition: opacity .15s,
+              font-size .3s .15s,
+              margin .3s .15s,
+              padding .3s .15s;
+}
+
+.transition__unshrink,
+.transition__shrink.pending {
+  /* unshrink, then fade in */
+  transition: font-size .15s,
+              margin .15s,
+              padding .15s,
+              opacity .3s .15s;
+}
+
 .animate__animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;

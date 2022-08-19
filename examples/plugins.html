@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="cleartype" content="on">
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="400">
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+  <title>My website</title>
+
+  <link rel="stylesheet" href="https://bluzky.github.io/nice-select2/dist/css/nice-select2.css" />
+  <!-- <link rel="stylesheet" href="https://tomas.github.io/skel.css/dist/0.5/skel-with-extras.min.css"> -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/components.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <div class="container">
+
+    <link rel="stylesheet" href="/css/extras/nice-select.css">
+    <div class="grid mt-50">
+      <h2>Selects</h2>
+
+      <div class="w-50">
+        <label>Normal select</label>
+        <select>
+          <option value="1">Some option</option>
+          <option value="2">Another option</option>
+          <option value="3" disabled>A disabled option</option>
+          <option value="4">Potato</option>
+        </select>
+
+        <label>Nice select</label>
+        <select class="selectize">
+          <option value="1">Some option</option>
+          <option value="2">Another option</option>
+          <option value="3" disabled>A disabled option</option>
+          <option value="4">Potato</option>
+        </select>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/extras/checkboxes.css">
+    <div class="grid mt-50">
+      <h2>Checkboxes</h2>
+
+      <div class="w-50">
+        <p>
+          <label>Normal checkbox</label>
+          <input type="checkbox" id="first-checkbox" name="addon[active]" />
+        </p>
+
+        <p>
+          <label>Toggle</label>
+          <input type="hidden" name="second" value="" />
+          <input type="checkbox" id="second-checkbox" class="ios-toggle" name="second" />
+          <label for="second-checkbox" class="checkbox-label" data-off="No" data-on="Sí"></label>
+        </p>
+
+        <p>
+          <label>Thin toggle</label>
+          <input type="hidden" name="third" value="" />
+          <input type="checkbox" id="third-checkbox" class="ios-toggle" name="third" />
+          <label for="third-checkbox" class="thin checkbox-label" data-off="No" data-on="Sí"></label>
+        </p>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/extras/spinners.css">
+    <div class="grid mt-50">
+      <h2>Spinners</h2>
+
+      <div class="w-50">
+        <p>
+          <label>Normal spinner</label>
+          <div class="spinner"></div>
+        </p>
+
+        <p>
+          <label>Spinner in button</label>
+          <button class="spinner">Something</button>
+          <button class="primary spinner">Something</button>
+        </p>
+
+        <p>
+          <label>Spinner in select</label>
+          <select class="spinner">
+            <option value="1">Some option</option>
+            <option value="2">Another option</option>
+            <option value="3" disabled>A disabled option</option>
+            <option value="4">Potato</option>
+          </select>
+        </p>
+
+        <p>
+          <label>Spinner in nice select</label>
+          <select class="spinner selectize">
+            <option value="1">Some option</option>
+            <option value="2">Another option</option>
+            <option value="3" disabled>A disabled option</option>
+            <option value="4">Potato</option>
+          </select>
+        </p>
+      </div>
+    </div>
+
+
+    <link rel="stylesheet" href="/css/extras/toasts.css">
+    <div class="grid mt-50">
+      <h2>Toasts</h2>
+
+      <div class="w-50">
+        <p>
+          <input type="text" value="Message for toast" />
+          <button onclick="showToast(this.previousElementSibling.value)">Show toast</button>
+        </p>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/extras/tooltips.css">
+    <div class="grid mt-50">
+      <h2>Tooltips</h2>
+
+      <div class="w-50">
+        <p>
+          <abbr data-tooltip="Hello there!">This</abbr> is a very interesting tooltip.
+        </p>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/extras/animations.css">
+    <div class="grid mt-50">
+      <h2>Animations</h2>
+
+      <div class="w-50">
+        <p>
+          <div id="redbox" class="mb-50" style="background-color: red; width: 100px; height: 100px;"></div>
+
+          <button onclick="animateElement(document.getElementById('redbox'), 'shakeX')">shakeX</button>
+          <button onclick="animateElement(document.getElementById('redbox'), 'shakeY')">shakeY</button>
+          <button onclick="transitionElement(document.getElementById('redbox'), 'shrink')">shrink</button>
+          <button onclick="transitionElement(document.getElementById('redbox'), 'unshrink')">unshrink</button>
+        </p>
+      </div>
+    </div>
+
+
+  </div><!-- /container -->
+
+<script src="https://bluzky.github.io/nice-select2/dist/js/nice-select2.js"></script>
+<script>
+  // nice selects
+  var selects = document.querySelectorAll(".selectize");
+  selects.forEach(NiceSelect.bind);
+
+  // toasts
+  var showToast = (function() {
+    function repositionToasts(container, fromBottom) {
+      var separation = 15,
+          topOffset  = fromBottom ? 0 : separation,
+          multiplier = fromBottom ? -1 : 1;
+
+      var toasts = container.getElementsByClassName('toast');
+      for (var i = 0; i < toasts.length; i++) {
+        var height = toasts[i].offsetHeight;
+        toasts[i].style.transform = 'translateY(' + (topOffset * multiplier) + 'px)';
+        topOffset += height + separation;
+      }
+    }
+
+    return function showToast(text, opts) {
+      // var container = document.getElementById('toasts');
+      var container = document.body;
+      var hideAfter = opts && opts.hideAfter || 8000; // 8 secs
+      var fromBottom = opts && opts.bottom;
+
+      var msg = document.createElement('div');
+      msg.classList.add('toast', 'shown');
+      if (fromBottom) msg.classList.add('bottom');
+      msg.innerHTML = text;
+      container.prepend(msg);
+      repositionToasts(container, fromBottom);
+
+      setTimeout(function() {
+        msg.classList.remove('shown');
+        // repositionToasts(container);
+
+        setTimeout(function() {
+          container.removeChild(msg);
+          if (!container.children.length) container.style.visisibility = 'hidden';
+          // repositionToasts(container);
+        }, 1000);
+      }, hideAfter);
+    }
+
+  })();
+
+  // animations
+  function animateElement(el, animationName, cb) {
+    el.classList.add('animate__animated', 'animate__' + animationName);
+
+    el.addEventListener('animationend', onAnimate);
+    function onAnimate() {
+      el.removeEventListener('animationend', onAnimate);
+      cb && cb.call(el);
+      el.classList.remove('animate__animated', 'animate__' + animationName);
+    }
+  }
+
+  function transitionElement(el, transitionName, cb) {
+    var isReverse = transitionName.startsWith('un');
+    console.log('isReverse', isReverse)
+
+    el.classList.add('transition__transitioning', 'transition__' + transitionName);
+    if (isReverse) el.classList.add('pending');
+
+    el.addEventListener('transitionend', onTransition);
+    function onTransition() {
+      setTimeout(function() {
+        el.removeEventListener('transitionend', onTransition);
+        cb && cb.call(el);
+        el.classList.remove('transition__transitioning', 'transition__' + transitionName);
+      }, 1000)
+    }
+
+    if (isReverse) setTimeout(function() { el.classList.remove('pending') }, 500);
+  }
+
+</script>
+
+</body>
+</html>
+
+
