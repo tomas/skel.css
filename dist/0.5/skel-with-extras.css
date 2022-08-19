@@ -529,6 +529,7 @@ input[type="button"] {
   line-height: 42px;
   color: #777;
   text-align: center;
+  font-size: 14px; /* same as input */
 /*
   font-weight: 500;
   font-size: 12px;
@@ -2136,7 +2137,30 @@ li.dropdown ul {
 .dark.bg-after::after {
   color: #fff;
   background-color: rgba(0,0,0,0.75);
-}.animate__animated {
+}.transition__shrink,
+.transition__unshrink.pending {
+  font-size: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+
+  /* fade out, then shrink */
+  transition: opacity .15s,
+              font-size .3s .15s,
+              margin .3s .15s,
+              padding .3s .15s;
+}
+
+.transition__unshrink,
+.transition__shrink.pending {
+  /* unshrink, then fade in */
+  transition: font-size .15s,
+              margin .15s,
+              padding .15s,
+              opacity .3s .15s;
+}
+
+.animate__animated {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-fill-mode: both;
@@ -2855,20 +2879,34 @@ body.noscroll .over {
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
   background-color: #daf6ff;
 }
-button.spinner {
-  text-indent: -999em;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%238080a9' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
-  background-position: 56% center;
+.spinner {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%23666666' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
   background-repeat: no-repeat;
+}
+
+div.spinner {
+  min-height: 36px;
+}
+
+button.spinner {
+  /*text-indent: -999em;*/
+  color: transparent;
+  background-position: 55% center;
 }
 
 button.primary.spinner {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%23309bff' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
 }
 
-select.spinner {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%238080a9' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
+select.spinner,
+.nice-select.spinner {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'><path d='M14,8 a1,1 0 0,10 20,0' fill='none' stroke='%23666666' stroke-width='2'><animateTransform attributeName='transform' type='rotate' from='0 14 18' to='360 14 18' dur='0.6s' repeatCount='indefinite'/></path></svg>");
   padding-right: 44px;
+  background-position: 99.7% center;
+}
+
+.nice-select.spinner:after {
+  display: none;
 }
 /* toasts
 --------------------------------------------------------------*/
@@ -2930,6 +2968,14 @@ body > .toast.bottom {
 /* tooltips, from pico.css
 --------------------------------------------------------------*/
 
+abbr[data-tooltip] {
+  border-bottom: dotted 1px;
+}
+
+abbr[data-tooltip]:hover {
+  border-bottom: solid 1px;
+}
+
 [data-tooltip] {
   position:relative
 }
@@ -2943,11 +2989,11 @@ body > .toast.bottom {
   display:block;
   z-index: 99;
   position: absolute;
-  bottom: 130%;
+  bottom: 200%;
   left: 50%;
   padding: .5rem 1rem;
   overflow:hidden;
-  transform: translate(-73%,-.25rem);
+  transform: translate(-50%,-.25rem);
   border-radius: .25rem;
   background: rgba(0,0,0,.8);
   content: attr(data-tooltip);
@@ -2959,12 +3005,12 @@ body > .toast.bottom {
   white-space: normal;
   opacity: 0;
   pointer-events: none;
-  width: 160px;
+  width: 100px;
 }
 
 [data-tooltip]::after {
   padding:0;
-  transform: translate(-50%,.3rem);
+  transform: translate(-50%, .3rem);
   border-top: .6rem solid;
   border-right: .6rem solid transparent;
   border-left: .6em solid transparent;
@@ -3004,21 +3050,21 @@ body > .toast.bottom {
 
 @-webkit-keyframes slide {
   from {
-    transform:translate(-73%,.75rem);
+    transform:translate(-73%, .75rem);
     opacity:0
   }
   to {
-    transform:translate(-73%,-.25rem);
+    transform:translate(-50%,-.25rem);
     opacity:1
   }
 }
 @keyframes slide {
   from {
-    transform:translate(-73%,.75rem);
+    transform:translate(-50%,.75rem);
     opacity:0
   }
   to {
-    transform:translate(-73%,-.25rem);
+    transform:translate(-50%,-.25rem);
     opacity:1
   }
 }

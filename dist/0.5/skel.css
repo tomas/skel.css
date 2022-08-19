@@ -529,6 +529,7 @@ input[type="button"] {
   line-height: 42px;
   color: #777;
   text-align: center;
+  font-size: 14px; /* same as input */
 /*
   font-weight: 500;
   font-size: 12px;
