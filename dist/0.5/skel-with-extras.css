@@ -2849,6 +2849,7 @@ body.noscroll .over {
   font-weight: 400;
   color: #000;
   width:  100%;
+  margin-bottom: 1.5rem; /* same as regular selects */
 }
 
 .nice-select.open {
