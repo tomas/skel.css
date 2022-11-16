@@ -525,7 +525,7 @@ input[type="reset"],
 input[type="button"] {
 
   appearance: none;
-  font-size: 1em;
+  /*font-size: 1em;*/
   border: 1px solid transparent;
 
   display: inline-block;
@@ -2841,7 +2841,7 @@ body.noscroll .over {
 
 .nice-select {
   height: 42px;
-  line-height: 40px;
+  line-height: 42px;
   border: none;
   box-shadow: 0 0 0 1px #d1d1d1;
   border-radius: 0;
