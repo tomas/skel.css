@@ -49,6 +49,14 @@
   border-radius: 3px;
 }
 
+.nice-select .optgroup {
+  list-style: none;
+  padding-left: 10px;
+  font-weight: normal;
+  color: #999;
+  margin: 0;
+}
+
 .nice-select .option.selected {
   font-weight: 600;
 }
@@ -56,3 +64,4 @@
 .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {
   background-color: #daf6ff;
 }
+
