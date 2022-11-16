@@ -376,7 +376,7 @@ body {
 
 body, label, input, textarea, select, button {
   /*font-family: Helvetica, Arial, sans-serif;*/
-  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', Arial, Noto Sans, sans-serif;
+  font-family: Inter, "Inter var", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', Arial, Noto Sans, sans-serif;
 }
 
 th, label, legend {
@@ -523,10 +523,27 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+
+  appearance: none;
+  font-size: 1em;
+  border: 1px solid transparent;
+
   display: inline-block;
-  padding: 0 25px;
-  height: 42px;
-  line-height: 42px;
+  box-sizing: content-box;
+
+  /* display: inline-flex; /
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* border-radius: 0.25em; */
+
+  /* box-shadow: 0 1px 4px rgb(9 66 179 / 25%); */
+
+  transition: 0.2s;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 1.5em;
+  /*padding: 0 25px;*/
+
   color: #777;
   text-align: center;
   font-size: 14px; /* same as input */
@@ -539,51 +556,50 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border: 0;
-  box-shadow: 0 0 0 1px #aaa;
+  border: 1px solid #aaa;
   cursor: pointer;
-  box-sizing: border-box }
+}
 
 input[type=submit].primary,
 button.primary,
 .button.primary {
   color: rgb(0, 120, 231);
-  box-shadow: 0 0 0 1px rgb(0, 120, 231);
+  border: 1px solid rgb(0, 120, 231);
 }
 
 input[type=submit].selected,
 button.selected,
 .button.selected {
   color: #345fcb;
-  box-shadow: 0 0 0 1px #345fcb;
+  border: 1px solid #345fcb;
 }
 
 input[type=submit].secondary,
 button.secondary,
 .button.secondary {
   color: rgb(88, 136, 162);
-  box-shadow: 0 0 0 1px rgb(126, 159, 177);
+  border: 1px solid rgb(126, 159, 177);
 }
 
 input[type=submit].danger,
 button.danger,
 .button.danger {
   color: rgb(214, 86, 75);
-  box-shadow: 0 0 0 1px rgb(214, 86, 75);
+  border: 1px solid rgb(214, 86, 75);
 }
 
 input[type=submit].success,
 button.success,
 .button.success {
   color: rgb(64, 189, 79);
-  box-shadow: 0 0 0 1px rgb(64, 189, 79);
+  border: 1px solid rgb(64, 189, 79);
 }
 
 input[type=submit].warning,
 button.warning,
 .button.warning {
   color: rgb(255, 163, 0);
-  box-shadow: 0 0 0 1px rgb(255, 163, 0);
+  border: 1px solid rgb(255, 163, 0);
 }
 
 input[type=submit]:disabled,
@@ -604,7 +620,7 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
-  box-shadow: 0 0 0 1px #666 }
+  border: 1px solid #666 }
 
 .button.small,
 button.small,
