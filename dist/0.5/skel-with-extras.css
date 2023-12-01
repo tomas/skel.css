@@ -954,7 +954,7 @@ hr {
 .m-25         { margin: 25px }
 .m-50         { margin: 50px }
 .m-100        { margin: 100px }
-.mt-10        { margin-top: 0 }
+.mt-0         { margin-top: 0 }
 .mt-10        { margin-top: 10px }
 .mt-25        { margin-top: 25px }
 .mt-50        { margin-top: 50px }
@@ -2251,6 +2251,17 @@ li.dropdown ul {
     -webkit-transform:translate3d(0,5px,0);
     transform:translate3d(0,5px,0)
   }
+}
+
+@keyframes revealFade {
+  0% {
+    mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 150% 0 / 400% no-repeat;
+    opacity: .2;
+  }
+  100% {
+    mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 0 / 400% no-repeat;
+    opacity: 1;
+  }
 }.bselect {
   position: relative;
   cursor: pointer;
@@ -2868,7 +2879,7 @@ body.noscroll .over {
 
 .nice-select .nice-select-dropdown {
   border: 1px solid #d1d1d1;
-  box-shadow: 0 5px 15px 5px rgb(0,0,0,0.05);
+  box-shadow: 0 5px 15px 5px rgba(0,0,0,0.05);
   width: 100%;
   margin-top: 10px;
   border-radius: 3px;
