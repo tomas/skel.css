@@ -29,7 +29,7 @@
 
 .nice-select .nice-select-dropdown {
   border: 1px solid #d1d1d1;
-  box-shadow: 0 5px 15px 5px rgb(0,0,0,0.05);
+  box-shadow: 0 5px 15px 5px rgba(0,0,0,0.05);
   width: 100%;
   margin-top: 10px;
   border-radius: 3px;
