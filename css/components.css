@@ -19,7 +19,6 @@
 
 .alert label {
   display: inline-block;
-  display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
   *zoom: 1;
