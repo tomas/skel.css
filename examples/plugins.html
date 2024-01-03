@@ -143,14 +143,36 @@
     <div class="grid mt-50">
       <h2>Animations</h2>
 
-      <div class="w-50">
+      <div>
         <p>
           <div id="redbox" class="mb-50" style="background-color: red; width: 100px; height: 100px;"></div>
 
           <button onclick="animateElement(document.getElementById('redbox'), 'shakeX')">shakeX</button>
           <button onclick="animateElement(document.getElementById('redbox'), 'shakeY')">shakeY</button>
-          <button onclick="transitionElement(document.getElementById('redbox'), 'shrink')">shrink</button>
-          <button onclick="transitionElement(document.getElementById('redbox'), 'unshrink')">unshrink</button>
+          <button onclick="transitionElement(document.getElementById('redbox'), 'shrink', 1)">shrink</button>
+          <button onclick="transitionElement(document.getElementById('redbox'), 'unshrink', 1)">unshrink</button>
+        </p>
+      </div>
+
+      <hr />
+      <h2>Collapsable</h2>
+
+      <div>
+        <button onclick="this.nextElementSibling.classList.toggle('collapsed')">toggle collapsed</button>
+
+        <div id="greenbox" class="mt-50 mb-50 collapsable" style="background-color: yellow; width: 100px; height: 100px;">
+          Some text
+        </div>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/css/extras/tooltips.css">
+    <div class="grid mt-50">
+      <h2>Tooltips</h2>
+
+      <div class="w-50">
+        <p>
+          <abbr data-tooltip="Hello there!">This</abbr> is a very interesting tooltip.
         </p>
       </div>
     </div>
@@ -206,35 +228,40 @@
 
   })();
 
+  var transitioning = false;
+
   // animations
   function animateElement(el, animationName, cb) {
+    if (transitioning) return;
+    transitioning = true;
     el.classList.add('animate__animated', 'animate__' + animationName);
 
     el.addEventListener('animationend', onAnimate);
     function onAnimate() {
       el.removeEventListener('animationend', onAnimate);
+      transitioning = false;
       cb && cb.call(el);
       el.classList.remove('animate__animated', 'animate__' + animationName);
     }
   }
 
-  function transitionElement(el, transitionName, cb) {
-    var isReverse = transitionName.startsWith('un');
-    console.log('isReverse', isReverse)
-
+  function transitionElement(el, transitionName, withPending, cb) {
+    if (transitioning) return;
+    transitioning = true;
     el.classList.add('transition__transitioning', 'transition__' + transitionName);
-    if (isReverse) el.classList.add('pending');
+    if (withPending) el.classList.add('pending');
 
     el.addEventListener('transitionend', onTransition);
     function onTransition() {
       setTimeout(function() {
         el.removeEventListener('transitionend', onTransition);
+        transitioning = false;
         cb && cb.call(el);
         el.classList.remove('transition__transitioning', 'transition__' + transitionName);
       }, 1000)
     }
 
-    if (isReverse) setTimeout(function() { el.classList.remove('pending') }, 500);
+    if (withPending) setTimeout(function() { el.classList.remove('pending') }, 500);
   }
 
 </script>
