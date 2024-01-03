@@ -1,3 +1,20 @@
+.collapsable {
+  max-height: 10em;
+/*  transition: max-height .5s ease-in-out;*/
+  transition: opacity .5s, max-height .5s cubic-bezier(0.25, 1, 0.5, 1);
+/*  height: inherit;*/
+/*  width: inherit;*/
+}
+
+.collapsable.collapsed {
+/*  transition: max-height .5s ease-in-out;*/
+  transition: opacity .3s, max-height .5s cubic-bezier(0, 1, 0.5, 1);
+  overflow-y: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+
 .transition__shrink,
 .transition__unshrink.pending {
   font-size: 0 !important;
@@ -20,6 +37,7 @@
               padding .15s,
               opacity .3s .15s;
 }
+
 
 .animate__animated {
   -webkit-animation-duration: 0.5s;
