@@ -252,6 +252,15 @@ button.warning,
   border: 1px solid rgb(255, 163, 0);
 }
 
+
+input[type=submit].ghost,
+button.ghost,
+.button.ghost {
+  color: rgb(9, 9, 11);
+  background-color: transparent;
+  border-color: transparent;
+}
+
 input[type=submit]:disabled,
 button:disabled,
 .button:disabled {
@@ -338,6 +347,15 @@ textarea, select {
 textarea {
   min-height: 65px;
   line-height: 1.6 }
+
+select.buried {
+  color: #666;
+  border-color: transparent;
+/*  background-color: transparent;*/
+  background-color: rgb(246, 246, 247);
+  box-shadow: none;
+  padding-right: 30px;
+  background-position: right 55%; }
 
 input[type="email"]:focus,
 input[type="number"]:focus,
