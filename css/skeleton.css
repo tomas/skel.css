@@ -293,12 +293,12 @@ input[type="button"].small {
 
 .dark .button {
   color: #ddd;
-  box-shadow: 0 0 0 1px #ddd;
+  border-color: #ddd;
 }
 
 .dark .button:hover {
   color: #fff;
-  box-shadow: 0 0 0 1px #fff;
+  border-color: #fff;
 }
 
 
