@@ -128,16 +128,26 @@
       </div>
     </div>
 
-    <link rel="stylesheet" href="/css/extras/tooltips.css">
+    <script src="https://unpkg.com/petite-vue" defer init></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <div class="grid mt-50">
-      <h2>Tooltips</h2>
+      <h2>Nice Toggle</h2>
 
       <div class="w-50">
-        <p>
-          <abbr data-tooltip="Hello there!">This</abbr> is a very interesting tooltip.
-        </p>
-      </div>
+        <div v-scope="{ planRate: 'Yearly' }" class="flex justify-center items-center mt-8">
+          <div class="flex bg-gray-200/[0.2] rounded-full transition-all duration-500 overflow-hidden relative p-1 shadow">
+            <div class="absolute top-0 left-0 h-full p-1 w-1/2" :class="{
+                    'animate-slide-and-squeeze': planRate === 'Yearly',
+                    'animate-slide-and-expand ': planRate === 'Monthly'
+                }">
+              <div class="w-full h-full rounded-full bg-white"></div>
+            </div>
+            <button type="button" class="flex-1 text-sm font-medium rounded-full py-2 px-6 relative z-10 transition-colors duration-200" :class="planRate === 'Monthly' ? 'text-black delay-200' : 'text-white'" @click="planRate = 'Monthly'">Monthly</button>
+            <button type="button" class="flex-1 text-sm font-medium rounded-full py-2 px-6 relative z-10 transition-colors duration-200" :class="planRate === 'Yearly' ? 'text-black' : 'text-white'" @click="planRate = 'Yearly'">Yearly</button>
+          </div>
+        </div>
     </div>
+
 
     <link rel="stylesheet" href="/css/extras/animations.css">
     <div class="grid mt-50">
