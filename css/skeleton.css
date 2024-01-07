@@ -184,7 +184,7 @@ input[type="button"] {
   /* display: inline-flex; /
   /* justify-content: center; */
   /* align-items: center; */
-   border-radius: 0.25em;
+  border-radius: 0.2em;
 
   /* box-shadow: 0 1px 4px rgb(9 66 179 / 25%); */
 
@@ -313,6 +313,7 @@ textarea, select {
   width: 100%;
   height: 42px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  border-radius: 0.2em;
   background-color: #fff;
   border: 0;
   outline: none;
@@ -391,7 +392,7 @@ textarea:disabled {
 
 select {
   line-height: 1.6;
-  border-radius: 0; /* chrome osx */
+  /*  border-radius: 0; */ /* for chrome osx */
   padding-right: 36px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12'><path d='M14,4 L18,8 L22,4' stroke='%23aaaaaa' stroke-width='2' fill='none' /></svg>");
   background-repeat: no-repeat;
