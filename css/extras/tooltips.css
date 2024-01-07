@@ -39,11 +39,12 @@ abbr[data-tooltip]:hover {
   white-space: normal;
   opacity: 0;
   pointer-events: none;
-  width: 100px;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 [data-tooltip]::after {
-  padding:0;
+  padding: 0;
   transform: translate(-50%, .3rem);
   border-top: .6rem solid;
   border-right: .6rem solid transparent;
@@ -75,8 +76,8 @@ abbr[data-tooltip]:hover {
 
   [data-tooltip]:focus::after,
   [data-tooltip]:hover::after {
-    -webkit-animation-duration:.3s;
-    animation-duration:.3s;
+    -webkit-animation-duration:.25s;
+    animation-duration:.25s;
     -webkit-animation-name:slideCaret;
     animation-name:slideCaret
   }

@@ -44,18 +44,16 @@ abbr[title] {
   border-bottom: dotted 1px;
 }
 
+pre, code, .monospace {
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
 pre, code {
   color: #a93fa9;
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-/* utility classes */
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
-}
-
-.monospace {
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 
@@ -186,7 +184,7 @@ input[type="button"] {
   /* display: inline-flex; /
   /* justify-content: center; */
   /* align-items: center; */
-  /* border-radius: 0.25em; */
+   border-radius: 0.25em;
 
   /* box-shadow: 0 1px 4px rgb(9 66 179 / 25%); */
 
@@ -867,7 +865,7 @@ hr {
   .md\:left          { float: left !important }
   .md\:right         { float: right !important }
   .md\:clear         { clear: both }
-  .md\:center       { float: none; margin-left: auto; margin-right: auto }
+  .md\:center        { float: none; margin-left: auto; margin-right: auto }
 
   .md\:centered {
     position: absolute;
@@ -1016,7 +1014,7 @@ hr {
   .lg\:left          { float: left !important }
   .lg\:right         { float: right !important }
   .lg\:clear         { clear: both }
-  .lg\:center       { float: none; margin-left: auto; margin-right: auto }
+  .lg\:center        { float: none; margin-left: auto; margin-right: auto }
 
   .lg\:centered {
     position: absolute;
@@ -1165,7 +1163,7 @@ hr {
   .xl\:left          { float: left !important }
   .xl\:right         { float: right !important }
   .xl\:clear         { clear: both }
-  .xl\:center       { float: none; margin-left: auto; margin-right: auto }
+  .xl\:center        { float: none; margin-left: auto; margin-right: auto }
 
   .xl\:centered {
     position: absolute;

@@ -1,7 +1,8 @@
 .collapsable {
-  max-height: 10em;
-/*  transition: max-height .5s ease-in-out;*/
-  transition: opacity .5s, max-height .5s cubic-bezier(0.25, 1, 0.5, 1);
+  /* max-height animation is long because the speed is calculated against
+    the max-height value, not the elements actual height */
+  max-height: 100em;
+  transition: opacity .5s, max-height 5s cubic-bezier(0.25, 1, 0.5, 1);
 /*  height: inherit;*/
 /*  width: inherit;*/
 }
@@ -14,28 +15,32 @@
   opacity: 0;
 }
 
-
-.transition__shrink,
-.transition__unshrink.pending {
+.transition__shrink {
   font-size: 0 !important;
   margin: 0 !important;
   opacity: 0 !important;
   padding: 0 !important;
 
   /* fade out, then shrink */
-  transition: opacity .15s,
-              font-size .3s .15s,
-              margin .3s .15s,
-              padding .3s .15s;
+  transition: opacity .3s,
+              font-size .3s .2s,
+              margin .3s .2s,
+              padding .3s .2s;
 }
 
-.transition__unshrink,
-.transition__shrink.pending {
+.transition__unshrink.transition__pending {
+  font-size: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+}
+
+.transition__unshrink {
   /* unshrink, then fade in */
-  transition: font-size .15s,
-              margin .15s,
-              padding .15s,
-              opacity .3s .15s;
+  transition: font-size .2s,
+              margin .2s,
+              padding .2s,
+              opacity .3s .25s;
 }
 
 
@@ -62,12 +67,12 @@
     transform:translateZ(0)
   }
   20%, 60% {
-    -webkit-transform:translate3d(-5px,0,0);
-    transform:translate3d(-5px,0,0)
+    -webkit-transform:translate3d(-8px,0,0);
+    transform:translate3d(-8px,0,0)
   }
   40%, 80% {
-    -webkit-transform:translate3d(5px,0,0);
-    transform:translate3d(5px,0,0)
+    -webkit-transform:translate3d(8px,0,0);
+    transform:translate3d(8px,0,0)
   }
 }
 
@@ -77,12 +82,12 @@
     transform:translateZ(0)
   }
   20%, 60% {
-    -webkit-transform:translate3d(-5px,0,0);
-    transform:translate3d(-5px,0,0)
+    -webkit-transform:translate3d(-8px,0,0);
+    transform:translate3d(-8px,0,0)
   }
   40%, 80% {
-    -webkit-transform:translate3d(5px,0,0);
-    transform:translate3d(5px,0,0)
+    -webkit-transform:translate3d(8px,0,0);
+    transform:translate3d(8px,0,0)
   }
 }
 

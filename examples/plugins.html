@@ -128,8 +128,12 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/petite-vue" defer init></script>
+
+    <!-- <script src="https://unpkg.com/petite-vue" defer init></script> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+
+    <!-- todo
+
     <div class="grid mt-50">
       <h2>Nice Toggle</h2>
 
@@ -148,6 +152,8 @@
         </div>
     </div>
 
+    -->
+
 
     <link rel="stylesheet" href="/css/extras/animations.css">
     <div class="grid mt-50">
@@ -159,7 +165,7 @@
 
           <button onclick="animateElement(document.getElementById('redbox'), 'shakeX')">shakeX</button>
           <button onclick="animateElement(document.getElementById('redbox'), 'shakeY')">shakeY</button>
-          <button onclick="transitionElement(document.getElementById('redbox'), 'shrink', 1)">shrink</button>
+          <button onclick="transitionElement(document.getElementById('redbox'), 'shrink')">shrink</button>
           <button onclick="transitionElement(document.getElementById('redbox'), 'unshrink', 1)">unshrink</button>
         </p>
       </div>
@@ -170,8 +176,7 @@
       <div>
         <button onclick="this.nextElementSibling.classList.toggle('collapsed')">toggle collapsed</button>
 
-        <div id="greenbox" class="mt-50 mb-50 collapsable" style="background-color: yellow; width: 100px; height: 100px;">
-          Some text
+        <div id="greenbox" class="mt-50 mb-50 collapsable" style="background-color: blue; width: 100px; height: 100px;">
         </div>
       </div>
     </div>
@@ -258,8 +263,14 @@
   function transitionElement(el, transitionName, withPending, cb) {
     if (transitioning) return;
     transitioning = true;
+
+    if (withPending) {
+      el.style.transition = 'none';
+      el.classList.add('transition__pending');
+    }
+
     el.classList.add('transition__transitioning', 'transition__' + transitionName);
-    if (withPending) el.classList.add('pending');
+
 
     el.addEventListener('transitionend', onTransition);
     function onTransition() {
@@ -271,7 +282,10 @@
       }, 1000)
     }
 
-    if (withPending) setTimeout(function() { el.classList.remove('pending') }, 500);
+    if (withPending) setTimeout(function() {
+      el.style.transition = null;
+      el.classList.remove('transition__pending')
+    }, 1000);
   }
 
 </script>
