@@ -392,18 +392,16 @@ abbr[title] {
   border-bottom: dotted 1px;
 }
 
+pre, code, .monospace {
+  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
 pre, code {
   color: #a93fa9;
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
-/* utility classes */
 .serif {
   font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
-}
-
-.monospace {
-  font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 
@@ -534,7 +532,7 @@ input[type="button"] {
   /* display: inline-flex; /
   /* justify-content: center; */
   /* align-items: center; */
-  /* border-radius: 0.25em; */
+  border-radius: 0.2em;
 
   /* box-shadow: 0 1px 4px rgb(9 66 179 / 25%); */
 
@@ -602,6 +600,15 @@ button.warning,
   border: 1px solid rgb(255, 163, 0);
 }
 
+
+input[type=submit].ghost,
+button.ghost,
+.button.ghost {
+  color: rgb(9, 9, 11);
+  background-color: transparent;
+  border-color: transparent;
+}
+
 input[type=submit]:disabled,
 button:disabled,
 .button:disabled {
@@ -634,12 +641,12 @@ input[type="button"].small {
 
 .dark .button {
   color: #ddd;
-  box-shadow: 0 0 0 1px #ddd;
+  border-color: #ddd;
 }
 
 .dark .button:hover {
   color: #fff;
-  box-shadow: 0 0 0 1px #fff;
+  border-color: #fff;
 }
 
 
@@ -663,6 +670,7 @@ textarea, select {
   width: 100%;
   height: 42px;
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  border-radius: 0.2em;
   background-color: #fff;
   border: 0;
   outline: none;
@@ -687,6 +695,15 @@ textarea, select {
 textarea {
   min-height: 65px;
   line-height: 1.6 }
+
+select.buried {
+  color: #666;
+  border-color: transparent;
+/*  background-color: transparent;*/
+  background-color: rgb(246, 246, 247);
+  box-shadow: none;
+  padding-right: 30px;
+  background-position: right 55%; }
 
 input[type="email"]:focus,
 input[type="number"]:focus,
@@ -741,7 +758,7 @@ textarea:disabled {
 
 select {
   line-height: 1.6;
-  border-radius: 0; /* chrome osx */
+  /*  border-radius: 0; */ /* for chrome osx */
   padding-right: 36px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='36' height='12'><path d='M14,4 L18,8 L22,4' stroke='%23aaaaaa' stroke-width='2' fill='none' /></svg>");
   background-repeat: no-repeat;
@@ -1215,7 +1232,7 @@ hr {
   .md\:left          { float: left !important }
   .md\:right         { float: right !important }
   .md\:clear         { clear: both }
-  .md\:center       { float: none; margin-left: auto; margin-right: auto }
+  .md\:center        { float: none; margin-left: auto; margin-right: auto }
 
   .md\:centered {
     position: absolute;
@@ -1364,7 +1381,7 @@ hr {
   .lg\:left          { float: left !important }
   .lg\:right         { float: right !important }
   .lg\:clear         { clear: both }
-  .lg\:center       { float: none; margin-left: auto; margin-right: auto }
+  .lg\:center        { float: none; margin-left: auto; margin-right: auto }
 
   .lg\:centered {
     position: absolute;
@@ -1513,7 +1530,7 @@ hr {
   .xl\:left          { float: left !important }
   .xl\:right         { float: right !important }
   .xl\:clear         { clear: both }
-  .xl\:center       { float: none; margin-left: auto; margin-right: auto }
+  .xl\:center        { float: none; margin-left: auto; margin-right: auto }
 
   .xl\:centered {
     position: absolute;
@@ -1653,6 +1670,63 @@ hr {
     display: none !important;
   }
 }
+/* details/summary accordion */
+
+details {
+  padding: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #333;
+}
+
+/*
+details + details {
+  margin-top: 1rem;
+}
+*/
+
+details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none
+}
+
+details summary:hover {
+  text-decoration: underline;
+}
+
+details summary ~ * {
+  margin: 10px 0 0 0;
+  animation: toggleSummary .2s ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+@keyframes toggleSummary {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+details .toggle-icon {
+  height: 16px;
+  width: 16px;
+  background: center no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>');
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .toggle-icon {
+  transform: rotate(0deg);
+}
+
 /* alerts
 --------------------------------------*/
 
@@ -1673,7 +1747,6 @@ hr {
 }
 
 .alert label {
-  display: inline-block;
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -2099,6 +2172,9 @@ li.dropdown ul {
 }
 
 
+/* bg/cover
+----------------------------------------------- */
+
 /*
 
 -- option 1: setting background via css:
@@ -2153,28 +2229,51 @@ li.dropdown ul {
 .dark.bg-after::after {
   color: #fff;
   background-color: rgba(0,0,0,0.75);
-}.transition__shrink,
-.transition__unshrink.pending {
+}.collapsable {
+  /* max-height animation is long because the speed is calculated against
+    the max-height value, not the elements actual height */
+  max-height: 100em;
+  transition: opacity .5s, max-height 5s cubic-bezier(0.25, 1, 0.5, 1);
+/*  height: inherit;*/
+/*  width: inherit;*/
+}
+
+.collapsable.collapsed {
+/*  transition: max-height .5s ease-in-out;*/
+  transition: opacity .3s, max-height .5s cubic-bezier(0, 1, 0.5, 1);
+  overflow-y: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.transition__shrink {
   font-size: 0 !important;
   margin: 0 !important;
   opacity: 0 !important;
   padding: 0 !important;
 
   /* fade out, then shrink */
-  transition: opacity .15s,
-              font-size .3s .15s,
-              margin .3s .15s,
-              padding .3s .15s;
+  transition: opacity .3s,
+              font-size .3s .2s,
+              margin .3s .2s,
+              padding .3s .2s;
 }
 
-.transition__unshrink,
-.transition__shrink.pending {
-  /* unshrink, then fade in */
-  transition: font-size .15s,
-              margin .15s,
-              padding .15s,
-              opacity .3s .15s;
+.transition__unshrink.transition__pending {
+  font-size: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
 }
+
+.transition__unshrink {
+  /* unshrink, then fade in */
+  transition: font-size .2s,
+              margin .2s,
+              padding .2s,
+              opacity .3s .25s;
+}
+
 
 .animate__animated {
   -webkit-animation-duration: 0.5s;
@@ -2199,12 +2298,12 @@ li.dropdown ul {
     transform:translateZ(0)
   }
   20%, 60% {
-    -webkit-transform:translate3d(-5px,0,0);
-    transform:translate3d(-5px,0,0)
+    -webkit-transform:translate3d(-8px,0,0);
+    transform:translate3d(-8px,0,0)
   }
   40%, 80% {
-    -webkit-transform:translate3d(5px,0,0);
-    transform:translate3d(5px,0,0)
+    -webkit-transform:translate3d(8px,0,0);
+    transform:translate3d(8px,0,0)
   }
 }
 
@@ -2214,12 +2313,12 @@ li.dropdown ul {
     transform:translateZ(0)
   }
   20%, 60% {
-    -webkit-transform:translate3d(-5px,0,0);
-    transform:translate3d(-5px,0,0)
+    -webkit-transform:translate3d(-8px,0,0);
+    transform:translate3d(-8px,0,0)
   }
   40%, 80% {
-    -webkit-transform:translate3d(5px,0,0);
-    transform:translate3d(5px,0,0)
+    -webkit-transform:translate3d(8px,0,0);
+    transform:translate3d(8px,0,0)
   }
 }
 
@@ -3042,11 +3141,12 @@ abbr[data-tooltip]:hover {
   white-space: normal;
   opacity: 0;
   pointer-events: none;
-  width: 100px;
+  width: fit-content;
+  white-space: nowrap;
 }
 
 [data-tooltip]::after {
-  padding:0;
+  padding: 0;
   transform: translate(-50%, .3rem);
   border-top: .6rem solid;
   border-right: .6rem solid transparent;
@@ -3078,8 +3178,8 @@ abbr[data-tooltip]:hover {
 
   [data-tooltip]:focus::after,
   [data-tooltip]:hover::after {
-    -webkit-animation-duration:.3s;
-    animation-duration:.3s;
+    -webkit-animation-duration:.25s;
+    animation-duration:.25s;
     -webkit-animation-name:slideCaret;
     animation-name:slideCaret
   }
