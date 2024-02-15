@@ -243,6 +243,14 @@ input[type="button"] {
 }
 */
 
+input[type=submit].ghost,
+button.ghost,
+.button.ghost {
+/*  color: rgb(9, 9, 11);*/
+  background-color: transparent;
+  border-color: transparent;
+}
+
 input[type=submit].primary,
 button.primary,
 .button.primary {
@@ -286,13 +294,6 @@ button.warning,
 }
 
 
-input[type=submit].ghost,
-button.ghost,
-.button.ghost {
-  color: rgb(9, 9, 11);
-  background-color: transparent;
-  border-color: transparent;
-}
 
 input[type=submit]:disabled,
 button:disabled,
