@@ -17,22 +17,31 @@
 
   <title>My website</title>
 
-  <link rel="stylesheet" href="https://tomas.github.io/skel.css/dist/0.4/skel.min.css">
+  <link rel="stylesheet" href="https://tomas.github.io/skel.css/dist/0.5/skel.min.css">
+
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body>
   <div class="container">
-    <div class="grid margin-top">
+    <div class="grid mt-50">
       <h2>An example page</h2>
-      <div class="width-one-half margin-bottom">
+      <div class="width-one-half mb-25">
         <p>This HTML page is a placeholder with the CSS. It's just waiting for you to add some content!</p>
         <button>Here's a button!</button>
       </div>
-      <div class="width-one-half margin-bottom">
+      <div class="width-one-half mb-25">
         <p>This a second column. For filling up content, don't forget your <a href="https://lipsum.com/feed/html">Lorem Ipsum</a>. For pictures, there's always <a href="https://picsum.photos/">Picsum Photos</a>.</p>
         <a href="#" class="primary button">Here's a button link</a>
       </div>
     </div>
+
+    <hr />
+
+    <div style="display: grid; grid-template-columns: 1fr auto; gap: 2rem;">
+      <input placeholder="Search" type="search">
+      <button class="primary search-button">Buscar</button>
+    </div>
+
   </div>
 </body>
 </html>
