@@ -175,7 +175,7 @@ div, p, label, input, optgroup, select, textarea {
 
 a,
 button {
-  font: inherit;
+/*  font: inherit;*/
 }
 
 .button,
