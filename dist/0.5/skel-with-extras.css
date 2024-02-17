@@ -641,8 +641,6 @@ button.warning,
   border: 1px solid rgb(255, 163, 0);
 }
 
-
-
 input[type=submit]:disabled,
 button:disabled,
 .button:disabled {
@@ -698,7 +696,7 @@ input[type="url"],
 input[type="password"],
 textarea, select {
   width: 100%;
-  transition: .2s;
+  transition: .2s border-color;
   height: 40px; /* same as buttons */
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   border-radius: 0.2em;
@@ -2980,27 +2978,34 @@ body.noscroll .over {
 
 }/* nice select plugin */
 
+select.selectize {
+  border: 0;
+}
+
 .nice-select {
-  height: 42px;
-  line-height: 42px;
-  border: none;
-  box-shadow: 0 0 0 1px #d1d1d1;
-  border-radius: 0;
+  font-size: 13px;
+  height: 40px;
+/*  line-height: 40px;*/
+  float: none;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d1d1d1;
+  border-radius: 0.2em;
   padding-left: 10px;
   font-weight: 400;
   color: #000;
-  width:  100%;
+  width: 100%;
   margin-bottom: 1.5rem; /* same as regular selects */
 }
 
 .nice-select.open {
   border-color: none;
-  box-shadow: 0 0 0 1px #33c3f0;
+  border-color: #33c3f0;
 }
 
 .nice-select .option {
   margin: 0;
-  line-height: 42px;
+  line-height: 40px;
 }
 
 .nice-select.open::after {
@@ -3012,7 +3017,8 @@ body.noscroll .over {
   box-shadow: 0 5px 15px 5px rgba(0,0,0,0.05);
   width: 100%;
   margin-top: 10px;
-  border-radius: 3px;
+  border-radius: .2em;
+  left: -1px;
   transform: translateY(-19px);
   transition: all .3s cubic-bezier(.18,.89,.25,1.45), opacity .15s ease-out;
 }
