@@ -1,0 +1,73 @@
+
+/* alerts
+--------------------------------------*/
+
+.alert,
+.alert-notice,
+.alert-success,
+.alert-warning,
+.alert-danger,
+.alert-error {
+  position: relative;
+  padding: 10px 15px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 0 1px #eee;
+}
+
+.alert > :last-child {
+  margin-bottom: 0;
+}
+
+.alert label {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  white-space: nowrap;
+}
+
+.alert,
+.alert-notice {
+  background: #ebf7fd;
+  box-shadow: 0 0 0 1px rgba(45,112,145,0.3);
+}
+
+.alert,
+.alert-notice,
+.alert .close-button:after,
+.alert-notice .close-button:after {
+  color: #4684a3;
+}
+
+.alert-success {
+  background: #f2fae3;
+  box-shadow: 0 0 0 1px rgba(101,159,19,0.3);
+}
+
+.alert-success,
+.alert-success .close-button:after {
+  color: #659f13;
+}
+
+.alert-warning {
+  background: #fffceb;
+  box-shadow: 0 0 0 1px rgba(226,131,39,0.3);
+}
+
+.alert-warning,
+.alert-warning .close-button:after {
+  color: #e28327;
+}
+
+.alert-error,
+.alert-danger {
+  background: #fff1f0;
+  box-shadow: 0 0 0 1px rgba(216,80,48,0.3);
+}
+
+.alert-danger,
+.alert-error,
+.alert-error .close-button:after,
+.alert-danger .close-button:after {
+  color: #CA6664;
+}

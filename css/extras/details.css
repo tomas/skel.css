@@ -1,0 +1,56 @@
+/* details/summary accordion */
+
+details {
+  padding: 20px;
+  font-size: 14px;
+  border-bottom: 1px solid #333;
+}
+
+/*
+details + details {
+  margin-top: 1rem;
+}
+*/
+
+details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  cursor: pointer;
+  list-style: none;
+  user-select: none
+}
+
+details summary:hover {
+  text-decoration: underline;
+}
+
+details summary ~ * {
+  margin: 10px 0 0 0;
+  animation: toggleSummary .2s ease-in-out;
+  transition: transform 0.2s ease;
+}
+
+@keyframes toggleSummary {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+details .toggle-icon {
+  height: 16px;
+  width: 16px;
+  background: center no-repeat url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>');
+  transition: transform 0.2s ease;
+  transform: rotate(-90deg);
+}
+
+details[open] .toggle-icon {
+  transform: rotate(0deg);
+}

@@ -1,0 +1,58 @@
+/* bg/cover
+----------------------------------------------- */
+
+/*
+
+-- option 1: setting background via css:
+
+  .wity-bg::after {
+    background-image: url(some-image.png);
+  }
+
+  <div class="cover with-bg">
+    <div class="centered">
+      <h1>Hello!</h2>
+      <p>This is some text.</p>
+    </div>
+  </div>
+
+-- option 2: setting background via html:
+
+  <div class="cover sm:bg-after dark">
+    <div class="v-centered sm:centered">
+      <h1>Hello!</h2>
+      <p>This is some text.</p>
+    </div>
+    <div class="bg" style="background-image: url(some-image.png)"></div>
+  </div>
+
+*/
+
+.cover,
+.bg,
+.bg-after::after {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-size: cover;
+}
+
+.bg, .bg-after::after {
+  content: "";
+  z-index: -1
+}
+
+.light.cover,
+.light.bg,
+.light.bg-after::after {
+  background-color: rgba(255,255,255,0.75);
+}
+
+.dark.cover,
+.dark.bg,
+.dark.bg-after::after {
+  color: #fff;
+  background-color: rgba(0,0,0,0.75);
+}

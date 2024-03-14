@@ -1,0 +1,56 @@
+/* dropdown
+----------------------------------------------- */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown ul {
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 3.5em;
+  margin: 0em;
+  display: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ensure nested dropdowns use the full parent's width */
+li.dropdown ul {
+  min-width: 100%;
+}
+
+.dropdown li {
+  z-index: 100;
+  background-color: #fafafa;
+  min-width: 150px;
+  border: 1px solid #eee;
+  border-bottom: none;
+}
+
+.dropdown ul .item {
+  /*line-height: 40px;*/
+}
+
+.dropdown li:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+.dark .dropdown li {
+  border-color: #111;
+}
+
+.right.dropdown ul {
+  left: auto;
+  right: 0;
+}
+
+.hover.dropdown:hover > .item {
+  /* color: #1EAEDB; */
+}
+
+.dropdown.active ul,
+.hover.dropdown:hover ul {
+  display: block;
+  visibility: visible;
+}

@@ -1,0 +1,93 @@
+/* menu icon, three dots & caret
+----------------------------------------------- */
+
+.menu-icon:before,
+.menu-icon:after,
+.three-dots:before,
+.three-dots:after {
+  display: inherit;
+  position: relative;
+  font-size: 18px;
+  content: "";
+  cursor: pointer;
+  width: 20px;
+  border-top: 2px solid #666;
+}
+
+.menu-icon:before {
+  height: 4px;
+  margin: 20px 25px 0;
+  border-bottom: 2px solid #666;
+}
+
+.menu-icon:after {
+  margin: 4px 25px 15px;
+  height: 6px;
+  border-top: 2px solid #666;
+}
+
+.right.menu-icon:before,
+.right.menu-icon:after {
+  margin-right: 0;
+}
+
+.left.menu-icon:before,
+.left.menu-icon:after {
+  margin-left: 0;
+}
+
+.three-dots {
+  padding: 0 8px;
+  line-height: 28px;
+}
+
+.three-dots:before,
+.three-dots:after {
+  width: 3px;
+  border-top: 3px solid #666;
+}
+
+.three-dots:before {
+  height: 3px;
+  margin: 14px 0 0;
+  border-bottom: 3px solid #666;
+}
+
+.three-dots:after {
+  margin: 4px 0 8px -3px;
+  border-top: 3px solid #666;
+  height: 4px;
+}
+
+.three-dots:hover:before,
+.three-dots:hover:after {
+  border-color: #000;
+}
+
+.caret {
+  display: inline-block;
+  padding: 0;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  content: "";
+}
+
+.dropdown .caret {
+  margin: 25px 8px 0;
+}
+
+.dark .caret {
+  border-top-color: #666;
+}
+
+.dropdown:hover .caret {
+  border-top-color: #000;
+}
+
+.dark .dropdown:hover .caret {
+  border-top-color: #fff
+}

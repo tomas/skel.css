@@ -1,0 +1,54 @@
+/* close button
+-------------------------------------------------------------*/
+
+.close-button {
+  display: inline-block;
+  width: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: inherit;
+  -webkit-appearance: none;
+  background: transparent;
+  /* reset stuff if used as button */
+  height: auto;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  font-weight: 300;
+}
+
+a.close-button {
+  text-decoration: none;
+}
+
+.close-button.left {
+  margin-right: 10px;
+}
+
+.close-button.right {
+  margin-left: 10px;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+.close-button:hover {
+  box-shadow: none;
+}
+
+.close-button:after {
+  content: '\00d7';
+  display: block;
+  font-size: 21px;
+
+  opacity: 0.6;
+  color: #666;
+
+  text-align: center;
+  font-weight: bolder;
+}
+
+.close-button:hover:after {
+  opacity: 1;
+}
