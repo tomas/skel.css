@@ -37,15 +37,15 @@ cat ${path}/skel.css $other_extras > ${path}/skel-with-extras.css
 csso -i ${path}/skel.css -o ${path}/skel.min.css
 csso -i ${path}/skel-with-extras.css -o ${path}/skel-with-extras.min.css
 
-# cd dist
-# ln -sf "$version" latest
-# git add dist
-# git commit -a -m "Updated build."
+cd dist
+ln -sf "$version" latest
+git add dist
+git commit -a -m "Updated build."
 
-# git checkout gh-pages
-# [ $? -ne 0 ] && echo "Stopping here." && exit 1
+git checkout gh-pages
+[ $? -ne 0 ] && echo "Stopping here." && exit 1
 
-# # git merge --ff-only master
-# git merge master
-# git push origin
-# git checkout master
+# git merge --ff-only master
+git merge master
+git push origin
+git checkout master

@@ -1827,9 +1827,7 @@ details[open] .toggle-icon {
 .alert-error .close-button:after,
 .alert-danger .close-button:after {
   color: #CA6664;
-}
-
-/* close button
+}/* close button
 -------------------------------------------------------------*/
 
 .close-button {
@@ -1884,7 +1882,7 @@ a.close-button {
   opacity: 1;
 }
 
-/* menu
+/* menu && navbar
 -------------------------------------------------------------*/
 
 .navbar {
@@ -1971,6 +1969,83 @@ a.close-button {
   color: inherit;
 }
 
+
+/* black navbar
+----------------------------------------------- */
+
+.dark.navbar {
+  border-color: #333;
+}
+
+.dark.navbar,
+.dark .dropdown li {
+  background: #1b1b1b;
+}
+
+.dark .item {
+  color: #999;
+}
+
+.dark.navbar a:hover,
+.dark.navbar a:focus,
+.dark .dropdown:hover {
+  color: #1EAEDB;
+}
+
+.dark .button:hover {
+  border-color: #1EAEDB;
+}
+
+.dark .menu-icon:before,
+.dark .menu-icon:after {
+  border-color: #ccc;
+}
+
+@media (max-width: 900px) {
+  .menu.visible,
+  .menu:target {
+    position: absolute;
+    top: 100%;
+    float: none !important; /* without this it pushes below */
+    /*right: 25px;*/
+    z-index:1;
+  }
+
+  .menu.right.visible {
+    right: 0;
+    text-align: right;
+  }
+
+  .visible.menu li {
+    min-width: 150px;
+    background: #fff;
+    display: block; /* or inherit */
+  }
+
+  .visible.menu .item {
+    padding: 0 25px !important;
+  }
+
+  .dark.navbar .menu li {
+    background: #1b1b1b;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .menu.visible,
+  .menu:target {
+    display: inherit;
+    /*width: 100%;*/
+    top: 0;
+    margin-left: -25px;
+    margin-right: -25px;
+    clear: both;
+    position: relative;
+    z-index: 1;
+  }
+
+}
 /* dropdown
 ----------------------------------------------- */
 
@@ -2026,9 +2101,7 @@ li.dropdown ul {
 .hover.dropdown:hover ul {
   display: block;
   visibility: visible;
-}
-
-/* menu icon & caret
+}/* menu icon, three dots & caret
 ----------------------------------------------- */
 
 .menu-icon:before,
@@ -2120,88 +2193,7 @@ li.dropdown ul {
 
 .dark .dropdown:hover .caret {
   border-top-color: #fff
-}
-
-
-/* black navbar
------------------------------------------------ */
-
-.dark.navbar {
-  border-color: #333;
-}
-
-.dark.navbar,
-.dark .dropdown li {
-  background: #1b1b1b;
-}
-
-.dark .item {
-  color: #999;
-}
-
-.dark.navbar a:hover,
-.dark.navbar a:focus,
-.dark .dropdown:hover {
-  color: #1EAEDB;
-}
-
-.dark .button:hover {
-  border-color: #1EAEDB;
-}
-
-.dark .menu-icon:before,
-.dark .menu-icon:after {
-  border-color: #ccc;
-}
-
-@media (max-width: 900px) {
-  .menu.visible,
-  .menu:target {
-    position: absolute;
-    top: 100%;
-    float: none !important; /* without this it pushes below */
-    /*right: 25px;*/
-    z-index:1;
-  }
-
-  .menu.right.visible {
-    right: 0;
-    text-align: right;
-  }
-
-  .visible.menu li {
-    min-width: 150px;
-    background: #fff;
-    display: block; /* or inherit */
-  }
-
-  .visible.menu .item {
-    padding: 0 25px !important;
-  }
-
-  .dark.navbar .menu li {
-    background: #1b1b1b;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .menu.visible,
-  .menu:target {
-    display: inherit;
-    /*width: 100%;*/
-    top: 0;
-    margin-left: -25px;
-    margin-right: -25px;
-    clear: both;
-    position: relative;
-    z-index: 1;
-  }
-
-}
-
-
-/* bg/cover
+}/* bg/cover
 ----------------------------------------------- */
 
 /*
