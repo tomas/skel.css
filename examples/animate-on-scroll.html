@@ -1,0 +1,482 @@
+<body>
+  <style>
+    .grid__item {
+      width: 200px;
+      height: 200px;
+      background-color: #123;
+      float: left;
+      margin: 30px;
+      opacity: 0;
+    }
+
+    .grid__item.shown,
+    .no-js .grid__item,
+    .no-cssanimations .grid__item {
+      opacity: 1;
+    }
+
+    .effect-hapi .grid__item.animate {
+      -webkit-transform: scale(0.2);
+      transform: scale(0.2);
+      -webkit-animation: hapi 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: hapi 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @-webkit-keyframes hapi {
+      0% { }
+      100% { -webkit-transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes hapi {
+      0% { }
+      100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+    }
+
+    .effect-fadein .grid__item.animate {
+      -webkit-animation: fadeIn 0.65s ease forwards;
+      animation: fadeIn 0.65s ease forwards;
+    }
+
+    @-webkit-keyframes fadeIn {
+      0% { }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { }
+      100% { opacity: 1; }
+    }
+
+    .effect-moveup .grid__item.animate {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+      -webkit-animation: moveUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: moveUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @-webkit-keyframes moveUp {
+      0% { }
+      100% { -webkit-transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes moveUp {
+      0% { }
+      100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
+    }
+
+    .effect-scaleup .grid__item.animate {
+      -webkit-transform: scale(0.6);
+      transform: scale(0.6);
+      -webkit-animation: scaleUp 0.65s ease-in-out forwards;
+      animation: scaleUp 0.65s ease-in-out forwards;
+    }
+
+    @-webkit-keyframes scaleUp {
+      0% { }
+      100% { -webkit-transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes scaleUp {
+      0% { }
+      100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+    }
+
+    .effect-fall {
+      -webkit-perspective: 1300px;
+      perspective: 1300px;
+    }
+
+    .effect-fall .grid__item.animate {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+      transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+      -webkit-animation: fallPerspective .8s ease-in-out forwards;
+      animation: fallPerspective .8s ease-in-out forwards;
+    }
+
+    @-webkit-keyframes fallPerspective {
+      0% { }
+      100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+    }
+
+    @keyframes fallPerspective {
+      0% { }
+      100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
+    }
+
+    /* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+    .effect-fly {
+      -webkit-perspective: 1300px;
+      perspective: 1300px;
+    }
+
+    .effect-fly .grid__item.animate {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform-origin: 50% 50% -300px;
+      transform-origin: 50% 50% -300px;
+      -webkit-transform: rotateX(-180deg);
+      transform: rotateX(-180deg);
+      -webkit-animation: fly .8s ease-in-out forwards;
+      animation: fly .8s ease-in-out forwards;
+    }
+
+    @-webkit-keyframes fly {
+      0% { }
+      100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+    }
+
+    @keyframes fly {
+      0% { }
+      100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+    }
+
+    /* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+    .effect-flip {
+      -webkit-perspective: 1300px;
+      perspective: 1300px;
+    }
+
+    .effect-flip .grid__item.animate {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform-origin: 0% 0%;
+      transform-origin: 0% 0%;
+      -webkit-transform: rotateX(-80deg);
+      transform: rotateX(-80deg);
+      -webkit-animation: flip .5s ease-in-out forwards;
+      animation: flip .5s ease-in-out forwards;
+    }
+
+    @-webkit-keyframes flip {
+      0% { }
+      100% { -webkit-transform: rotateX(0deg); opacity: 1; }
+    }
+
+    @keyframes flip {
+      0% { }
+      100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
+    }
+
+    /* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+    .effect-helix {
+      -webkit-perspective: 1300px;
+      perspective: 1300px;
+    }
+
+    .effect-helix .grid__item.animate {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: rotateY(-180deg);
+      transform: rotateY(-180deg);
+      -webkit-animation: helix .8s ease-in-out forwards;
+      animation: helix .8s ease-in-out forwards;
+    }
+
+    @-webkit-keyframes helix {
+      0% { }
+      100% { -webkit-transform: rotateY(0deg); opacity: 1; }
+    }
+
+    @keyframes helix {
+      0% { }
+      100% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); opacity: 1; }
+    }
+
+    .effect-eight {
+      -webkit-perspective: 1300px;
+      perspective: 1300px;
+    }
+
+    .effect-eight .grid__item.animate {
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform: scale(0.4);
+      transform: scale(0.4);
+      -webkit-animation: popUp .8s ease-in forwards;
+      animation: popUp .8s ease-in forwards;
+    }
+
+    @-webkit-keyframes popUp {
+      0% { }
+      70% { -webkit-transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; }
+      100% { -webkit-transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes popUp {
+      0% { }
+      70% { -webkit-transform: scale(1.1); transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
+      100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
+    }
+
+  </style>
+
+  <div class="grid">
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+    <div class="grid__item"></div>
+  </div>
+
+<script>
+// from https://tympanus.net/Development/GridLoadingEffects/js/AnimOnScroll.js
+// modified by @tomaspollak
+
+/**
+ * animOnScroll.js v1.0.0
+ * http://www.codrops.com
+ *
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ *
+ * Copyright 2013, Codrops
+ * http://www.codrops.com
+ */
+;( function( window ) {
+
+  'use strict';
+
+  var docElem = window.document.documentElement;
+
+  function imagesLoaded(container, done) {
+
+    function loadImage(img, cb) {
+      var src = (typeof img == 'string') ? img : img.src;
+
+      var preloader = new Image();
+      preloader.onerror = preloader.onload = done;
+
+      function done(err) {
+        // console.log('Image loaded:', src);
+        preloader.onerror = preloader.onload = null;
+        cb();
+      }
+
+      preloader.src = src;
+    }
+
+    var images = container.querySelectorAll('img');
+
+    var index = 0;
+    function nextImage(err) {
+      var img = images[index++];
+      if (!img) return done();
+      loadImage(img, nextImage);
+    }
+
+    nextImage();
+  }
+
+  function getViewportH() {
+    var client = docElem['clientHeight'],
+      inner = window['innerHeight'];
+
+    if( client < inner )
+      return inner;
+    else
+      return client;
+  }
+
+  function inViewport( el, h ) {
+    var elH = el.offsetHeight,
+      scrolled = scrollY(),
+      viewed = scrolled + getViewportH(),
+      elTop = getOffset(el).top,
+      elBottom = elTop + elH,
+      // if 0, the element is considered in the viewport as soon as it enters.
+      // if 1, the element is considered in the viewport only when it's fully inside
+      // value in percentage (1 >= h >= 0)
+      h = h || 0;
+
+    return (elTop + elH * h) <= viewed && (elBottom - elH * h) >= scrolled;
+  }
+
+  function scrollY() {
+    return window.pageYOffset || docElem.scrollTop;
+  }
+
+  // http://stackoverflow.com/a/5598797/989439
+  function getOffset( el ) {
+    var offsetTop = 0, offsetLeft = 0;
+    do {
+      if ( !isNaN( el.offsetTop ) ) {
+        offsetTop += el.offsetTop;
+      }
+      if ( !isNaN( el.offsetLeft ) ) {
+        offsetLeft += el.offsetLeft;
+      }
+    } while( el = el.offsetParent )
+
+    return {
+      top : offsetTop,
+      left : offsetLeft
+    }
+  }
+
+  function extend( a, b ) {
+    for( var key in b ) {
+      if( b.hasOwnProperty( key ) ) {
+        a[key] = b[key];
+      }
+    }
+    return a;
+  }
+
+  function AnimOnScroll( el, options ) {
+    this.el = el;
+    this.options = extend( this.defaults, options );
+    this._init();
+  }
+
+  AnimOnScroll.prototype = {
+    defaults : {
+      // Minimum and a maximum duration of the animation (random value is chosen)
+      minDuration : 0,
+      maxDuration : 0,
+      // The viewportFactor defines how much of the appearing item has to be visible in order to trigger the animation
+      // if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport.
+      // If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
+      viewportFactor : 0
+    },
+
+    itemSelector: '.grid__item',
+
+    _init : function() {
+      this.items = Array.prototype.slice.call( document.querySelectorAll( this.itemSelector ) );
+      this.itemsCount = this.items.length;
+      this.itemsRenderedCount = 0;
+      this.didScroll = false;
+      this.el.classList.add('effect-' + this.options.effect)
+
+      this.delayPerItem = 0.2;
+      var self = this;
+
+      imagesLoaded(this.el, function() {
+        // new Masonry( self.el, {
+        //   itemSelector: self.itemSelector,
+        //   transitionDuration : 0
+        // });
+
+        var currentDelay = 0;
+        self.items.forEach( function( el, i ) {
+          if( inViewport( el ) ) {
+            el.style.WebkitAnimationDelay = currentDelay + 's';
+            el.style.MozAnimationDelay = currentDelay + 's';
+            el.style.animationDelay = currentDelay + 's';
+            currentDelay += self.delayPerItem;
+            el.classList.add('animate');
+            self._checkTotalRendered();
+          }
+        });
+
+        setTimeout(function() {
+          // animate on scroll the items inside the viewport
+          window.addEventListener('scroll', function() {
+            self._onScrollFn();
+          }, false );
+
+          window.addEventListener('resize', function() {
+            self._resizeHandler();
+          }, false );
+        }, currentDelay * 1000)
+      });
+    },
+    _onScrollFn : function() {
+      var self = this;
+      if( !this.didScroll ) {
+        this.didScroll = true;
+        setTimeout( function() { self._scrollPage(); }, 60 );
+      }
+    },
+    _scrollPage : function() {
+      var self = this;
+      var currentDelay = 0;
+      this.items.forEach( function( el, i ) {
+
+        if( !el.classList.contains( 'shown' ) && !el.classList.contains( 'animate' ) && inViewport( el, self.options.viewportFactor ) ) {
+          setTimeout( function() {
+            var perspY = scrollY() + getViewportH() / 2;
+            self.el.style.WebkitPerspectiveOrigin = '50% ' + perspY + 'px';
+            self.el.style.MozPerspectiveOrigin = '50% ' + perspY + 'px';
+            self.el.style.perspectiveOrigin = '50% ' + perspY + 'px';
+
+            el.style.WebkitAnimationDelay = currentDelay + 's';
+            el.style.MozAnimationDelay = currentDelay + 's';
+            el.style.animationDelay = currentDelay + 's';
+            currentDelay += self.delayPerItem;
+
+            self._checkTotalRendered();
+
+            if( self.options.minDuration && self.options.maxDuration ) {
+              var randDuration = ( Math.random() * ( self.options.maxDuration - self.options.minDuration ) + self.options.minDuration ) + 's';
+              el.style.WebkitAnimationDuration = randDuration;
+              el.style.MozAnimationDuration = randDuration;
+              el.style.animationDuration = randDuration;
+            }
+
+            el.classList.add( 'animate' );
+          }, 25 );
+        }
+      });
+      this.didScroll = false;
+    },
+    _resizeHandler : function() {
+      var self = this;
+      function delayed() {
+        self._scrollPage();
+        self.resizeTimeout = null;
+      }
+      if ( this.resizeTimeout ) {
+        clearTimeout( this.resizeTimeout );
+      }
+      this.resizeTimeout = setTimeout( delayed, 1000 );
+    },
+    _checkTotalRendered : function() {
+      ++this.itemsRenderedCount;
+      if( this.itemsRenderedCount === this.itemsCount ) {
+        window.removeEventListener( 'scroll', this._onScrollFn );
+      }
+    }
+  }
+
+  // add to global namespace
+  window.AnimOnScroll = AnimOnScroll;
+
+})(window);
+
+  function startAnimation() {
+    var grid = document.querySelector('.grid');
+    var scroll = new AnimOnScroll(grid, {
+      effect: 'moveup', // hapi, fadein, moveup, scaleup, fall, fly, flip, helix, eight
+      // effect: 'scaleup',
+      // minDuration : 0.4,
+      // maxDuration : 0.7,
+      viewportFactor : 0.2
+    });
+  }
+
+  setTimeout(startAnimation, 100)
+</script>
+</body>
