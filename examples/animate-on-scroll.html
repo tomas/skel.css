@@ -213,31 +213,31 @@
   </style>
 
   <div class="grid">
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
-    <div class="grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
+    <div class="animatable grid__item"></div>
   </div>
 
 <script>
@@ -358,13 +358,13 @@
       // The viewportFactor defines how much of the appearing item has to be visible in order to trigger the animation
       // if we'd use a value of 0, this would mean that it would add the animation class as soon as the item is in the viewport.
       // If we were to use the value of 1, the animation would only be triggered when we see all of the item in the viewport (100% of it)
-      viewportFactor : 0
+      viewportFactor : 0,
+      itemSelector: '.animatable'
     },
 
-    itemSelector: '.grid__item',
 
     _init : function() {
-      this.items = Array.prototype.slice.call( document.querySelectorAll( this.itemSelector ) );
+      this.items = Array.prototype.slice.call( document.querySelectorAll( this.options.itemSelector ) );
       this.itemsCount = this.items.length;
       this.itemsRenderedCount = 0;
       this.didScroll = false;
@@ -374,14 +374,16 @@
       var self = this;
 
       imagesLoaded(this.el, function() {
+        console.log('Images loaded!')
+
         // new Masonry( self.el, {
         //   itemSelector: self.itemSelector,
         //   transitionDuration : 0
         // });
 
         var currentDelay = 0;
-        self.items.forEach( function( el, i ) {
-          if( inViewport( el ) ) {
+        self.items.forEach(function(el, i) {
+          if (inViewport(el)) {
             el.style.WebkitAnimationDelay = currentDelay + 's';
             el.style.MozAnimationDelay = currentDelay + 's';
             el.style.animationDelay = currentDelay + 's';
