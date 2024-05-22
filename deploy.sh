@@ -41,6 +41,9 @@ build() {
 
   cd dist
   ln -sf "$version" latest
+}
+
+commit() {
   git add dist
   git commit -a -m "Updated build."
 }
@@ -56,4 +59,5 @@ push() {
 }
 
 build
-# push
+commit
+push
