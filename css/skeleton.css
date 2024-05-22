@@ -350,7 +350,7 @@ textarea, select {
   width: 100%;
   transition: .2s border-color;
   height: 40px; /* same as buttons */
-  line-height: 40px;
+  /* line-height: 40px; */
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   border-radius: 0.2em;
   background-color: #fff;
