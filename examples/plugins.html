@@ -77,6 +77,40 @@
       </div>
     </div>
 
+    <link rel="stylesheet" href="/css/extras/dropdown-shadcn.css">
+    <div class="grid mt-50">
+      <h2>Dropdown</h2>
+
+      <div class="w-50">
+
+      <button onclick="this.nextElementSibling.classList.toggle('open'); transition(this.nextElementSibling)">Open dropdown</button>
+
+      <div class="dropdown">
+        <div role="menu" class="dropdown-menu" aria-orientation="vertical" tabindex="-1">
+          <div v-else-if="item.type == 'separator'">
+            <div role="separator" aria-orientation="horizontal" class="dropdown-separator"></div>
+          </div>
+
+          <div>
+            <div class="dropdown-label">Actions</div>
+          </div>
+
+          <div>
+            <div role="menuitem" class="dropdown-item"><a href="#">Item 1</a></div>
+          </div>
+
+          <div>
+            <div role="menuitem" class="dropdown-item"><a href="#">Item 2</a></div>
+          </div>
+
+          <div>
+            <div role="menuitem" class="dropdown-item"><a href="#">Item 3</a></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
     <link rel="stylesheet" href="/css/extras/spinners.css">
     <div class="grid mt-50">
       <h2>Spinners</h2>
@@ -269,8 +303,8 @@
       el.classList.add('transition__pending');
     }
 
-    el.classList.add('transition__transitioning', 'transition__' + transitionName);
-
+    el.classList.add('transition__transitioning');
+    if (transitionName) el.classList.add('transition__' + transitionName)
 
     el.addEventListener('transitionend', onTransition);
     function onTransition() {
@@ -278,7 +312,8 @@
         el.removeEventListener('transitionend', onTransition);
         transitioning = false;
         cb && cb.call(el);
-        el.classList.remove('transition__transitioning', 'transition__' + transitionName);
+        el.classList.remove('transition__transitioning');
+        if (transitionName) el.classList.remove('transition__' + transitionName)
       }, 1000)
     }
 
@@ -287,6 +322,28 @@
       el.classList.remove('transition__pending')
     }, 1000);
   }
+
+function transition(el, transitionName, withPending, cb) {
+  el.classList.add('transition_running');
+  if (transitionName) el.classList.add('transition_' + transitionName)
+  if (withPending) el.classList.add('transition_pending');
+
+  el.addEventListener('transitionend', onTransition);
+  function onTransition() {
+    el.removeEventListener('transitionend', onTransition);
+    cb && cb.call(el);
+    el.classList.remove('transition_running', 'transition_' + transitionName);
+  }
+
+  if (withPending) setTimeout(function() { el.classList.remove('transition_pending') }, 25);
+}
+
+// function onAnimationsEnd(cb) {
+//   const animations  = document.getAnimations().map(a => a.finished)
+//   await Promise.all(animations)
+//   cb()
+// }
+
 
 </script>
 
