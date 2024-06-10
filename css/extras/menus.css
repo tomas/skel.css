@@ -149,7 +149,6 @@
 }
 
 @media (max-width: 600px) {
-
   .menu.visible,
   .menu:target {
     display: inherit;
@@ -161,5 +160,4 @@
     position: relative;
     z-index: 1;
   }
-
 }

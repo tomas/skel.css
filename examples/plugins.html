@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <link rel="stylesheet" href="/css/extras/dropdown-shadcn.css">
+    <link rel="stylesheet" href="/css/extras/dropdown-menu.css">
     <div class="grid mt-50">
       <h2>Dropdown</h2>
 
@@ -85,27 +85,13 @@
 
       <button onclick="this.nextElementSibling.classList.toggle('open'); transition(this.nextElementSibling)">Open dropdown</button>
 
-      <div class="dropdown">
-        <div role="menu" class="dropdown-menu" aria-orientation="vertical" tabindex="-1">
-          <div v-else-if="item.type == 'separator'">
-            <div role="separator" aria-orientation="horizontal" class="dropdown-separator"></div>
-          </div>
-
-          <div>
-            <div class="dropdown-label">Actions</div>
-          </div>
-
-          <div>
-            <div role="menuitem" class="dropdown-item"><a href="#">Item 1</a></div>
-          </div>
-
-          <div>
-            <div role="menuitem" class="dropdown-item"><a href="#">Item 2</a></div>
-          </div>
-
-          <div>
-            <div role="menuitem" class="dropdown-item"><a href="#">Item 3</a></div>
-          </div>
+      <div class="dropdown-menu-container">
+        <div role="menu" class="dropdown-menu">
+          <div class="dropdown-label">Actions</div>
+          <div role="menuitem" class="dropdown-item"><a href="#">Item 1</a></div>
+          <div role="menuitem" class="dropdown-item"><a href="#">Item 2</a></div>
+          <div role="separator" class="dropdown-separator"></div>
+          <div role="menuitem" class="dropdown-item"><a href="#">Item 3</a></div>
         </div>
       </div>
 
@@ -226,14 +212,15 @@
       </div>
     </div>
 
-
   </div><!-- /container -->
 
 <script src="https://bluzky.github.io/nice-select2/dist/js/nice-select2.js"></script>
 <script>
   // nice selects
   var selects = document.querySelectorAll(".selectize");
-  selects.forEach(NiceSelect.bind);
+  selects.forEach(function(el) {
+    NiceSelect.bind(el, { searchable: true })
+  });
 
   // toasts
   var showToast = (function() {
