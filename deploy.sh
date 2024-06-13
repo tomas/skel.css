@@ -62,3 +62,4 @@ push() {
 build
 commit
 push
+
