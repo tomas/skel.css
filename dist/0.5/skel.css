@@ -724,7 +724,9 @@ textarea, select {
 
 textarea {
   min-height: 65px;
-  line-height: 1.6 }
+  line-height: 1.6; 
+  height: auto; 
+}
 
 select.buried {
   color: #666;
@@ -2033,7 +2035,6 @@ a.close-button {
 }
 
 @media (max-width: 600px) {
-
   .menu.visible,
   .menu:target {
     display: inherit;
@@ -2045,7 +2046,6 @@ a.close-button {
     position: relative;
     z-index: 1;
   }
-
 }
 /* dropdown
 ----------------------------------------------- */
@@ -2102,7 +2102,183 @@ li.dropdown ul {
 .hover.dropdown:hover ul {
   display: block;
   visibility: visible;
-}/* menu icon, three dots & caret
+}.transition_running.dropdown-menu-container {
+  visibility: visible;
+}
+
+.dropdown-menu-container {
+  transition: opacity .25s, transform .25s;
+  opacity: 0;
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  transform: translate3d(0,-6px,0) scale3d(.95,.95,.95);
+}
+
+.dropdown-menu-container.right {
+  right: 0;
+}
+
+/*
+.fixed-dropdown .dropdown-menu-container {
+  position: fixed;
+  z-index: 11;
+  margin-top: -21px;
+  margin-left: 9px;
+}
+*/
+
+.dropdown-menu-container.open {
+  opacity: 1;
+  transition: opacity .15s, transform .15s; /* appear */
+  visibility: visible;
+  transform: translate3d(0,0,0) scale3d(1,1,1);
+}
+
+.dropdown-menu {
+  outline: none;
+  pointer-events: auto;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px;
+  color: var(--button-color, rgb(9, 9, 11));
+  padding: 4px;
+  background-color: rgb(255, 255, 255);
+  border-width: 1px;
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 128px;
+  width: 200px;
+  z-index: 50;
+  border-color: rgb(228, 228, 231);
+  box-sizing: border-box;
+  border: 1px solid rgb(228, 228, 231);
+}
+
+.dropdown-label {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.dropdown-item,
+.dropdown-item button {
+  font-family: var(--button-font-family, Inter, Helvetica, Arial, sans-serif);
+  font-weight: var(--button-font-weight, 400);
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.dropdown-item {
+  transition-property: color, background-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  outline: rgba(0, 0, 0, 0) solid 2px;
+  outline-offset: 2px;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 4px;
+  align-items: center;
+  user-select: none;
+  cursor: default;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-item form,
+.dropdown-item button {
+  margin: 0;
+  width: 100%;
+}
+
+.dropdown-item button {
+  color: var(--button-color, rgb(9, 9, 11));
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dropdown-item a {
+  text-decoration: none;
+  color: currentColor;
+  width: 100%;
+}
+
+.dropdown-item.disabled {
+  color: #999;
+  pointer-events: none;
+}
+
+.dropdown-radio-item,
+.dropdown-checkbox-item {
+  padding-right: 8px;
+  padding-left: 32px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.dropdown-item:hover {
+  color: hsl(240 5.9% 10%);
+  background-color: hsl(240 4.8% 95.9%);
+}
+
+.dropdown-separator {
+  background-color: rgb(244, 244, 245);
+  height: 1px;
+  margin-top: 4px -4px 4px -4px;
+}
+
+.dropdown-right-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: auto;
+  border-color: rgb(228, 228, 231);
+  display: block;
+  vertical-align: middle;
+}
+
+/*
+.dropdown-item-shortcut {
+  opacity: 0.6;
+  letter-spacing: 1.2px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-left: auto;
+}
+
+.dropdown-item-danger {
+  color: rgb(220, 38, 38);
+}
+
+.dropdown-item-icon {
+  justify-content: center;
+  align-items: center;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  left: 8px;
+  position: absolute;
+}
+
+.dropdown-item-svg {
+  width: 1rem;
+  height: 16px;
+  display: block;
+  vertical-align: middle;
+}
+
+.dropdown-radio-item-svg {
+  fill: rgb(9, 9, 11);
+}
+*//* menu icon, three dots & caret
 ----------------------------------------------- */
 
 .menu-icon:before,

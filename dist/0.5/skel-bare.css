@@ -724,7 +724,9 @@ textarea, select {
 
 textarea {
   min-height: 65px;
-  line-height: 1.6 }
+  line-height: 1.6; 
+  height: auto; 
+}
 
 select.buried {
   color: #666;
