@@ -29,6 +29,7 @@ css/extras/tooltips.css
 "
 
 build() {
+  echo "Updating build!"
   rm -Rf $path
   rm -f dist/latest
   mkdir -p $path
@@ -42,6 +43,7 @@ build() {
 
   cd dist
   ln -sf "$version" latest
+  echo "Built version $version."
 }
 
 commit() {
