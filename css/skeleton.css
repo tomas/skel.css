@@ -832,6 +832,23 @@ hr {
   white-space: nowrap
 }
 
+
+.visible  { display: inherit !important }
+.hidden   { display: none !important }
+
+.print\:visible {
+  display: none !important;
+}
+
+@media print {
+  .print\:visible {
+    display: inherit !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+}
+
 @media (max-width: 600px) {
   .sm\:hidden,
   .md\:visible,
@@ -1545,21 +1562,5 @@ hr {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
-  }
-}
-
-.visible  { display: inherit !important }
-.hidden   { display: none !important }
-
-.print\:visible {
-  display: none !important;
-}
-
-@media print {
-  .print\:visible {
-    display: inherit !important;
-  }
-  .print\:hidden {
-    display: none !important;
   }
 }
